@@ -11,9 +11,21 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from source.utils.url_shortener import shorten_url
 from webdriver_manager.chrome import ChromeDriverManager
+from urllib.parse import urlencode
+import requests
+import json
 
 # Set working directory path
 sys.path.append('../')
+
+
+SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 
 class WebScrapper_Walmart:
@@ -54,6 +66,7 @@ class WebScrapper_Walmart:
         """ 
         Returns final result
         """
+        print("New Codeee")
         self.driver = self.get_driver()
         self.result = {}
         try:
@@ -65,26 +78,36 @@ class WebScrapper_Walmart:
                 print('Walmart_results empty')
             else:
                 item = results[0]
+                # Extract product price
+                product_price = item.find('div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span', class_='w_iUH7')\
+                                .text.strip().split(" ")[2].split("$")[1]
+
+                # Extract product description
+                product_description = item.find('span', class_='w_iUH7').text
+
+                # Extract product URL
+                product_url = 'https://www.walmart.com' + item.find('a')['href']
                 # Find teh atag containing our required item
                 atag = item.find("a", {"class": "absolute w-100 h-100 z-1"})
                 # Extract description from the atag
-                self.result['description'] = (
-                    atag.find("span", {"class": "w_DJ"})).text
+                self.result['description'] = product_description
                 # Get the URL for the page and shorten it
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
-                self.result['url'] = atag.get('href')
+                # self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                self.result['url'] = product_url
                 # Find the parent div containging price of the item
                 parent_price = item.find(
                     "div", {"class": "flex flex-wrap justify-start items-center lh-title mb2 mb1-m"})
                 # Find the price of the item
-                self.result['price'] = parent_price.find(
-                    "div", {"class": "b black f5 mr1 mr2-xl lh-copy f4-l"}).text
+                self.result['price'] = product_price
                 # Assign the site as walmart to result
                 self.result['site'] = 'walmart'
         except Exception as e:
             print('Walmart_results exception', e)
             self.result = {}
         return self.result
+
+
+
 
     def get_driver(self):
         """ 
@@ -112,10 +135,17 @@ class WebScrapper_Walmart:
         """
         # Call the function to get URL
         url = self.get_url_walmart()
+        # url = scrapeops_url(url)
+        response = requests.get(scrapeops_url(url))
+        html_response = response.text
         # Assign the URL to driver
         self.driver.get(url)
         # Use BeautifulSoup to scrap the webpage
-        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-        results = soup.find_all(
-            'div', {'class': 'h-100 pb1-xl pr4-xl pv1 ph1'})
+        soup = BeautifulSoup(html_response, 'html.parser')
+        print("*********")
+        # print(soup)
+        results = soup.find_all('div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
+        # results = soup.find_all(
+        #     'div', {'class': 'h-100 pb1-xl pr4-xl pv1 ph1'})
+        print(results)
         return results
