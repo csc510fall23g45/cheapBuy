@@ -11,7 +11,15 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from source.utils.url_shortener import shorten_url
 from webdriver_manager.chrome import ChromeDriverManager
+from urllib.parse import urlencode
 
+SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 # Set working directory path
 
 sys.path.append('../')
@@ -69,7 +77,7 @@ class WebScrapper_Bjs:
                 print('BJs_results empty')
                 self.result = {}
             else:
-                item = results[1]
+                item = results[0]
                 # Find teh atag containing our required item
                 atag = item.find(
                     "a", {"class": "product-link mt-xl-3 mt-xs-3 mt-md-0 mt-3"})
