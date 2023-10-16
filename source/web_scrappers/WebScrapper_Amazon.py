@@ -5,15 +5,22 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 import sys
-
+from urllib.parse import urlencode
+import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
+
 from source.utils.url_shortener import shorten_url
-from webdriver_manager.chrome import ChromeDriverManager
 
 # Set working directory path
 sys.path.append('../')
 
+SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 class WebScrapper_Amazon:
     """
@@ -53,11 +60,10 @@ class WebScrapper_Amazon:
         """ 
         Returns final result
         """
-        self.driver = self.get_driver()
         try:
             # Get results from scrapping function
             results = self.scrap_amazon()
-            # Condition to check whether results are avialable or not
+            # Condition to check whether results are available or not
             if len(results) == 0:
                 print('Amazon_results empty')
                 self.result = {}
@@ -70,7 +76,7 @@ class WebScrapper_Amazon:
                 # Get the URL for the page and shorten it
                 self.result['url'] = 'https://www.amazon.com'+atag.get('href')
                 self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
-                # Find the span containging price of the item
+                # Find the span containing price of the item
                 price_parent = item.find('span', 'a-price')
                 # Find the price of the item
                 self.result['price'] = price_parent.find(
@@ -81,17 +87,6 @@ class WebScrapper_Amazon:
             print('Amazon_results exception', e)
             self.result = {}
         return self.result
-
-    def get_driver(self):
-        """ 
-        Returns Chrome Driver
-        """
-        # Prepare driver for scrapping
-        options = webdriver.ChromeOptions()
-        options.headless = True
-        driver = webdriver.Chrome(
-            options=options, executable_path=ChromeDriverManager().install())
-        return driver
 
     def get_url_amazon(self):
         """ 
@@ -114,9 +109,11 @@ class WebScrapper_Amazon:
         try:
             # Call the function to get URL
             url = self.get_url_amazon()
-            self.driver.get(url)
+            # self.driver.get(url)
+            response = requests.get(scrapeops_url(url))
+            html_response = response.text
             # Use BeautifulSoup to scrap the webpage
-            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+            soup = BeautifulSoup(html_response, 'html.parser')
             results = soup.find_all(
                 'div', {'data-component-type': 's-search-result'})
         except:
