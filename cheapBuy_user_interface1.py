@@ -14,16 +14,22 @@ import streamlit as st
 import sys
 sys.path.append('../')
 
-title = '<p style="font-family:Bradley Hand, cursive; color:#2F184B; font-size: 157px;">CheapBuy</p>'
-# st.title("CheapBuy")
+# title = '<p style="font-family:Apple Chancery, cursive; color:#2F184B; font-size: 157px;">CheapBuy</p>'
+title = '<p style="font-family:Apple Chancery, cursive; color:#2F184B; font-size: 157px;">CheapBuy</p>'
 st.markdown(title, unsafe_allow_html=True)
+
+# Add tagline just below the title and to the right
+tagline = '<p style="color: #2F184B; font-size: 24px; text-align: right;">Your One-Stop Shop for the Best Deals</p>'
+st.markdown(tagline, unsafe_allow_html=True)
+# st.title("CheapBuy")
+# st.markdown(title, unsafe_allow_html=True)
 # st.image("media/saveMoney2.gif")
 #url_sidebar = st.sidebar.text_input('Quick Action: Open a new page')
 
 # st.sidebar.image("media/cheapBuy_Banner.gif")
 #st.sidebar.image("media/saveMoney2.gif")
-st.sidebar.title("Customize Options Here:")
-sites = st.sidebar.selectbox("Select the website:", ("All Sites",
+# st.sidebar.title("Customize Options Here:")
+sites = st.selectbox("Select the website:", ("All Sites",
                              "amazon", "walmart", "ebay", "bjs", "costco", "bestbuy", "traderjoes", "kroger"))
 
 #price_range = st.sidebar.selectbox("Select the price range:", (
@@ -47,9 +53,17 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 # Display Image
 
-st.sidebar.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
+# st.sidebar.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
 #st.write("cheapBuy provides you ease to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites")
 url = st.text_input('Enter the product')
+# # Create a list of options for the dropdown
+# options = ["Option 1", "Option 2", "Option 3"]
+#
+# # Create the dropdown
+# selected_option = st.selectbox("Select an option:", options)
+#
+# # Display the selected option
+# st.write("You selected:", selected_option)
 
 
 # def price_filter(price_range):
@@ -127,7 +141,7 @@ if url:
 
         dataframe = pd.DataFrame(
             {'Description': description, 'Price': price, 'Link': url}, index=site)
-        st.balloons()
+        st.snow()
         st.markdown(
             "<h1 style='text-align: center; color: #F4EFFA;'>RESULT</h1>", unsafe_allow_html=True)
         st.dataframe(dataframe.style.apply(highlight_row, axis=None))
@@ -173,8 +187,8 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy" target="_blank">Developed with ❤ by cheapBuy</a></p>
-<p><a style='display: block; text-align: center;' href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
+<p><a style='display: block; text-align: center;' href="https://github.com/EZ7051/cheapBuy" target="_blank">Developed with ❤ by CheapBuy</a></p>
+<p><a style='display: block; text-align: center;' href="https://github.com/EZ7051/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
 <p>Contributors: 
 <a href="https://github.com/shyni0201" target="_blank">Shynitha</a>,
 <a href="https://github.com/EZ7051" target="_blank">Ejaz</a>,
