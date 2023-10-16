@@ -136,7 +136,7 @@ if url:
             minimumPrice = df['Price'].min()
             # set by condition
             mask = df['Price'] == minimumPrice
-            df.loc[mask, :] = 'background-color: #ffc8dd'
+            df.loc[mask, :] = 'background-color: #F6FFF8'
             df.loc[~mask, :] = 'background-color: #CCE3DE'
             return df
 
