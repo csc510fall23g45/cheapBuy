@@ -193,9 +193,9 @@ text-align: center;
 <p>Contributors: 
 
 <a href="https://github.com/EZ7051" target="_blank">Ejaz</a>,
-<a href="https://github.com/soubhagya31" target="_blank">Soubhagya</a>, 
 <a href="https://github.com/shyni0201" target="_blank">Shynitha</a>,
-<a href="https://github.com/sumalatha-99" target="_blank">Sumalatha</a>
+<a href="https://github.com/sumalatha-99" target="_blank">Sumalatha</a>,
+<a href="https://github.com/soubhagya31" target="_blank">Soubhagya</a>
 
 </div>
 """

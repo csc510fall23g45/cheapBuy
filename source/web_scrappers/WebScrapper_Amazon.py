@@ -14,13 +14,14 @@ from source.utils.url_shortener import shorten_url
 # Set working directory path
 sys.path.append('../')
 
-SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+SCRAPEOPS_API_KEY = "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
 
 
 def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
 
 class WebScrapper_Amazon:
     """
@@ -74,8 +75,8 @@ class WebScrapper_Amazon:
                 # Extract description from the atag
                 self.result['description'] = atag.text.strip()
                 # Get the URL for the page and shorten it
-                self.result['url'] = 'https://www.amazon.com'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                self.result['url'] = 'https://www.amazon.com' + atag.get('href')
+                self.result['url'] = shorten_url(self.result['url'])  # short url is not applied currently
                 # Find the span containing price of the item
                 price_parent = item.find('span', 'a-price')
                 # Find the price of the item
@@ -94,7 +95,7 @@ class WebScrapper_Amazon:
         """
         try:
             # Prepare URL for given description
-            template = 'https://www.amazon.com'+'/s?k={}&ref=nb_sb_ss_ts-doa-p_3_5'
+            template = 'https://www.amazon.com' + '/s?k={}&ref=nb_sb_ss_ts-doa-p_3_5'
             search_term = self.description.replace(' ', '+')
             template = template.format(search_term)
         except:
