@@ -5,19 +5,15 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 
-
 import sys
-
-from bs4 import BeautifulSoup
-from selenium import webdriver
-import requests
 from urllib.parse import urlencode
-from webdriver_manager.chrome import ChromeDriverManager
+import requests
+from bs4 import BeautifulSoup
 
 # Set working directory path
 sys.path.append('../')
 
-SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+SCRAPEOPS_API_KEY = "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
 
 
 def scrapeops_url(url):
@@ -64,11 +60,10 @@ class WebScrapper_Bestbuy:
         """ 
         Returns final result
         """
-        self.driver = self.get_driver()
         try:
             # Get results from scrapping function
             results = self.scrap_bestbuy()
-            # Condition to check whether results are avialable or not
+            # Condition to check whether results are available or not
             if len(results) == 0:
                 print('Bestbuy_results empty')
                 self.result = {}
@@ -94,7 +89,9 @@ class WebScrapper_Bestbuy:
                 self.result['description'] = item.find('h4', class_='sku-title').text
                 self.result['url'] = 'https://www.bestbuy.com' + item.find('a')['href']
                 self.result['price'] = item.find(
-                    "div", class_="priceView-hero-price priceView-customer-price").find('span', class_='sr-only').text.strip().split("$")[1]
+                    "div", class_="priceView-hero-price priceView-customer-price").find('span',
+                                                                                        class_='sr-only').text.strip().split(
+                    "$")[1]
                 self.result['site'] = 'bestbuy'
 
                 '''
@@ -110,17 +107,6 @@ class WebScrapper_Bestbuy:
             print('Bestbuy_results exception', e)
             self.result = {}
         return self.result
-
-    def get_driver(self):
-        """ 
-        Returns Chrome Driver
-        """
-        # Prepare driver for scrapping
-        options = webdriver.ChromeOptions()
-        options.headless = True
-        driver = webdriver.Chrome(
-            options=options, executable_path=ChromeDriverManager().install())
-        return driver
 
     def get_url_bestbuy(self):
         """ 
@@ -141,13 +127,10 @@ class WebScrapper_Bestbuy:
         """
         results = []
         try:
-
             # Call the function to get URL
             url = self.get_url_bestbuy()
             response = requests.get(scrapeops_url(url))
             html_response = response.text
-            # Assign the URL to driver
-            self.driver.get(url)
             # Use BeautifulSoup to scrap the webpage
             soup = BeautifulSoup(html_response, 'html.parser')
             results = soup.find_all('li', {'class': 'sku-item'})

@@ -151,7 +151,7 @@ if url:
 
         for s, u, p in zip(site, url, price):
             if p == min(price):
-                if st.button('👉'+s+'👈'):
+                if st.button('❄️  '+s+'  ❄️'):
                     webbrowser.open(u)
             else:
                 if st.button(s):
