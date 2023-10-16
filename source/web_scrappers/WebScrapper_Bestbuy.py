@@ -11,10 +11,20 @@ import sys
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from source.utils.url_shortener import shorten_url
+import requests
+from urllib.parse import urlencode
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Set working directory path
 sys.path.append('../')
+
+SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 
 class WebScrapper_Bestbuy:
@@ -82,15 +92,13 @@ class WebScrapper_Bestbuy:
                 """
 
                 item = results[0]
-                atag = item.find("a", {"class": "sku-header"})
-                self.result['description'] = atag.text
-                self.result['url'] = atag.get('href')
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                self.result['description'] = item.find('h4', class_='sku-title').text
+                self.result['url'] = 'https://www.bestbuy.com' + item.find('a')['href']
                 self.result['price'] = item.find(
-                    "div", class_="priceView-hero-price priceView-customer-price").text.strip()
+                    "div", class_="priceView-hero-price priceView-customer-price").find('span', class_='sr-only').text.strip().split("$")[1]
                 self.result['site'] = 'bestbuy'
 
-                """
+                '''
                 for item in results:
                     print("Bestbuy:\n\n")
                     title = item.find("h4", class_="sku-header").get_text()
@@ -98,7 +106,7 @@ class WebScrapper_Bestbuy:
                     print(title,"\n")
                     print(price,"\n")
                     print('↑Bestbuy↑')
-                """
+                '''
         except Exception as e:
             print('Bestbuy_results exception', e)
             self.result = {}
@@ -134,12 +142,17 @@ class WebScrapper_Bestbuy:
         """
         results = []
         try:
+
             # Call the function to get URL
             url = self.get_url_bestbuy()
+            # url = scrapeops_url(url)
+            response = requests.get(scrapeops_url(url))
+            html_response = response.text
+            # Assign the URL to driver
             self.driver.get(url)
             # Use BeautifulSoup to scrap the webpage
-            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-            results = soup.find_all('div', {'class': 'sku-item'})
+            soup = BeautifulSoup(html_response, 'html.parser')
+            results = soup.find_all('li', {'class': 'sku-item'})
         except:
             results = []
 

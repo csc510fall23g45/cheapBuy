@@ -116,7 +116,7 @@ class WebScrapper_Costco:
         response = requests.get(scrapeops_url(url))
         html_response = response.text
         soup = BeautifulSoup(html_response, "html.parser")
-        print(soup)
+        #print(soup)
         results = soup.find_all('div', class_='product col-xs-12')
-        print(results)
+        #print(results)
         return results
