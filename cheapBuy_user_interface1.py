@@ -16,11 +16,11 @@ sys.path.append('../')
 
 
 # title = '<p style="font-family:Apple Chancery, cursive; color:#2F184B; font-size: 157px;">CheapBuy</p>'
-title = '<p style="font-family:Apple Chancery, cursive; color:#2F184B; font-size: 157px;">CheapBuy</p>'
+title = '<p style="font-family:Apple Chancery, cursive; color:#6B9080; font-size: 157px;">CheapBuy</p>'
 st.markdown(title, unsafe_allow_html=True)
 
 # Add tagline just below the title and to the right
-tagline = '<p style="color: #2F184B; font-size: 24px; text-align: right;">Your One-Stop Shop for the Best Deals</p>'
+tagline = '<p style="color: #6B9080; font-size: 24px; text-align: right;">Your One-Stop Shop for the Best Deals</p>'
 st.markdown(tagline, unsafe_allow_html=True)
 # st.title("CheapBuy")
 # st.markdown(title, unsafe_allow_html=True)
@@ -136,18 +136,18 @@ if url:
             minimumPrice = df['Price'].min()
             # set by condition
             mask = df['Price'] == minimumPrice
-            df.loc[mask, :] = 'background-color: #C8B1E4'
-            df.loc[~mask, :] = 'background-color: ""'
+            df.loc[mask, :] = 'background-color: #ffc8dd'
+            df.loc[~mask, :] = 'background-color: #CCE3DE'
             return df
 
         dataframe = pd.DataFrame(
             {'Description': description, 'Price': price, 'Link': url}, index=site)
         st.snow()
         st.markdown(
-            "<h1 style='text-align: center; color: #F4EFFA;'>RESULT</h1>", unsafe_allow_html=True)
+            "<h1 style='text-align: center; color: #F6FFF8;'>RESULT</h1>", unsafe_allow_html=True)
         st.dataframe(dataframe.style.apply(highlight_row, axis=None))
         st.markdown(
-            "<h1 style='text-align: center; color: #F4EFFA;'>Visit the Website</h1>", unsafe_allow_html=True)
+            "<h1 style='text-align: center; color: #F6FFF8;'>Visit the Website</h1>", unsafe_allow_html=True)
 
         for s, u, p in zip(site, url, price):
             if p == min(price):
@@ -166,13 +166,13 @@ if url:
 # Add footer to UI
 footer = """<style>
 a:link , a:visited{
-color: #2F184B;
+color: #6B9080;
 background-color: transparent;
 text-decoration: underline;
 }
 
 a:hover,  a:active {
-color: #F4EFFA;
+color: #F6FFF8;
 background-color: transparent;
 text-decoration: underline;
 }
@@ -182,7 +182,7 @@ position: fixed;
 left: 0;
 bottom: 0%;
 width: 100%;
-background-color: #9B72CF;
+background-color: #CCE3DE;
 color: black;
 text-align: center;
 }
@@ -191,10 +191,12 @@ text-align: center;
 <p><a style='display: block; text-align: center;' href="https://github.com/EZ7051/cheapBuy" target="_blank">Developed with ❤ by CheapBuy</a></p>
 <p><a style='display: block; text-align: center;' href="https://github.com/EZ7051/cheapBuy/blob/main/LICENSE" target="_blank">MIT License Copyright (c) 2021 cheapBuy</a></p>
 <p>Contributors: 
-<a href="https://github.com/shyni0201" target="_blank">Shynitha</a>,
+
 <a href="https://github.com/EZ7051" target="_blank">Ejaz</a>,
 <a href="https://github.com/soubhagya31" target="_blank">Soubhagya</a>, 
+<a href="https://github.com/shyni0201" target="_blank">Shynitha</a>,
 <a href="https://github.com/sumalatha-99" target="_blank">Sumalatha</a>
+
 </div>
 """
 
