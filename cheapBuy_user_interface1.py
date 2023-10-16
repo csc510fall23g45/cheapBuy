@@ -14,7 +14,7 @@ import streamlit as st
 import sys
 sys.path.append('../')
 
-title = '<p style="font-family:Bradley Hand, cursive; color:#64b3f4; font-size: 157px;">cheapBuy</p>'
+title = '<p style="font-family:Bradley Hand, cursive; color:#2F184B; font-size: 157px;">CheapBuy</p>'
 # st.title("CheapBuy")
 st.markdown(title, unsafe_allow_html=True)
 # st.image("media/saveMoney2.gif")
@@ -121,7 +121,7 @@ if url:
             minimumPrice = df['Price'].min()
             # set by condition
             mask = df['Price'] == minimumPrice
-            df.loc[mask, :] = 'background-color: lightgreen'
+            df.loc[mask, :] = 'background-color: #C8B1E4'
             df.loc[~mask, :] = 'background-color: ""'
             return df
 
@@ -129,10 +129,10 @@ if url:
             {'Description': description, 'Price': price, 'Link': url}, index=site)
         st.balloons()
         st.markdown(
-            "<h1 style='text-align: center; color: #1DC5A9;'>RESULT</h1>", unsafe_allow_html=True)
+            "<h1 style='text-align: center; color: #F4EFFA;'>RESULT</h1>", unsafe_allow_html=True)
         st.dataframe(dataframe.style.apply(highlight_row, axis=None))
         st.markdown(
-            "<h1 style='text-align: center; color: #1DC5A9;'>Visit the Website</h1>", unsafe_allow_html=True)
+            "<h1 style='text-align: center; color: #F4EFFA;'>Visit the Website</h1>", unsafe_allow_html=True)
 
         for s, u, p in zip(site, url, price):
             if p == min(price):
@@ -151,13 +151,13 @@ if url:
 # Add footer to UI
 footer = """<style>
 a:link , a:visited{
-color: blue;
+color: #2F184B;
 background-color: transparent;
 text-decoration: underline;
 }
 
 a:hover,  a:active {
-color: red;
+color: #F4EFFA;
 background-color: transparent;
 text-decoration: underline;
 }
@@ -167,7 +167,7 @@ position: fixed;
 left: 0;
 bottom: 0%;
 width: 100%;
-background-color: #47276b;
+background-color: #9B72CF;
 color: black;
 text-align: center;
 }
