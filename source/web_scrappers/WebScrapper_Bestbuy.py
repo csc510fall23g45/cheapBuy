@@ -10,7 +10,6 @@ import sys
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from source.utils.url_shortener import shorten_url
 import requests
 from urllib.parse import urlencode
 from webdriver_manager.chrome import ChromeDriverManager
@@ -145,7 +144,6 @@ class WebScrapper_Bestbuy:
 
             # Call the function to get URL
             url = self.get_url_bestbuy()
-            # url = scrapeops_url(url)
             response = requests.get(scrapeops_url(url))
             html_response = response.text
             # Assign the URL to driver

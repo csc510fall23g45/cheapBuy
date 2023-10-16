@@ -22,7 +22,7 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Find all the product containers (div elements)
-    product_containers = soup.find_all('div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
+    product_containers = soup.find_all('article', class_='SearchResultCard_searchResultCard__3V-_h')
 
     # Iterate through each product container and extract the information
     for container in product_containers:
@@ -30,13 +30,13 @@ if response.status_code == 200:
         # product_name = container.find('span', class_='normal dark-gray mb0 mt1 lh-title f6 f5-l lh-copy').text
 
         # Extract product price
-        product_price = container.find('div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span', class_='w_iUH7').text.strip()
+        product_price = container.find('span', class_='ProductPrice_productPrice__price__3-50j').text.strip()
 
         # Extract product description
-        product_description = container.find('span', class_='w_iUH7').text
+        product_description = container.find('a', class_='Link_link__1AZfr SearchResultCard_searchResultCard__titleLink__2nz6x').text
 
         # Extract product URL
-        product_url = 'https://www.traderjoes.com' + container.find('a')['href']
+        product_url = 'https://www.traderjoes.com' + container.find('a',class_='Link_link__1AZfr SearchResultCard_searchResultCard__titleLink__2nz6x' )['href']
 
         # Print or store the extracted information as needed
         # print("Product Name:", product_name)
