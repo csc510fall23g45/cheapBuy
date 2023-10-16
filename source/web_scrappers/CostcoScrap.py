@@ -22,8 +22,8 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Find all the product containers (div elements)
-    product_containers = soup.find_all('div', class_='product')
-
+    # product_containers = soup.find_all('div', class_='product')
+    product_containers=soup.find_all('div', class_='product col-xs-12')
     # Iterate through each product container and extract the information
     for container in product_containers:
         # # Extract product name

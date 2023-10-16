@@ -66,7 +66,7 @@ class WebScrapper_Walmart:
         """ 
         Returns final result
         """
-        print("New Codeee")
+        # print("New Codeee")
         self.driver = self.get_driver()
         self.result = {}
         try:
@@ -142,10 +142,10 @@ class WebScrapper_Walmart:
         self.driver.get(url)
         # Use BeautifulSoup to scrap the webpage
         soup = BeautifulSoup(html_response, 'html.parser')
-        print("*********")
+        # print("*********")
         # print(soup)
         results = soup.find_all('div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
         # results = soup.find_all(
         #     'div', {'class': 'h-100 pb1-xl pr4-xl pv1 ph1'})
-        print(results)
+        # print(results)
         return results

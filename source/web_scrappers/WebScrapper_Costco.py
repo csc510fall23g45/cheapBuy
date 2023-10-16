@@ -11,6 +11,15 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from source.utils.url_shortener import shorten_url
 from webdriver_manager.chrome import ChromeDriverManager
+from urllib.parse import urlencode
+import requests
+SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 sys.path.append('../')
 
@@ -65,12 +74,15 @@ class WebScrapper_Costco:
                 self.result = {}
             else:
                 item = results[0]
-                atag = item.find("span", {"class": "description"}).find('a')
-                self.result['description'] = atag.text
-                self.result['url'] = atag.get('href')
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
-                self.result['price'] = item.find(
-                    "div", {"class": "price"}).text.strip()
+                product_description = item.find('span', class_='description').text.strip()
+                product_url = item.find('a')['href']
+                product_price = item.find('div', class_='price').text.strip().split('$')[1]
+                self.result['description'] = product_description
+                self.result['url'] = product_url
+                # self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                # self.result['price'] = item.find(
+                #     "div", {"class": "price"}).text.strip()
+                self.result['price'] = product_price
                 self.result['site'] = 'costco'
         except Exception as e:
             print('Costco_results exception', e)
@@ -100,7 +112,11 @@ class WebScrapper_Costco:
         Returns Scraped result
         """
         url = self.get_url_costco()
-        self.driver.get(url)
-        soup = BeautifulSoup(self.driver.page_source, "html.parser")
-        results = soup.find_all('div', {'class': 'product-list grid'})
+        # self.driver.get(scrapeops_url(url))
+        response = requests.get(scrapeops_url(url))
+        html_response = response.text
+        soup = BeautifulSoup(html_response, "html.parser")
+        print(soup)
+        results = soup.find_all('div', class_='product col-xs-12')
+        print(results)
         return results
