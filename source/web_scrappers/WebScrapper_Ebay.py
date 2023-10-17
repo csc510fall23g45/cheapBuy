@@ -6,14 +6,20 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 """
 
 import sys
-
+from urllib.parse import urlencode
+import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from source.utils.url_shortener import shorten_url
-from webdriver_manager.chrome import ChromeDriverManager
 
 # Set working directory path
 sys.path.append('../')
+
+SCRAPEOPS_API_KEY = "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 
 class WebScrapper_Ebay:
@@ -54,7 +60,6 @@ class WebScrapper_Ebay:
         """ 
         Returns final result
         """
-        self.driver = self.get_driver()
         self.result = {}
         try:
             # Get results from scrapping function
@@ -64,35 +69,26 @@ class WebScrapper_Ebay:
                 self.result = {}
                 print('Ebay_results empty')
             else:
-                item = results[0]
-                # Find teh atag containing our required item
-                atag = item.find("a", {"class": "s-item__link"})
-                # Extract description from the atag
-                self.result['description'] = item.find(
-                    "h3", {"class": "s-item__title"}).get_text().strip()
+                item = results[1]
+                # Extract product price
+                product_price = item.find('div', class_='s-item__detail s-item__detail--primary').find('span',
+                                                                                                       class_='s-item__price').text.strip().split(
+                    '$')[1]
+                # Extract product description
+                product_description = item.find('div', class_="s-item__title").text.strip()
+                # Extract product URL
+                product_url = item.find('a')['href']
+                self.result['description'] = product_description
                 # Get the URL for the page and shorten item
-                self.result['url'] = atag.get('href')
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                self.result['url'] = product_url
                 # Find the price of the item
-                self.result['price'] = item.find(
-                    "span", {"class": "s-item__price"}).get_text().strip()
+                self.result['price'] = product_price
                 # Assign the site as ebay to result
                 self.result['site'] = 'ebay'
         except Exception as e:
             print('Ebay_results exception', e)
             self.result = {}
         return self.result
-
-    def get_driver(self):
-        """ 
-        Returns Chrome Driver
-        """
-        # Prepare driver for scrapping
-        options = webdriver.ChromeOptions()
-        options.headless = True
-        driver = webdriver.Chrome(
-            options=options, executable_path=ChromeDriverManager().install())
-        return driver
 
     def get_url_ebay(self):
         """ 
@@ -101,7 +97,7 @@ class WebScrapper_Ebay:
         try:
             # Prepare URL for given description
             template = "https://www.ebay.com" + \
-                "/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}"
+                       "/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}"
             template = template.format(self.description)
         except:
             template = ''
@@ -115,11 +111,12 @@ class WebScrapper_Ebay:
         try:
             # Call the function to get URL
             url = self.get_url_ebay()
-            self.driver.get(url)
+            response = requests.get(scrapeops_url(url))
+            html_response = response.text
             # Use BeautifulSoup to scrap the webpage
-            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+            soup = BeautifulSoup(html_response, 'html.parser')
             results = soup.find_all(
-                "li", {"class": "s-item s-item__pl-on-bottom s-item--watch-at-corner"})
+                "li", {"class": "s-item s-item__pl-on-bottom"})
         except:
             results = []
         return results
