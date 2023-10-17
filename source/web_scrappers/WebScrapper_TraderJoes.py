@@ -9,10 +9,20 @@ import sys
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from source.utils.url_shortener import shorten_url
+import requests
+from urllib.parse import urlencode
 from webdriver_manager.chrome import ChromeDriverManager
 
 # Set working directory path
 sys.path.append('../')
+
+SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 class WebScrapper_TraderJoes:
 
@@ -42,16 +52,16 @@ class WebScrapper_TraderJoes:
             else:
                 item = results[0]
                 # Find teh atag containing our required item
-                atag = item.h2.a
+                atag = item.h3.a
                 # Extract description from the atag
                 self.result['description'] = atag.text.strip()
                 # Get the URL for the page and shorten it
                 self.result['url'] = 'https://www.traderjoes.com/home'+atag.get('href')
                 self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
                 # Find the span containging price of the item
-                price_parent = item.find('span', 'a-price')
+                #price_parent = item.find('span', 'a-price')
                 # Find the price of the item
-                self.result['price'] = price_parent.find(
+                self.result['price'] = item.find(
                     'span', 'ProductPrice_productPrice__price__3-50j').text
                 # Assign the site as traderjoes to result
                 self.result['site'] = 'traderjoes'
@@ -93,11 +103,12 @@ class WebScrapper_TraderJoes:
         try:
             # Call the function to get URL
             url = self.get_url_traderjoes()
+            response = requests.get(scrapeops_url(url))
+            html_response = response.text
             self.driver.get(url)
             # Use BeautifulSoup to scrap the webpage
-            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-            results = soup.find_all(
-                'div', {'data-component-type': 's-search-result'})
+            soup = BeautifulSoup(html_response, 'html.parser')
+            results = soup.find_all('article', class_='SearchResultCard_searchResultCard__3V-_h')
         except:
             results = []
         return results
