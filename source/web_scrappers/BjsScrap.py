@@ -11,7 +11,7 @@ def scrapeops_url(url):
     return proxy_url
 
 # Replace this URL with the actual URL of the web page you want to scrape
-url = 'https://www.bjs.com/search/table'
+url = 'https://www.bjs.com/search/fryer/q?template=clp'
 
 # Send an HTTP GET request to the URL
 response = requests.get(scrapeops_url(url))
@@ -30,8 +30,11 @@ if response.status_code == 200:
         # product_name = container.find('span', class_='normal dark-gray mb0 mt1 lh-title f6 f5-l lh-copy').text
 
         # Extract product price
-        product_price = container.find('div', class_='price-new-plp').text.strip().split('$')[1]
-
+        product_price = container.find('div', class_='price-new-plp').text
+        if product_price == ' Member Only Price ':
+            product_price=product_price
+        else:
+            product_price=product_price.strip().split('$')[1]
         # Extract product description
         product_description = container.find('div', class_='title-new-plp').text
 

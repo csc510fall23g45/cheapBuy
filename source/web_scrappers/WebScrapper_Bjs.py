@@ -12,6 +12,7 @@ from selenium import webdriver
 from source.utils.url_shortener import shorten_url
 from webdriver_manager.chrome import ChromeDriverManager
 from urllib.parse import urlencode
+import requests
 
 SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
 
@@ -79,18 +80,28 @@ class WebScrapper_Bjs:
             else:
                 item = results[0]
                 # Find teh atag containing our required item
-                atag = item.find(
-                    "a", {"class": "product-link mt-xl-3 mt-xs-3 mt-md-0 mt-3"})
-                # Extract description from the atag
-                self.result['description'] = (
-                    atag.find("h2", {"class": "product-title no-select d-none"})).text
-                # Get the URL for the page and shorten item
-                self.result['url'] = "www.bjs.com" + str(atag.get('href'))
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
-                # Find the price of the item
-                self.result['price'] = item.find(
-                    "div", {"class": "display-price"}).find('span', {'class': 'price'}).text
-                # Assign the site as bjs to result
+                # atag = item.find(
+                #     "a", {"class": "product-link mt-xl-3 mt-xs-3 mt-md-0 mt-3"})
+                # # Extract description from the atag
+                # self.result['description'] = (
+                #     atag.find("h2", {"class": "product-title no-select d-none"})).text
+                # # Get the URL for the page and shorten item
+                # self.result['url'] = "www.bjs.com" + str(atag.get('href'))
+                # self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                # # Find the price of the item
+                # self.result['price'] = item.find(
+                #     "div", {"class": "display-price"}).find('span', {'class': 'price'}).text
+                # # Assign the site as bjs to result
+                product_description = item.find('div', class_='title-new-plp').text
+                product_url = 'https://www.bjs.com'+item.find('a')['href']
+                product_price = item.find('div', class_='price-new-plp').text
+                # if product_price == ' Member Only Price ':
+                #     product_price=product_price
+                # else:
+                #     product_price=product_price.strip().split('$')[1]
+                self.result['description'] = product_description
+                self.result['url'] = product_url
+                self.result['price'] = product_price
                 self.result['site'] = 'bjs'
         except Exception as e:
             print('BJs_results exception', e)
@@ -113,7 +124,7 @@ class WebScrapper_Bjs:
         Returns bjs URL of search box
         """
         # Prepare URL for given description
-        template = "https://www.bjs.com"+"/search/{}"
+        template = "https://www.bjs.com"+"/search/{}/q?template=clp"
         search_term = self.description.replace(' ', '+')
         return template.format(search_term)
 
@@ -125,6 +136,12 @@ class WebScrapper_Bjs:
         url = self.get_url_bjs()
         self.driver.get(url)
         # Use BeautifulSoup to scrap the webpage
-        soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-        results = soup.find_all('div', {'class': 'products-list'})
+        # soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+        # results = soup.find_all('div', {'class': 'products-list'})
+        response = requests.get(scrapeops_url(url))
+        html_response = response.text
+        soup = BeautifulSoup(html_response, "html.parser")
+        # with open('costco.html', 'w') as file:
+        #     file.write(soup.text)
+        results = soup.find_all('div', class_='product')
         return results
