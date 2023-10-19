@@ -174,11 +174,10 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 ## 👥 Team Members <a name="TeamMember"></a>
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/freakleesin"><img src="https://avatars.githubusercontent.com/u/44102063?v=4" width="75px;" alt=""/><br /><sub><b>Rundi Liu</b></sub></a></td>
-    <td align="center"><a href="https://github.com/Mahaoqu"><img src="https://avatars.githubusercontent.com/u/24971537?v=4" width="75px;" alt=""/><br /><sub><b>Haoqv Ma</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/zhijin44"><img src="https://avatars.githubusercontent.com/u/89488910?v=4" width="75px;" alt=""/><br /><sub><b>Zhijin Yang</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/SamuelVivivi"><img src="https://avatars.githubusercontent.com/u/10951700?v=4" width="75px;" alt=""/><br /><sub><b>Guanyu Hou</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/joshlin5"><img src="https://avatars.githubusercontent.com/u/47061522?v=4" width="75px;" alt=""/><br /><sub><b>Joshua Lin</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/EZ7051"><img src="https://avatars.githubusercontent.com/u/44102063?v=4" width="75px;" alt=""/><br /><sub><b>Ejaz</b></sub></a></td>
+    <td align="center"><a href="https://github.com/shyni0201"><img src="https://avatars.githubusercontent.com/u/72161297?v=4" width="75px;" alt=""/><br /><sub><b>Shynitha</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/sumalatha-99"><img src="https://avatars.githubusercontent.com/u/26276595?v=4" width="75px;" alt=""/><br /><sub><b>Sumalatha</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/soubhagya31"><img src="https://avatars.githubusercontent.com/u/143368827?v=4" width="75px;" alt=""/><br /><sub><b>Soubhagya</b></sub></a><br /></td>
   </tr>
 </table>
 
