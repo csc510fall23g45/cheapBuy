@@ -1,4 +1,4 @@
-# cheapBuy Phase 4 Improvements
+# CheapBuy Phase 4 Improvements
 <br><br>
 Following are the improvements made in Phase 4 of the project:
 
