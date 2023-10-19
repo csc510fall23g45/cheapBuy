@@ -12,10 +12,10 @@ import sys
 
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
 
-sys.path.append('../')
+sys.path.append('../../')
 
 
-def test_bestbuy():
-    description = 'Coca cola tins'
+def test_ebay():
+    description = 'Brita'
     fd = WebScrapper(description)
-    assert fd.get_description('bestbuy') == "Coca cola tins"
+    assert fd.get_description('ebay') == "Brita"

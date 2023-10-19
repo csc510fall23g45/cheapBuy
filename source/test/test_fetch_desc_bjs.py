@@ -7,7 +7,7 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 
 from source.web_scrappers.FetchDescription import FetchDescription
 import sys
-sys.path.append('../')
+sys.path.append('../../')
 
 
 def test_fetch_description_bjs():

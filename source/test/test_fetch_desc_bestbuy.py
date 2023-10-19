@@ -6,7 +6,7 @@ works properly
 
 from source.web_scrappers.FetchDescription import FetchDescription
 import sys
-sys.path.append('./')
+sys.path.append('/')
 
 
 def test_fetch_description_bestbuy():

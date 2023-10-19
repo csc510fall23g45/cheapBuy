@@ -7,12 +7,15 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 
 from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
 import sys
-sys.path.append('../')
+
+from source.web_scrappers.WebScrapper_Ebay import WebScrapper_Ebay
+
+sys.path.append('../../')
 
 
-def test_costco_scrapper():
+def test_ebay_scrapper():
 
     description = 'Coca cola tins'
-    t = WebScrapper_Costco(description)
+    t = WebScrapper_Ebay(description)
 
     assert t.result is not None
