@@ -45,8 +45,8 @@ Example : If user's current tab is having Television of a particular brand and t
 **Phase 1:** In phase 1, the UI theme has been modified to make it more readable  
 **Phase 2:** In phase 2, the price range is removed as we are looking for cheapest product across all websites or in a website
 ## **8. Fix issues and improve web scrapping speed in each website :**
-<br> <br>
-**Phase 1:** In phase 1, the proxy issues occurring during fetching results were identified and fixed<br> <br>
+<br><br>
+**Phase 1:** In phase 1, the proxy issues occurring during fetching results were identified and fixed<br>
 **Phase 2:** In phase 2, the web scrapping latency has been decreased
 
 
