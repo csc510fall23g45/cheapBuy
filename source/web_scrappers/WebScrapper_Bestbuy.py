@@ -68,22 +68,6 @@ class WebScrapper_Bestbuy:
                 print('Bestbuy_results empty')
                 self.result = {}
             else:
-                """
-                item=results[0]
-                #Find teh atag containing our required item
-                atag = item.h2.a
-                #Extract description from the atag
-                self.result['description'] = atag.text.strip()
-                #Get the URL for the page and shorten it
-                self.result['url'] = 'https://www.bestbuy.com'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])
-                #Find the span containging price of the item
-                price_parent = item.find('span', 'a-price')
-                #Find the price of the item
-                self.result['price'] = price_parent.find('span', 'a-offscreen').text
-                #Assign the site as bestbuy to result
-                self.result['site'] = 'bestbuy'
-                """
 
                 item = results[0]
                 self.result['description'] = item.find('h4', class_='sku-title').text
