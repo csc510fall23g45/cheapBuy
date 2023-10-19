@@ -24,7 +24,7 @@ We have removed loops, used a dictionary, and reduced the time complexity. Furth
 
 ## **4. Decreased the latency by removing driver code:**
 <br><br>
-We enhanced the search feature by replacing search with link by search with product description <br>
+We removed the driver code in order to decrease the latency of the website. <br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg">
 <br>
 
