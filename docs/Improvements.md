@@ -53,5 +53,10 @@ Example : If user's current tab is having Television of a particular brand and t
 **Phase 2:** In phase 2, the web scrapping latency has been decreased <br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home1.jpeg">
 <br>
+## **9. Enhanced the search feature:**
+<br><br>
+**Phase 1:** In phase 1, the search feature by replacing search with link by search with product description <br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg">
+<br>
 
 
