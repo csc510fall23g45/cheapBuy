@@ -5,14 +5,14 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 
-from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
+from source.web_scrappers.WebScrapper_Bjs import WebScrapper_Bjs
 import sys
-sys.path.append('../')
+sys.path.append('../../../')
 
 
-def test_costco_scrapper():
+def test_bjs_scrapper():
 
     description = 'Coca cola tins'
-    t = WebScrapper_Costco(description)
+    t = WebScrapper_Bjs(description)
 
     assert t.result is not None

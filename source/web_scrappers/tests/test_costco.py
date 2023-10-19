@@ -4,37 +4,18 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
-
-from bs4 import BeautifulSoup
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium import webdriver
-import os
+from source.web_scrappers.WebScrapper import WebScrapper
+from source.web_scrappers.WebScrapper_Amazon import WebScrapper_Amazon
+from source.web_scrappers.WebScrapper_Bestbuy import WebScrapper_Bestbuy
+from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
 import sys
-sys.path.append(os.path.abspath('../../../'))
+
+from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
+
+sys.path.append('../../../')
 
 
-options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(
-    options=options, executable_path=ChromeDriverManager().install())
-description = 'Brita Filter'
-
-template = "https://www.costco.com"+"/CatalogSearch?dept=All&keyword={}"
-search_term = description.replace(' ', '+')
-url = template.format(search_term)
-
-driver.get(url)
-soup = BeautifulSoup(driver.page_source, "html.parser")
-# mb1 ph1 pa0-x1 bb b--near-white w-25
-results = soup.find_all('div', {'class': 'product-list grid'})
-print('results:{}'.format(results))
-
-result = {}
-#results = scrap_walmart()
-if len(results) == 0:
-    print(result)
-item = results[0]
-atag = item.find("span", {"class": "description"}).find('a')
-result['description'] = atag.text
-result['url'] = atag.get('href')
-result['price'] = item.find("div", {"class": "price"}).text.strip()
-result['site'] = 'costco'
+def test_costco():
+    description = 'Coca cola tins'
+    fd = WebScrapper(description)
+    assert fd.get_description('costco') == "Coca cola tins"

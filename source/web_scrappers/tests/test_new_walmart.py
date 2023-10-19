@@ -10,7 +10,7 @@ import sys
 
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
 
-sys.path.append('../')
+sys.path.append('../../../')
 
 
 def test_walmart_scrapper():
