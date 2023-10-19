@@ -14,7 +14,7 @@ import sys
 
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
 
-sys.path.append('../../')
+sys.path.append('/home/runner/work/cheapBuy/cheapBuy/source')
 
 
 def test_amazon():
