@@ -51,7 +51,7 @@ Example : If user's current tab is having Television of a particular brand and t
 <br><br>
 **Phase 1:** In phase 1, the proxy issues occurring during fetching results were identified and fixed<br>
 **Phase 2:** In phase 2, the web scrapping latency has been decreased <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home1.jpeg">
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home.jpeg">
 <br>
 ## **9. Enhanced the search feature:**
 <br><br>
