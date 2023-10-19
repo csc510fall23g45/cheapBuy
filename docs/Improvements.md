@@ -24,7 +24,7 @@ We have removed loops, used a dictionary, and reduced the time complexity. Furth
 
 ## **4. Decreased the latency by removing driver code:**
 <br><br>
-We removed the driver code in order to decrease the latency of the website. <br>
+We removed the driver code in order to decrease the latency of the website, enhancing maintainability, and enabling code reuse, while also allowing for parallel execution and flexibility in choosing scraping methods, resulting in more efficient and adaptable web scraping solutions.<br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg">
 <br>
 
