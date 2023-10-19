@@ -26,9 +26,6 @@ if response.status_code == 200:
     product_containers=soup.find_all('div', class_='product')
     # Iterate through each product container and extract the information
     for container in product_containers:
-        # # Extract product name
-        # product_name = container.find('span', class_='normal dark-gray mb0 mt1 lh-title f6 f5-l lh-copy').text
-
         # Extract product price
         product_price = container.find('div', class_='price-new-plp').text
         if product_price == ' Member Only Price ':
@@ -41,12 +38,12 @@ if response.status_code == 200:
         # Extract product URL
         product_url = 'https://www.bjs.com'+container.find('a')['href']
 
-        # Print or store the extracted information as needed
-        # print("Product Name:", product_name)
+        '''
         print("Product Price:", product_price)
         print("Product Description:", product_description)
         print("Product URL:", product_url)
         print("\n")
+        '''
 
 else:
     print("Failed to retrieve the web page. Status code:", response.status_code)

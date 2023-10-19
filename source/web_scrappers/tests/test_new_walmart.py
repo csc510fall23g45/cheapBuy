@@ -5,7 +5,7 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 
-from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
+
 import sys
 
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
