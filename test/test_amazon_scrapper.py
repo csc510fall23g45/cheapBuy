@@ -8,7 +8,7 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 from source.web_scrappers.WebScrapper_Amazon import WebScrapper_Amazon
 import sys
 import os
-sys.path.append(os.path.abspath('../../../../'))
+sys.path.append(os.path.abspath('../../../'))
 
 
 def test_amazon_scrapper():

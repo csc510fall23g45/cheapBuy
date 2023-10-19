@@ -7,7 +7,7 @@ Created on Wed Nov  3 23:52:22 2021
 
 from source.web_scrappers.FetchDescription import FetchDescription
 import sys
-sys.path.append('../../')
+sys.path.append('../')
 
 
 def test_fetch_description_walmart():
