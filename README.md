@@ -24,18 +24,18 @@ Hello
 <a href="https://github.com/freakleesin/cheapBuy/stargazers" target="blank">
 <img src="https://img.shields.io/github/stars/freakleesin/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
 </a>
-<a href="https://github.com/freakleesin/cheapBuy/issues" target="blank">
+<a href="https://github.com/EZ7051/cheapBuy/issues" target="blank">
 <img src="https://img.shields.io/github/issues/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
 </a>
-<a href="https://github.com/freakleesin/cheapBuy/issues" target="blank">
+<a href="https://github.com/EZ7051/cheapBuy/issues?q=is%3Aissue+is%3Aclosed" target="blank">
 <img src="https://img.shields.io/github/issues-closed/freakleesin/cheapBuy" alt="cheapBuy issues closed"/>
 </a>
-<a href="https://github.com/freakleesin/cheapBuy/pulls" target="blank">
+<a href="https://github.com/EZ7051/cheapBuy/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/anshulp2912/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
 </a>
-<a href="https://github.com/freakleesin/cheapBuy/milestones" alt="milestones">
+<a href="https://github.com/EZ7051/cheapBuy/milestones" alt="milestones">
 <img src="https://img.shields.io/github/milestones/all/freakleesin/cheapBuy" /></a> 
-<a href="https://github.com/freakleesin/cheapBuy/graphs/commit-activity" alt="commit activity">
+<a href="https://github.com/EZ7051/cheapBuy/graphs/commit-activity" alt="commit activity">
 <img src="https://img.shields.io/github/commit-activity/w/freakleesin/cheapBuy" /></a> 
 <a href="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" /></a>
