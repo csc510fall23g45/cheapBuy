@@ -11,7 +11,7 @@ def scrapeops_url(url):
     return proxy_url
 
 # Replace this URL with the actual URL of the web page you want to scrape
-url = 'https://www.walmart.com/search?q=maggi'
+url = 'https://www.walmart.com/search?q=maggi&sort=price_low'
 
 # Send an HTTP GET request to the URL
 response = requests.get(scrapeops_url(url))

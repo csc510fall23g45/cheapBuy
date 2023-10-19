@@ -114,7 +114,8 @@ class WebScrapper_Bestbuy:
         """
         try:
             # Prepare URL for given description
-            template = 'https://www.bestbuy.com/site/searchpage.jsp?st={}&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
+            #template = 'https://www.bestbuy.com/site/searchpage.jsp?st={}&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
+            template = 'https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&sp=%2Bcurrentprice%20skuidsaas&st={}'
             search_term = self.description.replace(' ', '+')
             template = template.format(search_term)
         except:

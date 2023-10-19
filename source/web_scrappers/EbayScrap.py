@@ -11,8 +11,8 @@ def scrapeops_url(url):
     return proxy_url
 
 # Replace this URL with the actual URL of the web page you want to scrape
-url = 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=chair&_sacat=38204&LH_TitleDesc=0&_odkw=tablemaggi&_osacat=38204'
-
+#url = 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2334524.m570.l1313&_nkw=chair&_sacat=38204&LH_TitleDesc=0&_odkw=tablemaggi&_osacat=38204'
+url = 'https://www.ebay.com/sch/i.html?_from=R40&_nkw=chair&_sacat=0&_sop=15'
 # Send an HTTP GET request to the URL
 response = requests.get(scrapeops_url(url))
 

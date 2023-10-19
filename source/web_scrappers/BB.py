@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 
-SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+SCRAPEOPS_API_KEY =   "453fce39-0418-4083-8bd4-6f9e6376b8c7"
 
 
 def scrapeops_url(url):
@@ -11,7 +11,7 @@ def scrapeops_url(url):
     return proxy_url
 
 # Replace this URL with the actual URL of the web page you want to scrape
-url = 'https://www.bestbuy.com/site/searchpage.jsp?st=maggi'
+url = 'https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&sp=%2Bcurrentprice%20skuidsaas&st=chair'
 
 # Send an HTTP GET request to the URL
 response = requests.get(scrapeops_url(url))

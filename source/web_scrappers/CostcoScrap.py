@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode
 
-SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+SCRAPEOPS_API_KEY =   "453fce39-0418-4083-8bd4-6f9e6376b8c7"
 
 
 def scrapeops_url(url):
@@ -12,7 +12,7 @@ def scrapeops_url(url):
 
 # Replace this URL with the actual URL of the web page you want to scrape
 url = 'https://www.costco.com/CatalogSearch?dept=All&keyword=table'
-
+#url = 'https://www.costco.com/CatalogSearch?keyword=chair&dept=All&sortBy=item_location_pricing_salePrice+asc'
 # Send an HTTP GET request to the URL
 response = requests.get(scrapeops_url(url))
 
@@ -20,7 +20,7 @@ response = requests.get(scrapeops_url(url))
 if response.status_code == 200:
     # Parse the HTML content of the page using Beautiful Soup
     soup = BeautifulSoup(response.text, 'html.parser')
-
+    print("200 ok")
     # Find all the product containers (div elements)
     # product_containers = soup.find_all('div', class_='product')
     product_containers=soup.find_all('div', class_='product col-xs-12')

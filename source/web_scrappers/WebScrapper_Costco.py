@@ -10,7 +10,7 @@ from urllib.parse import urlencode
 import requests
 from bs4 import BeautifulSoup
 
-SCRAPEOPS_API_KEY = "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+SCRAPEOPS_API_KEY = ""
 
 
 def scrapeops_url(url):
@@ -84,11 +84,11 @@ class WebScrapper_Costco:
         """ 
         Returns costco URL of search box
         """
-        template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}"
+        template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" #+"&dept=All&sortBy=item_location_pricing_salePrice+asc"
         search_term = self.description.replace(' ', '+')
         return template.format(search_term)
 
-    def scrap_costco(self):
+    def scrap_costco(self) :
         """ 
         Returns Scraped result
         """

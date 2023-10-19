@@ -96,8 +96,9 @@ class WebScrapper_Ebay:
         """
         try:
             # Prepare URL for given description
-            template = "https://www.ebay.com" + \
-                       "/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}"
+            #template = "https://www.ebay.com" + \
+            #           "/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}"
+            template = "https://www.ebay.com/sch/i.html?_from=R40&_nkw={}&_sacat=0&_sop=15"
             template = template.format(self.description)
         except:
             template = ''
