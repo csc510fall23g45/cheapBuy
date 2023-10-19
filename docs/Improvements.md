@@ -1,62 +1,34 @@
-# cheapBuy Phase 2 Improvements
+# cheapBuy Phase 4 Improvements
 <br><br>
-Following are the improvements made in Phase 2 of the project:
+Following are the improvements made in Phase 4 of the project:
+## **1. Improve user interface:**
 <br><br>
-## **1. Add web scraping for other websites:** <br>
-**Phase 1:** In the first version of the project, the comparison for any product was only provided from two websites (Amazon and ebay).
-<br>
-<img src = https://github.com/anshulp2912/cheapBuy/blob/main/media/Phase1-extoutput.png>
-<br>
-**Phase 2:** In Phase 2, comparison for any product is provided from five different websites (Amazon, ebay, Walmart, bjs, Costco).
-<br><br><br>
-## **2. Highlight the cheapest option:**
-<br><br>
-**Phase 1:** In the previous version, the extension showed only the available options but did not highlight the cheapest option.
-<br><br>
-**Phase 2:** In the updated version, the cheapest option among the available options is highlighted in the output given in the website. <br>
-<img src = "https://github.com/anshulp2912/cheapBuy/blob/main/media/highlight.jpeg"> <br>
-<br><br><br>
-## **3. Multithreading:**
-<br><br>
-**Phase 1:** In phase 1, multithreading was not implemented. Speed is less and works correctly only for a few products. All the products were not working.
-<br><br>
-**Phase 2:** In phase 2, Multithreading is implemented to improve the speed of the output as well as to show all the 5 output product website pop-ups at once. This works efficiently.
-<br><br><br>
-## **4. Created a website (UI Interface):**
-<br><br>
-**Phase 1:** No website Implementation in the previous version.<br><br>
-**Phase 2:** A UI interface is created for the cheapBuy project. Used Streamlit to create the website. Given any url of the product as the input, the website gives the product list from 5 different websites (Amazon, ebay, Costco, bjs, Walmart) to compare the prices of the same product on different websites.<br><br>The below screenshot shows the website created for cheapBuy.
-<img src = "https://github.com/anshulp2912/cheapBuy/blob/main/media/UIinterface.png">
-<br><br><br>
-## **5. Chrome Extension Enhancements:** <br><br>
-**Phase 1:** Chrome Extension worked only on three specific products but did not work for other products from the same website.<br><br>
-**Phase 2:** Chrome Extension works for any input product given from any of the five websites and the comparison will be given from the five websites we targeted (Amazon, ebay, Costco, bjs, Walmart).
-<br><br>
-<img src = "https://github.com/anshulp2912/cheapBuy/blob/main/media/CheapBuy_Extension.PNG">
-<img src = "https://github.com/anshulp2912/cheapBuy/blob/main/media/CheapBuy_Extension_output.PNG">
-<br><br><br>
-## **6. Improve accuracy of the product:**
-<br><br>
-**Phase 1:** In phase 1, for a given input url of a product, available options on two websites are given. But the accuracy of the output is less. It does not search and give the same product from the other websites.<br><br>
-**Phase 2:** In phase 2, for any product given, the output is accurate. It gives the same product from 5 different websites.<br><br>
-Example : If user's current tab is having Television of a particular brand and there is a better option available at a cheaper or comparable rate than provide alternative product accordingly.
-## **7. Improve user interface:**
-<br><br>
-**Phase 1:** In phase 1, the UI theme has been modified to make it more readable  
-**Phase 2:** In phase 2, the price range is removed as we are looking for cheapest product across all websites or in a website<br>
+The UI theme has been modified to make it more readable and made it presentable with an appropriate color palette 
+The price range is removed as we are looking for the cheapest product across all websites or in a website<br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home1.jpeg">
 <br>
 
-## **8. Fix issues and improve web scrapping speed in each website :**
+## **2. Enhanced the search feature:**
 <br><br>
-**Phase 1:** In phase 1, the proxy issues occurring during fetching results were identified and fixed<br>
-**Phase 2:** In phase 2, the web scrapping latency has been decreased <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home.jpeg">
+We enhanced the search feature by replacing search with link by searching with product description. This way we would be able to make the website user-friendly<br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg">
 <br>
-## **9. Enhanced the search feature:**
+
+## **4. Further improving the accuracy of product results:**
 <br><br>
 **Phase 1:** In phase 1, we enhanced the search feature by replacing search with link by search with product description <br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg">
 <br>
 
+## **5. Decreased the latency by removing driver code:**
+<br><br>
+**Phase 1:** In phase 1, we enhanced the search feature by replacing search with link by search with product description <br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg">
+<br>
 
+## **2. Fix issues and improve web scrapping speed on each website:**
+<br><br>
+The proxy issues occurring during fetching results were identified and fixed<br>
+The web scrapping latency has been decreased <br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home.jpeg">
+<br>
