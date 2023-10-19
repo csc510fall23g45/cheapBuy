@@ -84,7 +84,7 @@ class WebScrapper_Costco:
         """ 
         Returns costco URL of search box
         """
-        template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" #+"&dept=All&sortBy=item_location_pricing_salePrice+asc"
+        template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" +"&dept=All&sortBy=item_location_pricing_salePrice+asc"
         search_term = self.description.replace(' ', '+')
         return template.format(search_term)
 
