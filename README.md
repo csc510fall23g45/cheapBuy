@@ -146,14 +146,13 @@ streamlit run cheapBuy_user_interface.py
 11. Improve the accuracy of searching products.
 12. Link buttons for all websites.
 
-### PHASE-4 ⌛ <a name="Phase3"></a>
-1. Fix proxy issues in web scraping of all website
+### PHASE-4 ✅ <a name="Phase4"></a>
+1. Fix proxy issues in web scraping of all websites
 3. Remove the Chrome Driver from webscrappers to decrease the latency.
-4. Remove price range 
+4. Remove price range as we are looking for cheapest
 5. Enhance the user interface, and keep only relevant images and content.
 
-
-### PHASE-5 ⌛ <a name="Phase3"></a>
+### PHASE-5 ⌛ <a name="Phase5"></a>
 1. Automatic deployment of server using Teraform or ansible.
 2. Dashboard including how many user's click on the website.
 3. Email notification of the available coupon to the user.
@@ -174,7 +173,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 ## 👥 Team Members <a name="TeamMember"></a>
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/EZ7051"><img src="https://avatars.githubusercontent.com/u/44102063?v=4" width="75px;" alt=""/><br /><sub><b>Ejaz</b></sub></a></td>
+    <td align="center"><a href="https://github.com/EZ7051"><img src="https://avatars.githubusercontent.com/u/35006207?v=4" width="75px;" alt=""/><br /><sub><b>Ejaz</b></sub></a></td>
     <td align="center"><a href="https://github.com/shyni0201"><img src="https://avatars.githubusercontent.com/u/72161297?v=4" width="75px;" alt=""/><br /><sub><b>Shynitha</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/sumalatha-99"><img src="https://avatars.githubusercontent.com/u/26276595?v=4" width="75px;" alt=""/><br /><sub><b>Sumalatha</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/soubhagya31"><img src="https://avatars.githubusercontent.com/u/143368827?v=4" width="75px;" alt=""/><br /><sub><b>Soubhagya</b></sub></a><br /></td>
