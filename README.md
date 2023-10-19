@@ -14,38 +14,38 @@
 Hello
 
 <!--Badges-->
-<a href="https://github.com/freakleesin/cheapBuy/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy license" />
+<a href="https://github.com/EZ7051/cheapBuy/blob/main/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy license" />
     
 </a>
-<a href="https://github.com/freakleesin/cheapBuy/fork" target="blank">
-<img src="https://img.shields.io/github/forks/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
+<a href="https://github.com/EZ7051/cheapBuy/forks" target="blank">
+<img src="https://img.shields.io/github/forks/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
 </a>
-<a href="https://github.com/freakleesin/cheapBuy/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/freakleesin/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
+<a href="https://github.com/EZ7051/cheapBuy/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/EZ7051/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
 </a>
 <a href="https://github.com/EZ7051/cheapBuy/issues" target="blank">
-<img src="https://img.shields.io/github/issues/freakleesin/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
+<img src="https://img.shields.io/github/issues/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
 </a>
 <a href="https://github.com/EZ7051/cheapBuy/issues?q=is%3Aissue+is%3Aclosed" target="blank">
-<img src="https://img.shields.io/github/issues-closed/freakleesin/cheapBuy" alt="cheapBuy issues closed"/>
+<img src="https://img.shields.io/github/issues-closed/EZ7051/cheapBuy" alt="cheapBuy issues closed"/>
 </a>
 <a href="https://github.com/EZ7051/cheapBuy/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/anshulp2912/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
+<img src="https://img.shields.io/github/issues-pr/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
 </a>
 <a href="https://github.com/EZ7051/cheapBuy/milestones" alt="milestones">
-<img src="https://img.shields.io/github/milestones/all/freakleesin/cheapBuy" /></a> 
+<img src="https://img.shields.io/github/milestones/all/EZ7051/cheapBuy" /></a> 
 <a href="https://github.com/EZ7051/cheapBuy/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/freakleesin/cheapBuy" /></a> 
-<a href="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/freakleesin/cheapBuy" /></a>
+<img src="https://img.shields.io/github/commit-activity/w/EZ7051/cheapBuy" /></a> 
+<a href="https://img.shields.io/github/repo-size/EZ7051/cheapBuy" alt="repo size">
+<img src="https://img.shields.io/github/repo-size/EZ7051/cheapBuy" /></a>
 
 
 
 <p align="center">
-    <a href="https://github.com/anshulp2912/cheapBuy/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/EZ7051/cheapBuy/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/anshulp2912/cheapBuy/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/EZ7051/cheapBuy/issues/new/choose">Request Feature</a>
 </p>
 
 
