@@ -40,3 +40,13 @@ Following are the improvements made in Phase 2 of the project:
 **Phase 1:** In phase 1, for a given input url of a product, available options on two websites are given. But the accuracy of the output is less. It does not search and give the same product from the other websites.<br><br>
 **Phase 2:** In phase 2, for any product given, the output is accurate. It gives the same product from 5 different websites.<br><br>
 Example : If user's current tab is having Television of a particular brand and there is a better option available at a cheaper or comparable rate than provide alternative product accordingly.
+## **7. Improve user interface:**
+<br><br>
+**Phase 1:** In phase 1, the UI theme has been modified to make it more readable  
+**Phase 2:** In phase 2, the price range is removed as we are looking for cheapest product across all websites or in a website
+## **8. Fix issues and improve web scrapping speed in each website :**
+<br> <br>
+**Phase 1:** In phase 1, the proxy issues occurring during fetching results were identified and fixed
+**Phase 2:** In phase 2, the web scrapping latency has been decreased
+
+
