@@ -41,6 +41,7 @@ streamlit run cheapBuy_user_interface1.py
 <br><br><br>
 2. **WebScrapper.py**<br> <br>
 * function scrapper(product_description): Checks for each ecommerce platform the product_description(parameter of function) for details. Details include description, price and url. This function returns these details as a dictionary.
+  <br><br>
 3. **WebScrapper_Amazon.py** <br><br>
 * function run(): The function run is executed when the thread is started. It gets result from function scrap_amazon and extracts output in desired format from the result<br>
 * function get_driver(): The function get_driver prepares and returns a Chrome driver using Selenium.<br>
