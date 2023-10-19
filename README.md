@@ -148,7 +148,8 @@ streamlit run cheapBuy_user_interface.py
 
 ### PHASE-4 ✅ <a name="Phase4"></a>
 1. Fix proxy issues in web scraping of all websites
-3. Remove the Chrome Driver from webscrappers to decrease the latency.
+2. Remove the Chrome Driver from webscrappers to decrease the latency.
+3. Optimise the results fetching time
 4. Remove price range as we are looking for cheapest
 5. Enhance the user interface, and keep only relevant images and content.
 
