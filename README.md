@@ -145,11 +145,15 @@ streamlit run cheapBuy_user_interface.py
 12. Link buttons for all websites.
 
 ### PHASE-4 ✅ <a name="Phase4"></a>
-1. Fix proxy issues in web scraping of all websites
-2. Remove the Chrome Driver from web-scrapers to decrease the latency.
-3. Optimise the results fetching time.
-4. Remove price range as we are looking for a cheapest product across a website or on a website
-5. Enhance the user interface, and keep only relevant images and content.
+1. Showing the cheapest product from every website (previously they were giving the first product and not the least cost one).
+2. Remove the product link and use the product name or description to search.
+3. Fix proxy issues in web scraping of all websites.
+4. Increase the speed of execution of single site selection.
+5. Remove the Chrome Driver from web-scrapers to decrease the latency.
+6. Optimise the results fetching time.
+7. Remove price range as we are looking for the cheapest product across a website or on a website.
+8. Enhance the user interface, and keep only relevant images and content.
+9. Reduce the time complexity and latency for the product search by removing inner loops.
 
 ### PHASE-5 ⌛ <a name="Phase5"></a>
 1. Dashboard including how many users click on the website.
