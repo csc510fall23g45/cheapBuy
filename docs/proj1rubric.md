@@ -32,8 +32,6 @@ Old rubrics of Cheap Buy before our changes
 | Short release cycles                                                                                                                                                                    | 2         | No comments                                                                                                                                                                                                                                                                                          |
 | | |
 | Sustanability Form | Answer | |
-| Rubric                                                                                                                                                                                                         | Assesment |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | Does your website and documentation provide a clear, high-level overview of your software?                                                                                                                     | Yes       |
 | Does your website and documentation clearly describe the type of user who should use your software?                                                                                                            | Yes       |
 | Do you publish case studies to show how your software has been used by yourself and others?                                                                                                                    | Yes       |
