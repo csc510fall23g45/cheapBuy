@@ -22,6 +22,5 @@ jobs:
           echo requirements installed
       - name: Run tests
         run: |
-          cd source/web_scrappers/tests
           pip install pytest
           pytest
