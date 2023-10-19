@@ -147,6 +147,13 @@ streamlit run cheapBuy_user_interface.py
 12. Link buttons for all websites.
 
 ### PHASE-4 ⌛ <a name="Phase3"></a>
+1. Fix proxy issues in web scraping of all website
+3. Remove the Chrome Driver from webscrappers to decrease the latency.
+4. Remove price range 
+5. Enhance the user interface, and keep only relevant images and content.
+
+
+### PHASE-5 ⌛ <a name="Phase3"></a>
 1. Automatic deployment of server using Teraform or ansible.
 2. Dashboard including how many user's click on the website.
 3. Email notification of the available coupon to the user.
