@@ -199,7 +199,7 @@ class WebScrapper:
         """
         #scrapper = [WebScrapper_Bestbuy] # So slow though only bestbuy, why?
         scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
-                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_TraderJoes, WebScrapper_Kroger, WebScrapper_Bestbuy]
+                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy]
 
         t_scrapper = [s.__call__(self.product_description) for s in scrapper]
 
