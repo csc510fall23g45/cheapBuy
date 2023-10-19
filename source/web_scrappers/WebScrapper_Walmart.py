@@ -99,7 +99,7 @@ class WebScrapper_Walmart:
         Returns walmart URL of search box
         """
         # Prepare URL for given description
-        template = 'https://www.walmart.com/search?q={}'
+        template = 'https://www.walmart.com/search?q={}&sort=price_low'
         search_term = self.description.replace(' ', '+')
         return template.format(search_term)
 
