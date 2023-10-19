@@ -59,7 +59,6 @@ jobs:
     - name: Run the tests
       run: |
           cd test
-          pytest --cov=./
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
       env:
