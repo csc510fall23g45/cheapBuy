@@ -26,9 +26,6 @@ if response.status_code == 200:
 
     # Iterate through each product container and extract the information
     for container in product_containers:
-        # # Extract product name
-        # product_name = container.find('span', class_='normal dark-gray mb0 mt1 lh-title f6 f5-l lh-copy').text
-
         # Extract product price
         product_price = container.find('div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span', class_='w_iUH7').text.strip()
 
@@ -38,8 +35,6 @@ if response.status_code == 200:
         # Extract product URL
         product_url = 'https://www.walmart.com' + container.find('a')['href']
 
-        # Print or store the extracted information as needed
-        # print("Product Name:", product_name)
         print("Product Price:", product_price)
         print("Product Description:", product_description)
         print("Product URL:", product_url)
