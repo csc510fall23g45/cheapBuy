@@ -139,7 +139,7 @@ streamlit run cheapBuy_user_interface.py
 6. Web Scrapping various product details from Kroger.
 7. Improve code execution speed using multiprocessing.
 8. Improve website UI.
-9. Add sidebar.
+9. Add a sidebar.
 10. Users can choose the selected website and price range.
 11. Improve the accuracy of searching products.
 12. Link buttons for all websites.
@@ -148,16 +148,14 @@ streamlit run cheapBuy_user_interface.py
 1. Fix proxy issues in web scraping of all websites
 2. Remove the Chrome Driver from web-scrapers to decrease the latency.
 3. Optimise the results fetching time.
-4. Remove price range as we are looking for cheapest product across website or in a website
+4. Remove price range as we are looking for a cheapest product across a website or on a website
 5. Enhance the user interface, and keep only relevant images and content.
 
 ### PHASE-5 ⌛ <a name="Phase5"></a>
-1. Automatic deployment of server using Teraform or ansible.
-2. Dashboard including how many user's click on the website.
-3. Email notification of the available coupon to the user.
-4. Alternate product suggestion feature.
-5. Show a available coupon on other shopping website.
-6. Add more websites webScrapping .
+1. Dashboard including how many users click on the website.
+2. Email notification of the available coupon to the user.
+3. Alternate product suggestion feature.
+4. Add more websites for web scrapping like Target, Kroger, and Traderjoes.
 
 🌟 You are all set! 🌟
 
