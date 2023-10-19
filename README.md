@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10020346.svg)](https://doi.org/10.5281/zenodo.10020346)
 [![codecov](https://codecov.io/gh/anshulp2912/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://app.codecov.io/gh/sumalatha-99/cheapBuy/)
 ![Build Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
-[![Python Style Checker](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml)
+[![Python Style Checker](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
 [![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
 [![Running Code Coverage](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml)
