@@ -7,9 +7,8 @@
 [![Running Code Coverage](https://github.com/EZ7051/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/code_cov.yml)
 ![Build Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 [![Python Style Checker](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml)
-[![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
-[![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
-[![Running Code Coverage](https://github.com/anshulp2912/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/code_cov.yml)
+[![Run Tests On Push](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml/badge.svg?branch=main)](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml)
+[![Lint Python](https://github.com/EZ7051/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/main.yml)
 
 Hello
 
@@ -164,10 +163,10 @@ streamlit run cheapBuy_user_interface.py
 🌟 You are all set! 🌟
 
 ## 📝 License <a name="License"></a>
-This project is licensed under the terms of the MIT license. Please check [License](https://github.com/anshulp2912/cheapBuy/blob/main/LICENSE) for more details.
+This project is licensed under the terms of the MIT license. Please check [License](https://github.com/EZ7051/cheapBuy/blob/main/LICENSE) for more details.
 
 ## 🍰 Contributing <a name="Contributing"></a>
-Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/anshulp2912/cheapBuy/compare).
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/EZ7051/cheapBuy/compare).
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
@@ -183,7 +182,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants Xiao Ling, Andre Lustosa, Kewen Peng, Weichen Shi for their support throughout the project.
-We would also like to extend our gratitude to previous group : [https://github.com/het-patel99/cheapBuy](https://github.com/rliu9/cheapBuy)
+We would also like to extend our gratitude to previous group : [[https://github.com/het-patel99/cheapBuy](https://github.com/rliu9/cheapBuy)](https://github.com/rliu9/cheapBuy)
 - [https://streamlit.io/](https://streamlit.io/)
 - [https://shields.io/](https://shields.io/)
 - [https://www.powtoon.com/](https://www.powtoon.com/)
