@@ -193,13 +193,26 @@ class WebScrapper:
         scraper_method = website_configs[website]
         return getattr(fd, scraper_method)()
 
-    def call_scrapper(self):
+    def call_scrapper(self, sites):
         """
         Build Threads and call scrapper for all websites
         """
         #scrapper = [WebScrapper_Bestbuy] # So slow though only bestbuy, why?
-        scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
+        if(sites == "All Sites") :
+            scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
                     WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy]
+        elif(sites == "amazon"):
+            scrapper = [WebScrapper_Amazon]
+        elif(sites == "walmart"):
+            scrapper = [WebScrapper_Walmart]
+        elif(sites == "ebay"):
+            scrapper = [WebScrapper_Ebay]
+        elif(sites == "bjs"):
+            scrapper = [WebScrapper_Bjs]
+        elif(sites == "costco"):
+            scrapper = [WebScrapper_Costco]
+        elif(sites == "bestbuy"):
+            scrapper = [WebScrapper_Bestbuy]
 
         t_scrapper = [s.__call__(self.product_description) for s in scrapper]
 

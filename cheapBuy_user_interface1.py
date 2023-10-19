@@ -89,7 +89,7 @@ url = st.text_input('Enter the product')
 # Pass url to method
 if url:
     webScrapper = WebScrapper(url)
-    results = webScrapper.call_scrapper()
+    results = webScrapper.call_scrapper(sites)
 
     # Use st.columns based on return values
     description, url, price, site = [], [], [], []
