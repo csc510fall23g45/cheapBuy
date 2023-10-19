@@ -24,7 +24,7 @@ pip install -r requirements.txt
 3. Check out the demo video to know about the use of the website in the media files.
 4. To locally run the streamlit website, we would recommend setting up an Anaconda Environment and running the command
 ```
-streamlit run cheapBuy_user_interface.py
+streamlit run cheapBuy_user_interface1.py
 ```
 **Code Functionalities:**
 <br><br>
