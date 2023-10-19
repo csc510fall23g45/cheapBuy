@@ -5,7 +5,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10020346.svg)](https://doi.org/10.5281/zenodo.10020346)
 [![codecov](https://codecov.io/gh/anshulp2912/cheapBuy/branch/main/graph/badge.svg?token=WO5GVXOUSD)](https://codecov.io/gh/anshulp2912/cheapBuy)
-[![Build Status](https://app.travis-ci.com/anshulp2912/cheapBuy.svg?branch=main)](https://app.travis-ci.com/anshulp2912/cheapBuy)
+![Build Status check](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![Build Status](https://app.travis-ci.com/anshulp2912/cheapBuy.svg?branch=main)](https://app.travis-ci.com/github/EZ7051/cheapBuy)
 [![Python Style Checker](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/anshulp2912/cheapBuy/actions/workflows/unit_test.yml/badge.svg)](https://github.com/freakleesin/cheapBuy/actions/workflows/unit_test.yml)
 [![Lint Python](https://github.com/freakleesin/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/anshulp2912/cheapBuy/actions/workflows/main.yml)
