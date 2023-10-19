@@ -31,49 +31,46 @@ streamlit run cheapBuy_user_interface.py
 **web_scrappers**
 1. **FetchDescription.py**
 <br><br>
-* function fetch_desc_walmart():The function fetch_desc_walmart fetches description from the incoming walmart URL.<br>
-* function fetch_desc_amazon(): The function fetch_desc_amazon fetches description from the incoming amazon URL.<br>
-* function fetch_desc_ebay(): The function fetch_desc_ebay fetches description from the incoming ebay URL.<br>
-* function fetch_desc_costco(): The function fetch_desc_costco fetches description from the incoming costco URL.<br>
-* function fetch_desc_bjs(): The function fetch_desc_bjs fetches description from the incoming bjs URL.<br>
+* function fetch_desc_amazon() : The function fetch_desc_amazon parses the link and gets the product description <br>
+* function fetch_desc_walmart() : The function fetch_desc_walmart parses the link and gets the product description <br>
+* function fetch_desc_ebay() : The function fetch_desc_ebay parses the link and gets the product description <br>
+* function fetch_desc_costco() : The function fetch_desc_costco parses the link and gets the product description <br> 
+* function fetch_desc_bestbuy() : The function fetch_desc_bestbuy parses the link and gets the product description <br> 
+* function fetch_desc_bjs() : The function fetch_desc_bjs parses the link and gets the product description <br> 
+
 <br><br><br>
-2. **WebScrapper.py**
-* function get_description(): The function get_description checks website of incoming URL and calls the respective website function to fetch the description.<br>
-* function call_scrapper(): The function call_scrapper utilizes threads to call scrapper functions for all 5 websites and get the final result.<br><br>
+2. **WebScrapper.py**<br> <br>
+* function scrapper(product_description): Checks for each ecommerce platform the product_description(parameter of function) for details. Details include description, price and url. This function returns these details as a dictionary.
 3. **WebScrapper_Amazon.py** <br><br>
 * function run(): The function run is executed when the thread is started. It gets result from function scrap_amazon and extracts output in desired format from the result<br>
 * function get_driver(): The function get_driver prepares and returns a Chrome driver using Selenium.<br>
-* function get_url_amazon(): The function get_url_amazon prepares a URL for Amazon scraping from description.<br>
+* function get_url_amazon(search_item): This function returns the Amazon url of the product (search_term) given as an argument..<br>
 * function scrap_amazon(): The function scrap_amazon performs web scraping using BeautifulSoup on the URL provided by function get_url_amazon.
 <br><br> 
 4. **WebScrapper_Bjs.py** <br><br>
-* function run(): The function run is executed when the thread is started. It gets the result from the function scrap_bjs and extracts output in the desired format from the result.<br>
-* function get_driver(): The function get_driver prepares and returns a Chrome driver using Selenium.<br>
-* function get_url_bjs(): The function get_url_bjs prepares a URL for Bjs scraping from description.<br>
-* function scrap_bjs(): The function scrap_bjs performs web scraping using BeautifulSoup on the URL provided by function get_url_bjs.<br>
+* function get_url_bjs(search_term): This function returns the bjs url of the product (search_term) given as an argument.<br>
+* function scrap_bjs(driver, search_term): Webpage of the product corresponding to search_term is retrieved using BeautifulSoup. <br>
+* function run(search_term): Extracts the product description, price , URL and website name corresponding to search_term and returns it through a dictionary variable.
 <br><br>
 5. **WebScrapper_Costco.py**<br><br>
-* function run(): The function run is executed when the thread is started. It gets the result from the function scrap_costco and extracts output in the desired format from the result.<br>
-* function get_driver(): The function get_driver prepares and returns a Chrome driver using Selenium.<br>
-* function get_url_costco(): The function get_url_costco prepares a URL for Costco scraping from description.<br>
-* function scrap_costco(): The function scrap_costco performs web scraping using BeautifulSoup on the URL provided by function get_url_costco.
+* function get_url_costco(search_term): This function returns the Costco url of the product (search_term) given as an argument.<br>
+* function scrap_costco( search_term): Webpage of the product corresponding to search_term is retrieved using BeautifulSoup.<br>
+* function run(search_term): Extracts the product description, price , URL and website name corresponding to search_term and returns it through a dictionary variable.
 <br><br> 
 6. **WebScrapper_Ebay.py** <br><br>
-* function run(): The function run is executed when the thread is started. It gets the result from the function scrap_ebay and extracts output in the desired format from the result.<br>
-* function get_driver(): The function get_driver prepares and returns a Chrome driver using Selenium.<br>
-* function get_url_ebay(): The function get_url_ebay prepares a URL for Ebay scraping from description.<br>
-* function scrap_ebay(): The function scrap_ebay performs web scraping using BeautifulSoup on the URL provided by function get_url_ebay.
+* function get_url_amazon(search_term): This function returns the Amazon url of the product (search_term) given as an argument.<br>
+* function scrap_ebay( search_term): Webpage of the product corresponding to search_term is retrieved using BeautifulSoup.<br>
+* function run(search_term): Extracts the product description, price, URL and website name corresponding to search_term and returns it through a dictionary variable.
 <br><br>
 7. **WebScrapper_Walmart.py** <br><br>
-* function run(): The function run is executed when the thread is started. It gets the result from the function scrap_walmart and extracts output in the desired format from the result<br>
-* function get_driver(): The function get_driver prepares and returns a Chrome driver using Selenium.<br>
-* function get_url_walmart(): The function get_url_walmart prepares a URL for Walmart scrapping from description<br>
-* function scrap_walmart(): The function scrap_walmart performs web scraping using BeautifulSoup on the URL provided by function get_url_walmart.<br>
+* function get_url_walmart(search_term):This function returns the Walmart url of the product (search_term) given as an argument.<br>
+* function scrap_walmart search_term): Webpage of the product corresponding to search_term is retrieved using BeautifulSoup.<br>
+* function run(search_term): Extracts the product description, price , URL and website name corresponding to search_term and returns it through a dictionary variable.
 <br><br>
 
 **Output:**<br>
 The below screenshot shows the website created for cheapBuy. In the output, the cheapest option is highlighted in the website.<br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home1.jpeg"><br><br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home.jpeg"><br><br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg"><br><br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allWebsiteslinks.jpeg"><br><br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/singleWebsite.jpeg"><br><br>
