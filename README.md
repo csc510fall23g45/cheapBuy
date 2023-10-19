@@ -177,6 +177,13 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
   </tr>
 </table>
 
+| Name                   | Unity ID                           |
+|------------------------|------------------------------------|
+| Ejaz Ahamed Shaik      | eshaik                             |
+| Shynitha Muthyam       | smuthya                            |
+| Soubhagya Akkena       | sakkena                            |
+| Sumalatha Mashetty     | smashet                            |
+
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants San Gilson, Andre Lustosa, Xueqi (Sherry) Yang, Yasitha Rajapaksha, and Rahul Yedida for their support throughout the project.
 We would also like to extend our gratitude to the previous group : [https://github.com/rliu9/cheapBuy](https://github.com/rliu9/cheapBuy)
