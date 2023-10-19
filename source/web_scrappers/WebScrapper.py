@@ -16,7 +16,9 @@ from source.web_scrappers.WebScrapper_Ebay import WebScrapper_Ebay
 from source.web_scrappers.WebScrapper_TraderJoes import WebScrapper_TraderJoes
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
 from source.web_scrappers.WebScrapper_Kroger import WebScrapper_Kroger
+import sys
 
+sys.path.append('../../')
 class WebScrapper:
     """
     Main class used to fetch results by parsing the URL
