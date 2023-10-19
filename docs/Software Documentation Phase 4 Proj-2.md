@@ -71,6 +71,6 @@ streamlit run cheapBuy_user_interface.py
 **Output:**<br>
 The below screenshot shows the website created for cheapBuy. In the output, the cheapest option is highlighted in the website.<br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home1.jpeg"><br><br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home.jpeg"><br><br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg"><br><br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allWebsiteslinks.jpeg"><br><br>
 <img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/singleWebsite.jpeg"><br><br>
