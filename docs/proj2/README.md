@@ -15,6 +15,8 @@
 [![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=VbyqMsFM2wA) <br>
 ![YouTube Video Views](https://img.shields.io/youtube/views/VbyqMsFM2wA)
 
+## GitHub Link : 
+https://github.com/EZ7051/cheapBuy
 
 ## Score Card : 
 
