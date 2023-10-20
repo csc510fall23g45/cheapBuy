@@ -9,7 +9,6 @@
 [![Run Tests On Push](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml/badge.svg?branch=main)](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml)
 [![Lint Python](https://github.com/EZ7051/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/main.yml)
 
-Hello
 
 <!--Badges-->
 <a href="https://github.com/EZ7051/cheapBuy/blob/main/LICENSE" target="blank">
