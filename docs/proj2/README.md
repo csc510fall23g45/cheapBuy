@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">CSC 510 Software Engineering Project-1</h1>
+<h1 style="text-align: center;">CSC 510 Software Engineering Project-2</h1>
 
 <h3 style="text-align: center;">Group - 3</h3>
 <h3 style="text-align: center;">Team members:</h3>
