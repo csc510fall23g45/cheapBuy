@@ -1,4 +1,7 @@
-# cheapBuy Phase 2 - Improved Version<br><br>
+# cheapBuy Phase 2 - Improved Version<br>
+[![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=VbyqMsFM2wA) <br>
+![YouTube Video Views](https://img.shields.io/youtube/views/VbyqMsFM2wA)
+<br>
 **Motivation:**<br><br>
 cheapBuy Extension provides you ease to buy any product through your favourite websites like Amazon, Walmart, Ebay, Bjs, Costco, etc, by providing prices of the same product from all different websites. It takes a lot of time to search for the same product in different websites, and find the cheapest one, instead just add our extension cheapBuy and it will automatically fetch you price of the same product from different websites and you can directly compare the prices from different websites through our extension. In sum, cheapBuy is a one stop solution to buy the cheapest product online.
 <br><br>
