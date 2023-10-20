@@ -7,10 +7,10 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 from source.web_scrappers.WebScrapper import WebScrapper
 import sys
 
-sys.path.append('../../../')
+sys.path.append('../')
 
 
-def test_walmart():
+def test_bjs():
     description = 'Coca cola tins'
     fd = WebScrapper(description)
-    assert fd.get_description('walmart') == "Coca cola tins"
+    assert fd.get_description('bjs') == "Coca cola tins"

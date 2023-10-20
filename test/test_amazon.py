@@ -9,7 +9,7 @@ from source.web_scrappers.WebScrapper import WebScrapper
 
 import sys
 
-sys.path.append('../../../')
+sys.path.append('../')
 
 
 def test_amazon():

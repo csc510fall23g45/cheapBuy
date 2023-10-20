@@ -5,17 +5,16 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 @author: cheapBuy
 """
 
-
 import sys
 
-from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
+from source.web_scrappers.WebScrapper_Ebay import WebScrapper_Ebay
 
-sys.path.append('../../../')
+sys.path.append('../')
 
 
-def test_walmart_scrapper():
+def test_ebay_scrapper():
 
     description = 'Coca cola tins'
-    t = WebScrapper_Walmart(description)
+    t = WebScrapper_Ebay(description)
 
     assert t.result is not None
