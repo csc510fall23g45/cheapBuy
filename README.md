@@ -4,7 +4,7 @@
 
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10020346.svg)](https://doi.org/10.5281/zenodo.10020346)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023744.svg)](https://doi.org/10.5281/zenodo.10023744)
 [![Running Code Coverage](https://github.com/EZ7051/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/code_cov.yml)
 [![Python Style Checker](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml/badge.svg?branch=main)](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml)
