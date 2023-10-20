@@ -11,23 +11,23 @@ Previously in code, they fetched the first product from each website irrespectiv
 
 ## **2. Improve user interface:**
 <br>
-The UI theme has been modified to make it more readable and made it presentable with an appropriate color palette. 
+The UI theme has been modified to make it more readable and made it presentable with an appropriate colour palette. 
 The price range is removed as we are looking for the cheapest product across all websites or on a website.<br>
 <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/home1.jpeg"><br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allWebsites.jpeg"><br>
 <br>
 ## **3. Enhanced the search feature:**
 <br>
 We enhanced the search feature by replacing search with link by searching with product description. This way we would be able to make the website user-friendly.<br>
 <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allWebsiteslinks.jpeg">
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allSites.png">
 <br>
 
 ## **4. Further improving the accuracy of product results and speed:**
 <br>
 We have removed loops, used a dictionary, and reduced the time complexity. Furthermore, this change will improve accuracy as there is no link and there is only a product description.
 <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/results.jpeg"><br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/cokeAllsites.png"><br>
 <br>
 
 ## **5. Decreased the latency by removing driver code:**
