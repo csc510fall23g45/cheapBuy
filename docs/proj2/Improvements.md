@@ -14,13 +14,13 @@ Previously in code, they fetched the first product from each website irrespectiv
 The UI theme has been modified to make it more readable and made it presentable with an appropriate colour palette. 
 The price range is removed as we are looking for the cheapest product across all websites or on a website.<br>
 <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allWebsites.jpeg"><br>
+<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allSites.png"><br>
 <br>
+
 ## **3. Enhanced the search feature:**
 <br>
 We enhanced the search feature by replacing search with link by searching with product description. This way we would be able to make the website user-friendly.<br>
 <br>
-<img src = "https://github.com/EZ7051/cheapBuy/blob/main/media/allSites.png">
 <br>
 
 ## **4. Further improving the accuracy of product results and speed:**
