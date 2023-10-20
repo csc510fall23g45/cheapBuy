@@ -1,4 +1,13 @@
 # SE_Group3
+
+
+## **Youtube Video : 
+[![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=VbyqMsFM2wA) <br>
+![YouTube Video Views](https://img.shields.io/youtube/views/VbyqMsFM2wA)
+
+
+## **Score Card : 
+
 | Rubric                                                                                                                                                                                  | Assessment | Evidence                                                                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |                                                                                                                                                                                         | 78         |                                                                                                                                                                                            |
