@@ -10,6 +10,8 @@ app.secret_key = 'y2904c194hfoadpcascfeff4fv'
 
 @app.route('/')
 def index():
+    if "username" in session:
+        print(session["username"]) # redirect to user homepage
     return render_template('index.html')
 
 @app.route('/result', methods=['POST'])
@@ -72,6 +74,27 @@ def create_account():
         return render_template('index.html', error="User already exists") # index page error feedback
     else:
         return render_template('index.html', error="Something is wrong, try again later") # index page error feedback
- 
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    result = db.get_password(username)
+    print(username, password, result)
+    if result == None:
+        return render_template('index.html', error="Something is wrong, try again later") # index page error feedback
+    elif result == False:
+        return render_template('index.html', error="Invalid Username") # index page error feedback
+    elif password != result:
+        return render_template('index.html', error="Invalid Password") # index page error feedback
+    elif password == result:
+        session['username'] = username # login successful
+        return redirect(url_for('index')) # should be changed to user homepage redirect
+
+@app.route('/logout', methods=['GET'])
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
