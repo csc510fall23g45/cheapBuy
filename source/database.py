@@ -7,13 +7,13 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 
 import sqlite3
 
-DB_NAME = 'test.db'
+DB_NAME = 'data.db'
 
 def execute_query(query, values = []):
     result = None
     error = None
     try:
-        conn = sqlite3.connect('test.db')
+        conn = sqlite3.connect(DB_NAME)
         conn.execute("PRAGMA foreign_keys = 1")
         cursor = conn.cursor()
         with conn:
