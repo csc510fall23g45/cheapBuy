@@ -110,5 +110,3 @@ def view_wishlist_items(username):
         return None
     else:
         return result
-
-initiate_database()

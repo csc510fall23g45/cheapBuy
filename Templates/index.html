@@ -231,18 +231,22 @@
         transition: var(--transition);
     }
 
-    .switch__button {
+    .switch__button, 
+    .form__button {
         cursor: pointer;
     }
 
-    .switch__button:hover {
+    .switch__button:hover,
+    .form__button:hover {
         box-shadow: 6px 6px 10px var(--neu-2), -6px -6px 10px var(--white);
         transform: scale(.985);
         transition: .25s;
     }
 
     .switch__button:active,
-    .switch__button:focus {
+    .switch__button:focus,
+    .form__button:active,
+    .form__button:focus {
         box-shadow: 2px 2px 6px var(--neu-2), -2px -2px 6px var(--white);
         transform: scale(.97);
         transition: .25s;
@@ -295,11 +299,11 @@
 <body>
     <div class="main">
         <div class="container a-container" id="a-container">
-            <form id="a-form" class="form" method="" action="">
+            <form id="a-form" class="form" method="post" action="/create-account">
                 <h2 class="form_title title">Create Account</h2>
-                <input class="form__input" type="text" placeholder="Username">
-                <input class="form__input" type="password" placeholder="Password">
-                <button class="form__button button submit">SIGN UP</button>
+                <input class="form__input" name="username" type="text" placeholder="Username">
+                <input class="form__input" name="password" type="password" placeholder="Password">
+                <button class="form__button button">SIGN UP</button>
             </form>
         </div>
 
