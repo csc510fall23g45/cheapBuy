@@ -13,7 +13,7 @@ def index():
     if "username" in session:
         return render_template("landing.html", username=session["username"])
     else:
-        return render_template('index.html')
+        return render_template('login.html')
 
 @app.route('/search', methods=['GET', 'POST'])
 def search():
@@ -95,9 +95,9 @@ def create_account():
         session['username'] = username # if account created, then login automatically
         return redirect(url_for('index'))
     elif result == False:
-        return render_template('index.html', error="User already exists") # index page error feedback
+        return render_template('login.html', error="User already exists") # index page error feedback
     else:
-        return render_template('index.html', error="Something is wrong, try again later") # index page error feedback
+        return render_template('login.html', error="Something is wrong, try again later") # index page error feedback
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -105,11 +105,11 @@ def login():
     password = request.form['password']
     result = db.get_password(username)
     if result == None:
-        return render_template('index.html', error="Something is wrong, try again later") # index page error feedback
+        return render_template('login.html', error="Something is wrong, try again later") # index page error feedback
     elif result == False:
-        return render_template('index.html', error="Invalid Username") # index page error feedback
+        return render_template('login.html', error="Invalid Username") # index page error feedback
     elif password != result:
-        return render_template('index.html', error="Invalid Password") # index page error feedback
+        return render_template('login.html', error="Invalid Password") # index page error feedback
     elif password == result:
         session['username'] = username # login successful
         return redirect(url_for('index')) # should be changed to user homepage redirect
