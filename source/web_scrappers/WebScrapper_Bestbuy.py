@@ -10,16 +10,24 @@ from urllib.parse import urlencode
 import requests
 from bs4 import BeautifulSoup
 
-# Set working directory path
-sys.path.append('../')
+import os
+from dotenv import load_dotenv
 
-SCRAPEOPS_API_KEY = "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
+# Set working directory path
+sys.path.append('../')
+
 
 
 class WebScrapper_Bestbuy:

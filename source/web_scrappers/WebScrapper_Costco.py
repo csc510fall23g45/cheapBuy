@@ -10,7 +10,15 @@ from urllib.parse import urlencode
 import requests
 from bs4 import BeautifulSoup
 
-SCRAPEOPS_API_KEY = "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+# SCRAPEOPS_API_KEY = "8751fb74-9ddd-4d9f-a4b6-e58d8792a17d"
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
@@ -71,6 +79,7 @@ class WebScrapper_Costco:
                 product_description = item.find('span', class_='description').text.strip()
                 product_url = item.find('a')['href']
                 product_price = item.find('div', class_='price').text.strip().split('$')[1]
+                # product_price = item.find('span', class_="value").text.strip()
                 self.result['description'] = product_description
                 self.result['url'] = product_url
                 self.result['price'] = product_price

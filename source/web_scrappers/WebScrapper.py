@@ -14,6 +14,8 @@ from source.web_scrappers.WebScrapper_Bjs import WebScrapper_Bjs
 from source.web_scrappers.WebScrapper_Costco import WebScrapper_Costco
 from source.web_scrappers.WebScrapper_Ebay import WebScrapper_Ebay
 from source.web_scrappers.WebScrapper_Walmart import WebScrapper_Walmart
+from source.web_scrappers.WebScrapper_TraderJoes import WebScrapper_TraderJoes
+
 import sys
 
 sys.path.append('../../')
@@ -79,7 +81,7 @@ class WebScrapper:
 
         if(sites == "All Sites") :
             scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
-                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy]
+                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy, WebScrapper_TraderJoes]
         elif(sites == "amazon"):
             scrapper = [WebScrapper_Amazon]
         elif(sites == "walmart"):
@@ -92,6 +94,8 @@ class WebScrapper:
             scrapper = [WebScrapper_Costco]
         elif(sites == "bestbuy"):
             scrapper = [WebScrapper_Bestbuy]
+        elif(sites == "traderjoes"):
+            scrapper=[WebScrapper_TraderJoes]
 
         t_scrapper = [s.__call__(self.product_description) for s in scrapper]
 

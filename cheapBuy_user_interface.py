@@ -40,6 +40,8 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 url = st.text_input('Enter the product')
 
+
+
 # Pass url to method
 if url:
     webScrapper = WebScrapper(url)
@@ -87,15 +89,42 @@ if url:
             df.loc[mask, :] = 'background-color: #F6FFF8'
             df.loc[~mask, :] = 'background-color: #CCE3DE'
             return df
+        # ''' if len(description) == len(url) == len(price) == len(site):
+        #     dataframe = pd.DataFrame({'Description': description, 'Price': price, 'Link': url}, index=site)
+        #     st.snow()
+        #     st.markdown("<h1 style='text-align: center; color: #F6FFF8;'>RESULT</h1>", unsafe_allow_html=True)
+        #     st.dataframe(dataframe.style.apply(highlight_row, axis=None))
+        #     st.markdown("<h1 style='text-align: center; color: #F6FFF8;'>Visit the Website</h1>", unsafe_allow_html=True)
 
-        dataframe = pd.DataFrame(
-            {'Description': description, 'Price': price, 'Link': url}, index=site)
-        st.snow()
-        st.markdown(
-            "<h1 style='text-align: center; color: #F6FFF8;'>RESULT</h1>", unsafe_allow_html=True)
-        st.dataframe(dataframe.style.apply(highlight_row, axis=None))
-        st.markdown(
-            "<h1 style='text-align: center; color: #F6FFF8;'>Visit the Website</h1>", unsafe_allow_html=True)
+        # for s, u, p in zip(site, url, price):
+        #     if p == min(price):
+        #         if st.button('❄️  '+s+'  ❄️'):
+        #             webbrowser.open(u)
+        #     else:
+        #         if st.button(s):
+        #             webbrowser.open(u) '''
+        # print(description)
+        # print(price)
+        if len(description) == len(url) == len(price) == len(site):
+            dataframe = pd.DataFrame()
+            dataframe['description'] = description
+            dataframe['price']=price 
+            dataframe['url'] = url
+            # print(dataframe)
+            dataframe.to_string(index=False, header=True)
+        
+        try:
+            st.snow()
+            st.markdown(
+                "<h1 style='text-align: center; color: #F6FFF8;'>RESULT</h1>", unsafe_allow_html=True)
+            # st.dataframe(dataframe, width=800, height=400, scrollable=True)
+            # st.dataframe(dataframe.style.apply(highlight_row, axis=None))
+            st.table(dataframe.style.highlight_max(axis=0, color='6B9080'))
+
+            st.markdown(
+                "<h1 style='text-align: center; color: #F6FFF8;'>Visit the Website</h1>", unsafe_allow_html=True)
+        except:
+            pass
 
         for s, u, p in zip(site, url, price):
             if p == min(price):

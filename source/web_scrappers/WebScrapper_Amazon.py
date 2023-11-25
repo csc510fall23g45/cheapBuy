@@ -10,11 +10,18 @@ import requests
 from bs4 import BeautifulSoup
 
 from source.utils.url_shortener import shorten_url
+import os
+from dotenv import load_dotenv
+
 
 # Set working directory path
 sys.path.append('../')
 
-SCRAPEOPS_API_KEY = "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
