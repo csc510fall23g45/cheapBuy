@@ -14,6 +14,20 @@ from webdriver_manager.chrome import ChromeDriverManager
 # Set working directory path
 sys.path.append('../')
 
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
+
+
+def scrapeops_url(url):
+    payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
+    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
+    return proxy_url
 
 class WebScrapper_Kroger:
     """
@@ -54,7 +68,6 @@ class WebScrapper_Kroger:
         Returns final result
         """
         self.driver = self.get_driver()
-        
         try:
             # Get results from scrapping function
             results = self.scrap_kroger()
