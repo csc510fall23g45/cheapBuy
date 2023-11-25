@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from source.utils.url_shortener import shorten_url
 from webdriver_manager.chrome import ChromeDriverManager
+from urllib.parse import urlencode
 
 # Set working directory path
 sys.path.append('../')
