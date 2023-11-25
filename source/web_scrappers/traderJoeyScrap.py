@@ -2,7 +2,14 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlencode,unquote
 
-SCRAPEOPS_API_KEY =   "b8d3d18d-bc64-45dc-b765-d24bb865fd3c"
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
