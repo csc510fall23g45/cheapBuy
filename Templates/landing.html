@@ -174,11 +174,11 @@
             <div class="container">
                 <a href="#" class="logo"><b>CHEAPBUY</b></a>
                 <ul class="links">
-                    <li>Home</li>
-                    <li>Wishlist</li>
-                    <li>About</li>
-                    <li>Logout</li>
-                    <li>Welcome name</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wishlist">Wishlist</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li>Welcome {{username}}</li>
                 </ul>
             </div>
         </header>
@@ -189,8 +189,9 @@
                     <p>Designed to streamline your shopping experience by filtering through multiple websites to find
                         the best deals for you. It's your go-to solution for saving time and money, ensuring you always
                         get the best value with minimal effort.</p>
-                    <form class="example" action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search" style="height: 30px">
+                    <form class="example" method="get" action="/search">
+                        <input type="text" placeholder="Search.." name="product" style="height: 30px">
+                        <input type="text" name="sites" value="All Sites" style="height: 30px" hidden>
                         <button type="submit">Search</button>
                     </form>
                 </div>

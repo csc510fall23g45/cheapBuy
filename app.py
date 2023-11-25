@@ -11,8 +11,9 @@ app.secret_key = 'y2904c194hfoadpcascfeff4fv'
 @app.route('/')
 def index():
     if "username" in session:
-        print(session["username"]) # redirect to user homepage
-    return render_template('index.html')
+        return render_template("landing.html", username=session["username"])
+    else:
+        return render_template('index.html')
 
 @app.route('/result', methods=['POST'])
 def result():
