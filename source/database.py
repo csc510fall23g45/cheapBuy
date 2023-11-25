@@ -103,9 +103,12 @@ def delete_wishlist_item(username, id):
         return True
 
 def view_wishlist_items(username):
-    view_items_query = "SELECT * FROM wishlist WHERE username=?;"
+    view_items_query = "SELECT id, item_name, price, website, link  FROM wishlist WHERE username=?;"
     (result, error) = execute_query(view_items_query, [username])
     if error:
         return None
     else:
-        return result
+        items = []
+        for r in result:
+            items.append({"id":r[0], "title":r[1], "price":r[2], "website":r[3], "link":r[4]})
+        return items

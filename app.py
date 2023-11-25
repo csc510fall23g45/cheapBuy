@@ -65,6 +65,13 @@ def search():
 
     return render_template('search.html', data=dataframe.to_dict(orient='records'))
 
+@app.route('/wishlist')
+def wishlist():
+    if "username" in session:
+        username=session["username"]
+        wishlist_items = db.view_wishlist_items(username)
+        return render_template("wishlist.html", username=username, data=wishlist_items)
+
 @app.route('/add-wishlist-item', methods=['POST'])
 def add_wishlist_item():
     username = session['username']

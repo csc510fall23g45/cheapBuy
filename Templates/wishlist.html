@@ -289,11 +289,11 @@
             <div class="container">
                 <a href="#" class="logo"><b>CHEAPBUY</b></a>
                 <ul class="links">
-                    <li>Home</li>
+                    <li><a href="/">Home</a></li>
                     <li>Wishlist</li>
-                    <li>About</li>
-                    <li>Logout</li>
-                    <li>Welcome name</li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li>Welcome {{username}}</li>
                 </ul>
             </div>
         </header>
@@ -311,14 +311,13 @@
                 <table border='1' class="item-list" style="border-collapse: collapse;">
                     <thead>
                         <tr>
-                            <th colspan="6">Products</th>
+                            <th colspan="5">Products</th>
                         </tr>
                         <tr>
                             <td>S.No</td>
                             <td>Title</td>
                             <td>Price</td>
                             <td>Website</td>
-                            <td>Rating</td>
                             <td>Delete</td>
                         </tr>
                     </thead>
@@ -326,13 +325,11 @@
 
                         {% for product in data %}
                         <tr data-price="{{product.price}}" data-website="{{product.website}}"
-                            data-title="{{product.title}}" data-link="{{product.link}}" data-rating="{{product.rating}}"
-                            data-timestamp="{{product.timestamp}}" data-no_of_ratings="{{product.no_of_ratings}}">
+                            data-title="{{product.title}}" data-link="{{product.link}}">
                             <td>{{ loop.index }}</td>
                             <td><a href={{product.link}} target="_blank">{{product.title}}</a></td>
                             <td>{{product.price}}</td>
                             <td>{{product.website}}</td>
-                            <td>{{product.rating}}</td>
                             <td> <span class="delete-icon" data-index="{{ loop.index }}"
                                     onclick="deleteItem(this)">&#x1F5D1;</span>
                             </td>
@@ -343,6 +340,9 @@
                     </tbody>
                 </table>
             </div>
+            <form id="rm-wishlist-item" action="/rm-wishlist-item" method="post" hidden>
+                <input type="text" name="index" hidden>
+            </form>
             <div class="col-md-4"></div>
         </div>
 
@@ -351,9 +351,10 @@
 </body>
 <script>
     function deleteItem(deleteIcon) {
+        debugger
         let index = deleteIcon.dataset["index"]
         rm_form = document.forms["rm-wishlist-item"]
-        rm_form["index"].value = index - 1 // -1 as index in list starts at 0
+        rm_form["index"].value = index
         rm_form.submit()
     }
 </script>
