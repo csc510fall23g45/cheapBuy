@@ -54,6 +54,7 @@ class WebScrapper_Kroger:
         Returns final result
         """
         self.driver = self.get_driver()
+        
         try:
             # Get results from scrapping function
             results = self.scrap_kroger()

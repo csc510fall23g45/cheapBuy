@@ -6,7 +6,7 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 """
 
 import json
-from WebScrapper import WebScrapper
+from source.web_scrappers.WebScrapper import WebScrapper
 import flask
 
 app = flask.Flask(__name__)
@@ -21,6 +21,5 @@ def execute():
     resp = flask.Response(jsonStr)
     resp.headers["Access-Control-Allow-Origin"] = "*"
     return resp
-
 
 app.run()
