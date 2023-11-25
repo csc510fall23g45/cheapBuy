@@ -87,7 +87,6 @@ def add_wishlist_item(username, item_name, price, website, link):
     add_item_query = "INSERT INTO wishlist(username, item_name, price, website, link) VALUES (?,?,?,?,?);"
     (result, error) = execute_query(add_item_query, (username, item_name, price, website, link))
     if error:
-        print(error.sqlite_errorname)
         if error.sqlite_errorname == 'SQLITE_CONSTRAINT_FOREIGNKEY':
             return False
         else:

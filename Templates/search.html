@@ -340,7 +340,7 @@
                             <td><a href={{product.link}} target="_blank">{{product.title}}</a></td>
                             <td>{{product.price}}</td>
                             <td>{{product.website}}</td>
-                            <td> <a href="#" id="heart-link" class="heart-link" onclick="addToCart(this)"><span
+                            <td> <a href="#" id="heart-link" class="heart-link" onclick="addToWishlist(this)"><span
                                         class="heart-icon"></span></a>
                             </td>
                         </tr>
@@ -357,7 +357,7 @@
 
 </body>
 <script>
-    function addToCart(heartLink) {
+    function addToWishlist(heartLink) {
         if (!heartLink.classList.contains("clicked-heart")) {
             heartLink.classList.add("clicked-heart");
             product_data = heartLink.parentNode.parentNode.dataset;

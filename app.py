@@ -65,6 +65,13 @@ def search():
 
     return render_template('search.html', data=dataframe.to_dict(orient='records'))
 
+@app.route('/add-wishlist-item', methods=['POST'])
+def add_wishlist_item():
+    username = session['username']
+    item = request.form.to_dict()
+    db.add_wishlist_item(username, item["title"], item["price"], item["website"], item["link"])
+    return ""
+
 @app.route('/create-account', methods=['POST'])
 def create_account():
     username = request.form['username']
