@@ -289,11 +289,11 @@
             <div class="container">
                 <a href="#" class="logo"><b>CHEAPBUY</b></a>
                 <ul class="links">
-                    <li>Home</li>
-                    <li>Wishlist</li>
-                    <li>About</li>
-                    <li>Logout</li>
-                    <li>Welcome name</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/wishlist">Wishlist</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li>Welcome {{username}}</li>
                 </ul>
             </div>
         </header>
@@ -302,11 +302,12 @@
         <br>
         <!-- FORM SEARCH -->
         <div class="form">
-            <form>
+            <form method="get" action="/search">
                 <label for="form-search"></label>
                 <input type="text" id="form-search" placeholder="Search ">
                 <button type="submit"
                     style=" color:white; background-color :#6c63ff; border-color:#6c63ff;  line-height: 30px; ">Search</button>
+                <input type="text" name="sites" value="All Sites" style="height: 30px" hidden>
             </form>
         </div>
         <br>
@@ -320,14 +321,13 @@
                 <table border='1' class="item-list" style="border-collapse: collapse;">
                     <thead>
                         <tr>
-                            <th colspan="6">Products</th>
+                            <th colspan="5">Products</th>
                         </tr>
                         <tr>
-                            <td>S.No</td>
+                            <td>#</td>
                             <td>Title</td>
                             <td>Price</td>
                             <td>Website</td>
-                            <td>Rating</td>
                             <td>Wishlist</td>
                         </tr>
                     </thead>
@@ -335,13 +335,11 @@
 
                         {% for product in data %}
                         <tr data-price="{{product.price}}" data-website="{{product.website}}"
-                            data-title="{{product.title}}" data-link="{{product.link}}" data-rating="{{product.rating}}"
-                            data-timestamp="{{product.timestamp}}" data-no_of_ratings="{{product.no_of_ratings}}">
+                            data-title="{{product.title}}" data-link="{{product.link}}">
                             <td>{{ loop.index }}</td>
                             <td><a href={{product.link}} target="_blank">{{product.title}}</a></td>
                             <td>{{product.price}}</td>
                             <td>{{product.website}}</td>
-                            <td>{{product.rating}}</td>
                             <td> <a href="#" id="heart-link" class="heart-link" onclick="addToCart(this)"><span
                                         class="heart-icon"></span></a>
                             </td>

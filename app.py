@@ -15,53 +15,55 @@ def index():
     else:
         return render_template('index.html')
 
-@app.route('/result', methods=['POST'])
-def result():
+@app.route('/search', methods=['GET', 'POST'])
+def search():
     if request.method == 'POST':
-        url = request.form['url']
+        url = request.form['product']
         sites = request.form['sites']
+    elif request.method == 'GET':
+        url = request.args['product']
+        sites = request.args['sites']
 
-        webScrapper = WebScrapper(url)
-        results = webScrapper.call_scrapper(sites)
+    webScrapper = WebScrapper(url)
+    results = webScrapper.call_scrapper(sites)
 
-        description, url, price, site = [], [], [], []
+    description, url, price, site = [], [], [], []
 
-        if sites == "All Sites":
-            for result in results:
-                if result:
-                    try:
+    if sites == "All Sites":
+        for result in results:
+            if result:
+                try:
+                    description.append(result['description'])
+                    url.append(result['url'])
+                    price.append(
+                        float(result['price'].strip('$').rstrip('0')))
+                    site.append(result['site'])
+                except Exception as e:
+                    print(e)
+    else:
+        for result in results:
+            if result:
+                try:
+                    if result['site'].strip() == sites:
                         description.append(result['description'])
                         url.append(result['url'])
                         price.append(
                             float(result['price'].strip('$').rstrip('0')))
                         site.append(result['site'])
-                    except Exception as e:
-                        print(e)
-        else:
-            for result in results:
-                if result:
-                    try:
-                        if result['site'].strip() == sites:
-                            description.append(result['description'])
-                            url.append(result['url'])
-                            price.append(
-                                float(result['price'].strip('$').rstrip('0')))
-                            site.append(result['site'])
-                    except Exception as e:
-                        print(e)
+                except Exception as e:
+                    print(e)
 
-        if len(price):
-            dataframe = pd.DataFrame({
-                'description': description,
-                'price': price,
-                'url': url,
-                'site': site
-            })
+    dataframe = pd.DataFrame({
+        'title': description,
+        'price': price,
+        'link': url,
+        'website': site
+    })
 
-            # Add a column for the link to the website
-            dataframe['website_link'] = dataframe.apply(lambda row: f"/visit/{row['url']}/{row['site']}", axis=1)
+    # Add a column for the link to the website
+    #dataframe['website_link'] = dataframe.apply(lambda row: f"/visit/{row['url']}/{row['site']}", axis=1)
 
-            return render_template('result.html', dataframe=dataframe.to_dict(orient='records'))
+    return render_template('search.html', data=dataframe.to_dict(orient='records'))
 
 @app.route('/create-account', methods=['POST'])
 def create_account():
