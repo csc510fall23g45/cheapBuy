@@ -373,6 +373,10 @@
 
         window.addEventListener("load", mainF);
 
+        {% if error %}
+            alert("{{error}}")
+        {% endif %}
+
     </script>
 
 </body>
