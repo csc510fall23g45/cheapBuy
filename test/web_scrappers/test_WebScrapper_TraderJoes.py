@@ -21,4 +21,4 @@ def test_get_url_traderjoes_empty():
 
 def test_scrap_traderjoes():
     result = webScrapper_TraderJoes.scrap_traderjoes()
-    assert 'Set' in str(type(result))
+    assert 'list' in str(type(result))

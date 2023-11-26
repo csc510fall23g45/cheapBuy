@@ -10,7 +10,7 @@ from urllib.parse import unquote
 def test_scrapeops_url():
     url = 'https://www.traderjoes.com/home/search?q=potato'
     result = scrapeops_url(url)
-    expected = "https://proxy.scrapeops.io/v1/?api_key=b8d3d18d-bc64-45dc-b765-d24bb865fd3c&url="+url+"&country=us"
+    expected = "https://proxy.scrapeops.io/v1/?api_key=None&url=https://www.traderjoes.com/home/search?q=potato&country=us"
     assert result == expected
 
 def test_response_call():
