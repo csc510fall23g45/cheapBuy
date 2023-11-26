@@ -9,8 +9,16 @@ import sys
 from urllib.parse import urlencode
 import requests
 from bs4 import BeautifulSoup
+from urllib.parse import quote
+# SCRAPEOPS_API_KEY = "8751fb74-9ddd-4d9f-a4b6-e58d8792a17d"
+import os
+from dotenv import load_dotenv
 
-SCRAPEOPS_API_KEY = "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
@@ -71,6 +79,7 @@ class WebScrapper_Costco:
                 product_description = item.find('span', class_='description').text.strip()
                 product_url = item.find('a')['href']
                 product_price = item.find('div', class_='price').text.strip().split('$')[1]
+                # product_price = item.find('span', class_="value").text.strip()
                 self.result['description'] = product_description
                 self.result['url'] = product_url
                 self.result['price'] = product_price
@@ -80,13 +89,22 @@ class WebScrapper_Costco:
             self.result = {}
         return self.result
 
+    # def get_url_costco(self):
+    #     """ 
+    #     Returns costco URL of search box
+    #     """
+    #     template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" +"&dept=All&sortBy=item_location_pricing_salePrice+asc"
+    #     search_term = self.description.replace(' ', '+')
+    #     return template.format(search_term)
+    
+    
+
     def get_url_costco(self):
-        """ 
-        Returns costco URL of search box
-        """
+        """Returns Costco URL of the search box."""
         template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" +"&dept=All&sortBy=item_location_pricing_salePrice+asc"
-        search_term = self.description.replace(' ', '+')
+        search_term = quote(self.description)
         return template.format(search_term)
+
 
     def scrap_costco(self) :
         """ 
