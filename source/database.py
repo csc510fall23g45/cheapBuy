@@ -7,13 +7,13 @@ This code is licensed under MIT license (see LICENSE.MD for details)
 
 import sqlite3
 
-DB_NAME = 'test.db'
+DB_NAME = 'data.db'
 
 def execute_query(query, values = []):
     result = None
     error = None
     try:
-        conn = sqlite3.connect('test.db')
+        conn = sqlite3.connect(DB_NAME)
         conn.execute("PRAGMA foreign_keys = 1")
         cursor = conn.cursor()
         with conn:
@@ -87,7 +87,6 @@ def add_wishlist_item(username, item_name, price, website, link):
     add_item_query = "INSERT INTO wishlist(username, item_name, price, website, link) VALUES (?,?,?,?,?);"
     (result, error) = execute_query(add_item_query, (username, item_name, price, website, link))
     if error:
-        print(error.sqlite_errorname)
         if error.sqlite_errorname == 'SQLITE_CONSTRAINT_FOREIGNKEY':
             return False
         else:
@@ -104,11 +103,12 @@ def delete_wishlist_item(username, id):
         return True
 
 def view_wishlist_items(username):
-    view_items_query = "SELECT * FROM wishlist WHERE username=?;"
+    view_items_query = "SELECT id, item_name, price, website, link  FROM wishlist WHERE username=?;"
     (result, error) = execute_query(view_items_query, [username])
     if error:
         return None
     else:
-        return result
-
-initiate_database()
+        items = []
+        for r in result:
+            items.append({"id":r[0], "title":r[1], "price":r[2], "website":r[3], "link":r[4]})
+        return items
