@@ -48,7 +48,7 @@
 
 
 <h1 align="center">
- <img src="https://github.com/freakleesin/cheapBuy/blob/main/media/saveMoney2.gif" />
+ <img src="https://github.com/csc510fall23g45/cheapBuy/blob/Project3/media/cheapBuyGif.gif" />
 </h1>
 
 
