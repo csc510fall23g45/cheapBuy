@@ -23,7 +23,7 @@ def search():
     elif request.method == 'GET':
         url = request.args['product']
         sites = request.args['sites']
-
+    
     webScrapper = WebScrapper(url)
     results = webScrapper.call_scrapper(sites)
 
@@ -52,18 +52,18 @@ def search():
                         site.append(result['site'])
                 except Exception as e:
                     print(e)
+    if len(price) == len(description) == len(url) == len(site):
+        dataframe = pd.DataFrame({
+            'title': description,
+            'price': price,
+            'link': url,
+            'website': site
+        })
 
-    dataframe = pd.DataFrame({
-        'title': description,
-        'price': price,
-        'link': url,
-        'website': site
-    })
+        # Add a column for the link to the website
+        #dataframe['website_link'] = dataframe.apply(lambda row: f"/visit/{row['url']}/{row['site']}", axis=1)
 
-    # Add a column for the link to the website
-    #dataframe['website_link'] = dataframe.apply(lambda row: f"/visit/{row['url']}/{row['site']}", axis=1)
-
-    return render_template('search.html', data=dataframe.to_dict(orient='records'))
+        return render_template('search.html', data=dataframe.to_dict(orient='records'))
 
 @app.route('/wishlist')
 def wishlist():
