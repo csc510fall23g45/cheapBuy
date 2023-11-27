@@ -13,14 +13,20 @@ from webdriver_manager.chrome import ChromeDriverManager
 from urllib.parse import urlencode
 import requests
 
-SCRAPEOPS_API_KEY =   "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
-# Set working directory path
 
 sys.path.append('../')
 
@@ -79,12 +85,21 @@ class WebScrapper_Bjs:
             else:
                 item = results[0]
 
-                product_description = item.find('div', class_='title-new-plp').text
-                product_url = 'https://www.bjs.com'+item.find('a')['href']
-                product_price = item.find('div', class_='price-new-plp').text
-                self.result['description'] = product_description
-                self.result['url'] = product_url
-                self.result['price'] = product_price
+                product_description = item.find('span', {'auto-data': 'product_name'}).text
+                product_url = 'https://www.bjs.com'+item.find('a',class_="product-link")['href']
+                product_price = item.find('div', class_='normal-price').text
+                print(product_url)
+                print(product_price)
+                print(product_description)
+                if product_description:
+                    self.result['description'] = product_description.text
+                if product_url:
+                    self.result['url'] = product_url
+                if product_price:
+                    self.result['price'] = product_price.text
+                # self.result['description'] = product_description
+                # self.result['url'] = product_url
+                # self.result['price'] = product_price
                 self.result['site'] = 'bjs'
         except Exception as e:
             print('BJs_results exception', e)
@@ -124,3 +139,6 @@ class WebScrapper_Bjs:
         soup = BeautifulSoup(html_response, "html.parser")
         results = soup.find_all('div', class_='product')
         return results
+    
+
+    

@@ -1,375 +1,530 @@
-<head>
+<html>
+	<head>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet');
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		* {
+			box-sizing: border-box;
+		}
 
+		body {
+			font-family: "Open Sans", sans-serif;
+		}
 
-</head>
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Acme|Open+Sans:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet');
+		a {
+			text-decoration: none;
+		}
 
-    * {
-        box-sizing: border-box;
-    }
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
 
-    body {
-        font-family: 'Open Sans', sans-serif;
-    }
+		.container {
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
-    a {
-        text-decoration: none;
-    }
+		table {
+			border: 1px solid #ccc;
+			border-collapse: collapse;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			table-layout: fixed;
+		}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
+		table caption {
+			font-size: 1.5em;
+			margin: 0.5em 0 0.75em;
+		}
 
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+		table tr {
+			background-color: #f8f8f8;
+			border: 1px solid #ddd;
+			padding: 0.35em;
+		}
 
-    table {
-        border: 1px solid #ccc;
-        border-collapse: collapse;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        table-layout: fixed;
-    }
+		table th,
+		table td {
+			padding: 0.625em;
+			text-align: center;
+		}
 
-    table caption {
-        font-size: 1.5em;
-        margin: .5em 0 .75em;
-    }
+		table th {
+			font-size: 0.85em;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
 
-    table tr {
-        background-color: #f8f8f8;
-        border: 1px solid #ddd;
-        padding: .35em;
-    }
+		@media screen and (max-width: 600px) {
+			table {
+				border: 0;
+			}
 
-    table th,
-    table td {
-        padding: .625em;
-        text-align: center;
-    }
+			table caption {
+				font-size: 1.3em;
+			}
 
-    table th {
-        font-size: .85em;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-    }
+			table thead {
+				border: none;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
 
-    @media screen and (max-width: 600px) {
-        table {
-            border: 0;
-        }
+			table tr {
+				border-bottom: 3px solid #ddd;
+				display: block;
+				margin-bottom: 0.625em;
+			}
 
-        table caption {
-            font-size: 1.3em;
-        }
+			table td {
+				border-bottom: 1px solid #ddd;
+				display: block;
+				font-size: 0.8em;
+				text-align: right;
+			}
 
-        table thead {
-            border: none;
-            clip: rect(0 0 0 0);
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-            padding: 0;
-            position: absolute;
-            width: 1px;
-        }
+			table td::before {
+				content: attr(data-label);
+				float: left;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
 
-        table tr {
-            border-bottom: 3px solid #ddd;
-            display: block;
-            margin-bottom: .625em;
-        }
+			table td:last-child {
+				border-bottom: 0;
+			}
+		}
 
-        table td {
-            border-bottom: 1px solid #ddd;
-            display: block;
-            font-size: .8em;
-            text-align: right;
-        }
+		@media (min-width: 768px) {
+			.container {
+				width: 750px;
+			}
+		}
 
-        table td::before {
-            content: attr(data-label);
-            float: left;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+		@media (min-width: 992px) {
+			.container {
+				width: 970px;
+			}
+		}
 
-        table td:last-child {
-            border-bottom: 0;
-        }
-    }
+		@media (min-width: 1200px) {
+			.container {
+				width: 1170px;
+			}
+		}
 
+		.landing-page header {
+			min-height: 80px;
+			display: flex;
+		}
 
-    @media (min-width: 768px) {
-        .container {
-            width: 750px;
-        }
-    }
+		@media (max-width: 767px) {
+			.landing-page header {
+				min-height: auto;
+				display: initial;
+			}
+		}
 
-    @media (min-width: 992px) {
-        .container {
-            width: 970px;
-        }
-    }
+		.landing-page header .container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 
-    @media (min-width: 1200px) {
-        .container {
-            width: 1170px;
-        }
-    }
+		@media (max-width: 767px) {
+			.landing-page header .container {
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
 
-    .landing-page header {
-        min-height: 80px;
-        display: flex;
-    }
+		.landing-page header .logo {
+			color: #5d5d5d;
+			font-style: italic;
+			text-transform: uppercase;
+			font-size: 20px;
+		}
 
-    @media (max-width: 767px) {
-        .landing-page header {
-            min-height: auto;
-            display: initial;
-        }
-    }
+		@media (max-width: 767px) {
+			.landing-page header .logo {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
 
-    .landing-page header .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+		.landing-page header .links {
+			display: flex;
+			align-items: center;
+		}
 
-    @media (max-width: 767px) {
-        .landing-page header .container {
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
+		@media (max-width: 767px) {
+			.landing-page header .links {
+				text-align: center;
+				gap: 10px;
+			}
+		}
 
-    .landing-page header .logo {
-        color: #5d5d5d;
-        font-style: italic;
-        text-transform: uppercase;
-        font-size: 20px;
-    }
+		.landing-page header .links li {
+			margin-left: 30px;
+			color: #5d5d5d;
+			cursor: pointer;
+			transition: 0.3s;
+		}
 
-    @media (max-width: 767px) {
-        .landing-page header .logo {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-    }
+		@media (max-width: 767px) {
+			.landing-page header .links li {
+				margin-left: auto;
+			}
+		}
 
-    .landing-page header .links {
-        display: flex;
-        align-items: center;
-    }
+		.landing-page header .links li:last-child {
+			border-radius: 20px;
+			padding: 10px 20px;
+			color: #fff;
+			background-color: #6c63ff;
+		}
 
-    @media (max-width: 767px) {
-        .landing-page header .links {
-            text-align: center;
-            gap: 10px;
-        }
-    }
+		.landing-page header .links li:not(:last-child):hover {
+			color: #6c63ff;
+		}
 
-    .landing-page header .links li {
-        margin-left: 30px;
-        color: #5d5d5d;
-        cursor: pointer;
-        transition: .3s;
-    }
+		.landing-page .content .container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 140px;
+			min-height: calc(100vh - 80px);
+		}
 
-    @media (max-width: 767px) {
-        .landing-page header .links li {
-            margin-left: auto;
-        }
-    }
+		@media (max-width: 767px) {
+			.landing-page .content .container {
+				gap: 0;
+				min-height: calc(100vh - 101px);
+				justify-content: center;
+				flex-direction: column-reverse;
+			}
+		}
 
-    .landing-page header .links li:last-child {
-        border-radius: 20px;
-        padding: 10px 20px;
-        color: #FFF;
-        background-color: #6c63ff;
-    }
+		@media (max-width: 767px) {
+			.landing-page .content .info {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+		}
 
-    .landing-page header .links li:not(:last-child):hover {
-        color: #6c63ff;
-    }
+		.landing-page .content .info h1 {
+			color: #5d5d5d;
+			font-size: 44px;
+		}
 
-    .landing-page .content .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 140px;
-        min-height: calc(100vh - 80px);
-    }
+		.landing-page .content .info p {
+			margin: 0;
+			line-height: 1.6;
+			font-size: 15px;
+			color: #5d5d5d;
+		}
 
-    @media (max-width: 767px) {
-        .landing-page .content .container {
-            gap: 0;
-            min-height: calc(100vh - 101px);
-            justify-content: center;
-            flex-direction: column-reverse;
-        }
-    }
+		.landing-page .content .info button {
+			border: 0;
+			border-radius: 20px;
+			padding: 12px 30px;
+			margin-top: 30px;
+			cursor: pointer;
+			color: #fff;
+			background-color: #6c63ff;
+		}
 
-    @media (max-width: 767px) {
-        .landing-page .content .info {
-            text-align: center;
-            margin-bottom: 15px
-        }
-    }
+		.landing-page .content .image img {
+			max-width: 100%;
+		}
 
-    .landing-page .content .info h1 {
-        color: #5d5d5d;
-        font-size: 44px;
-    }
+		.form {
+			text-align: center;
+		}
 
-    .landing-page .content .info p {
-        margin: 0;
-        line-height: 1.6;
-        font-size: 15px;
-        color: #5d5d5d;
-    }
+		#form-search {
+			width: 450px;
+			line-height: 32px;
+			padding: 20px 10px;
+		}
 
-    .landing-page .content .info button {
-        border: 0;
-        border-radius: 20px;
-        padding: 12px 30px;
-        margin-top: 30px;
-        cursor: pointer;
-        color: #FFF;
-        background-color: #6c63ff;
-    }
+		.form #form-search {
+			padding: 0 8px;
+		}
 
-    .landing-page .content .image img {
-        max-width: 100%;
-    }
+		.heart-icon::before {
+			content: "\2665";
+			font-size: 24px;
+			color: white;
+		}
 
+		.clicked-heart .heart-icon::before {
+			color: red;
+		}
 
-    .form {
-        text-align: center;
-    }
+		.heart-link {
+			text-decoration: none;
+		}
 
-    #form-search {
-        width: 450px;
-        line-height: 32px;
-        padding: 20px 10px;
-    }
+		.checkbox-dropdown {
+			width: 200px;
+			border: 1px solid #aaa;
+			padding: 10px;
+			position: relative;
+			margin: 0 auto;
 
-    .form #form-search {
-        padding: 0 8px;
-    }
+			user-select: none;
+		}
 
-    .heart-icon::before {
-        content: "\2665";
-        font-size: 24px;
-        color: white;
-    }
+		.checkbox-dropdown summary {
+			position: relative;
+			padding-right: 20px; /* Adjust as needed */
+		}
 
-    .clicked-heart .heart-icon::before {
-        color: red;
-    }
+		/* Display CSS arrow to the right of the dropdown text */
+		/* .checkbox-dropdown:after {
+			content: "";
+			height: 0;
+			position: absolute;
+			width: 0;
+			border: 6px solid transparent;
+			border-top-color: #000;
+			top: 50%;
+			right: 10px;
+			margin-top: -3px;
+		} */
 
-    .heart-link {
-        text-decoration: none;
-    }
-</style>
+		/* Reverse the CSS arrow when the dropdown is active */
+		.checkbox-dropdown.is-active:after {
+			border-bottom-color: #000;
+			border-top-color: #fff;
+			margin-top: -9px;
+		}
 
-<body>
-    <div class="landing-page">
-        <header>
-            <div class="container">
-                <a href="#" class="logo"><b>CHEAPBUY</b></a>
-                <ul class="links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/wishlist">Wishlist</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                    <li>Welcome {{username}}</li>
-                </ul>
-            </div>
-        </header>
+		.checkbox-dropdown-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 100%;
+			/* align the dropdown right below the dropdown text */
+			border: inherit;
+			border-top: none;
+			left: -1px;
+			/* align the dropdown to the left */
+			right: -1px;
+			/* align the dropdown to the right */
+			opacity: 0;
+			/* hide the dropdown */
 
+			transition: opacity 0.4s ease-in-out;
+			height: 100px;
+			overflow: scroll;
+			overflow-x: hidden;
+			pointer-events: none;
+			/* avoid mouse click events inside the dropdown */
+		}
 
-        <br>
-        <!-- FORM SEARCH -->
-        <div class="form">
-            <form method="get" action="/search">
-                <label for="form-search"></label>
-                <input type="text" id="form-search" placeholder="Search ">
-                <button type="submit"
-                    style=" color:white; background-color :#6c63ff; border-color:#6c63ff;  line-height: 30px; ">Search</button>
-                <input type="text" name="sites" value="All Sites" style="height: 30px" hidden>
-            </form>
-        </div>
-        <br>
+		.is-active .checkbox-dropdown-list {
+			opacity: 1;
+			/* display the dropdown */
+			pointer-events: auto;
+			/* make sure that the user still can select checkboxes */
+		}
 
+		.checkbox-dropdown-list li label {
+			display: block;
+			border-bottom: 1px solid silver;
+			padding: 10px;
 
+			transition: all 0.2s ease-out;
+		}
 
+		.checkbox-dropdown-list li label:hover {
+			background-color: #555;
+			color: white;
+		}
+	</style>
 
-        <div class="results">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <table border='1' class="item-list" style="border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th colspan="5">Products</th>
-                        </tr>
-                        <tr>
-                            <td>#</td>
-                            <td>Title</td>
-                            <td>Price</td>
-                            <td>Website</td>
-                            <td>Wishlist</td>
-                        </tr>
-                    </thead>
-                    <tbody>
+	<body>
+		<div class="landing-page">
+			<header>
+				<div class="container">
+					<a href="#" class="logo"><b>CHEAPBUY</b></a>
+					<ul class="links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/wishlist">Wishlist</a></li>
+						<li><a href="/">About</a></li>
+						<li><a href="/logout">Logout</a></li>
+						<li>Welcome {{username}}</li>
+					</ul>
+				</div>
+			</header>
 
-                        {% for product in data %}
-                        <tr data-price="{{product.price}}" data-website="{{product.website}}"
-                            data-title="{{product.title}}" data-link="{{product.link}}">
-                            <td>{{ loop.index }}</td>
-                            <td><a href={{product.link}} target="_blank">{{product.title}}</a></td>
-                            <td>{{product.price}}</td>
-                            <td>{{product.website}}</td>
-                            <td> <a href="#" id="heart-link" class="heart-link" onclick="addToWishlist(this)"><span
-                                        class="heart-icon"></span></a>
-                            </td>
-                        </tr>
+			<br />
+			<!-- FORM SEARCH -->
+			<div class="form">
+				<form method="get" action="/search">
+					<label for="form-search"></label>
+					<input
+						type="text"
+						name="product"
+						id="form-search"
+						placeholder="Search "
+					/>
+					<button
+						type="submit"
+						style="
+							color: white;
+							background-color: #6c63ff;
+							border-color: #6c63ff;
+							line-height: 30px;
+						"
+					>
+						Search
+					</button>
+					<input
+						type="text"
+						name="sites"
+						value="All Sites"
+						style="height: 30px"
+						hidden
+					/>
+				</form>
+			</div>
+			<br />
 
-                        {% endfor %}
+			<details class="checkbox-dropdown">
+				<summary>Choose website</summary>
+				<ul class="checkbox-dropdown-list">
+					<li>
+						<label>
+							<input type="checkbox" value="Amazon" name="city" />Amazon
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" value="Bestbuy" name="city" />Bestbuy
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" value="Bjs" name="city" />Bjs
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="checkbox" value="Costco" name="city" />Costco
+						</label>
+					</li>
+				</ul>
+			</details>
 
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
+			<br /><br />
+			<br /><br />
+			<br /><br />
+			<div class="results">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<table border="1" class="item-list" style="border-collapse: collapse">
+						<thead>
+							<tr>
+								<th colspan="5">Products</th>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>Title</td>
+								<td>Price</td>
+								<td>Website</td>
+								<td>Wishlist</td>
+							</tr>
+						</thead>
+						<tbody>
+							{% for product in data %}
+							<tr
+								data-price="{{product.price}}"
+								data-website="{{product.website}}"
+								data-title="{{product.title}}"
+								data-link="{{product.link}}"
+							>
+								<td>{{ loop.index }}</td>
+								<td>
+									<a href="{{product.link}}" target="_blank"
+										>{{product.title}}</a
+									>
+								</td>
+								<td>{{product.price}}</td>
+								<td>{{product.website}}</td>
+								<td>
+									<a
+										href="#"
+										id="heart-link"
+										class="heart-link"
+										onclick="addToWishlist(this)"
+										><span class="heart-icon"></span
+									></a>
+								</td>
+							</tr>
 
-    </div>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-4"></div>
+			</div>
+		</div>
 
-</body>
-<script>
-    function addToWishlist(heartLink) {
-        if (!heartLink.classList.contains("clicked-heart")) {
-            heartLink.classList.add("clicked-heart");
-            product_data = heartLink.parentNode.parentNode.dataset;
-            let post_data = new URLSearchParams();
-            for (k in product_data)
-                post_data.append(k, product_data[k])
-            fetch("/add-wishlist-item", {
-                method: 'post',
-                body: post_data,
-            }).then(result => console.log(result)).catch(error => console.error(error))
-        } else {
-            heartLink.classList.remove("clicked-heart");
-        }
-    }
-</script>
+		<script>
+			$(".checkbox-dropdown").click(function () {
+				$(this).toggleClass("is-active");
+			});
+
+			$(".checkbox-dropdown ul").click(function (e) {
+				e.stopPropagation();
+			});
+		</script>
+	</body>
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script>
+		$(".checkbox-dropdown").click(function () {
+			$(this).toggleClass("is-active");
+		});
+
+		$(".checkbox-dropdown ul").click(function (e) {
+			e.stopPropagation();
+		});
+
+		function addToWishlist(heartLink) {
+			if (!heartLink.classList.contains("clicked-heart")) {
+				heartLink.classList.add("clicked-heart");
+				product_data = heartLink.parentNode.parentNode.dataset;
+				let post_data = new URLSearchParams();
+				for (k in product_data) post_data.append(k, product_data[k]);
+				fetch("/add-wishlist-item", {
+					method: "post",
+					body: post_data,
+				})
+					.then((result) => console.log(result))
+					.catch((error) => console.error(error));
+			} else {
+				heartLink.classList.remove("clicked-heart");
+			}
+		}
+	</script>
+</html>

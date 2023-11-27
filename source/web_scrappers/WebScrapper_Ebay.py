@@ -10,16 +10,26 @@ from urllib.parse import urlencode
 import requests
 from bs4 import BeautifulSoup
 
-# Set working directory path
-sys.path.append('../')
+import pyshorteners
 
-SCRAPEOPS_API_KEY = "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
+# Set working directory path
+sys.path.append('../')
 
 
 class WebScrapper_Ebay:
@@ -56,6 +66,13 @@ class WebScrapper_Ebay:
         self.description = description
         self.result = {}
 
+
+    def shorten_url(long_url):
+        s = pyshorteners.Shortener()
+        short_url = s.tinyurl.short(long_url)
+        return short_url
+
+
     def run(self):
         """ 
         Returns final result
@@ -71,9 +88,7 @@ class WebScrapper_Ebay:
             else:
                 item = results[1]
                 # Extract product price
-                product_price = item.find('div', class_='s-item__detail s-item__detail--primary').find('span',
-                                                                                                       class_='s-item__price').text.strip().split(
-                    '$')[1]
+                product_price = item.find('div', class_='s-item__detail s-item__detail--primary').find('span',class_='s-item__price').text.strip().split('$')[1]
                 # Extract product description
                 product_description = item.find('div', class_="s-item__title").text.strip()
                 # Extract product URL
@@ -81,6 +96,9 @@ class WebScrapper_Ebay:
                 self.result['description'] = product_description
                 # Get the URL for the page and shorten item
                 self.result['url'] = product_url
+                print(product_url)
+                # self.result['url']= self.shorten_url(self.result['url'])
+                print(self.result['url'])
                 # Find the price of the item
                 self.result['price'] = product_price
                 # Assign the site as ebay to result

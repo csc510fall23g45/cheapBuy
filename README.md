@@ -5,50 +5,52 @@
 
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023744.svg)](https://doi.org/10.5281/zenodo.10023744)
-[![Running Code Coverage](https://github.com/EZ7051/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/code_cov.yml)
-[![Python Style Checker](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/style_checker.yml)
-[![Run Tests On Push](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml/badge.svg?branch=main)](https://github.com/EZ7051/cheapBuy/actions/workflows/unit_test.yml)
-[![Lint Python](https://github.com/EZ7051/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/EZ7051/cheapBuy/actions/workflows/main.yml)
+![Github](https://img.shields.io/badge/language-python-red.svg)
+[![codecov](https://codecov.io/gh/csc510fall23g45/cheapBuy/graph/badge.svg?token=Qntv9b30AU)](https://codecov.io/gh/csc510fall23g45/cheapBuy)
+[![Running Code Coverage](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/code_cov.yml)
+[![Python Style Checker](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/style_checker.yml)
+[![Run Tests On Push](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/unit_test.yml/badge.svg?branch=main)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/unit_test.yml)
+[![Lint Python](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/main.yml)
 
 
 <!--Badges-->
-<a href="https://github.com/EZ7051/cheapBuy/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy license" />
+<a href="https://github.com/csc510fall23g45/cheapBuy/blob/main/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy license" />
     
 </a>
-<a href="https://github.com/EZ7051/cheapBuy/forks" target="blank">
-<img src="https://img.shields.io/github/forks/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
+<a href="https://github.com/csc510fall23g45/cheapBuy/forks" target="blank">
+<img src="https://img.shields.io/github/forks/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
 </a>
-<a href="https://github.com/EZ7051/cheapBuy/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/EZ7051/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
+<a href="https://github.com/csc510fall23g45/cheapBuy/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/csc510fall23g45/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
 </a>
-<a href="https://github.com/EZ7051/cheapBuy/issues" target="blank">
-<img src="https://img.shields.io/github/issues/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
+<a href="https://github.com/csc510fall23g45/cheapBuy/issues" target="blank">
+<img src="https://img.shields.io/github/issues/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
 </a>
-<a href="https://github.com/EZ7051/cheapBuy/issues?q=is%3Aissue+is%3Aclosed" target="blank">
-<img src="https://img.shields.io/github/issues-closed/EZ7051/cheapBuy" alt="cheapBuy issues closed"/>
+<a href="https://github.com/csc510fall23g45/cheapBuy/issues?q=is%3Aissue+is%3Aclosed" target="blank">
+<img src="https://img.shields.io/github/issues-closed/csc510fall23g45/cheapBuy" alt="cheapBuy issues closed"/>
 </a>
-<a href="https://github.com/EZ7051/cheapBuy/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/EZ7051/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
+<a href="https://github.com/csc510fall23g45/cheapBuy/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
 </a>
-<a href="https://github.com/EZ7051/cheapBuy/milestones" alt="milestones">
-<img src="https://img.shields.io/github/milestones/all/EZ7051/cheapBuy" /></a> 
-<a href="https://github.com/EZ7051/cheapBuy/graphs/commit-activity" alt="commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/EZ7051/cheapBuy" /></a> 
-<a href="https://img.shields.io/github/repo-size/EZ7051/cheapBuy" alt="repo size">
-<img src="https://img.shields.io/github/repo-size/EZ7051/cheapBuy" /></a>
+<a href="https://github.com/csc510fall23g45/cheapBuy/milestones" alt="milestones">
+<img src="https://img.shields.io/github/milestones/all/csc510fall23g45/cheapBuy" /></a> 
+<a href="https://github.com/csc510fall23g45/cheapBuy/graphs/commit-activity" alt="commit activity">
+<img src="https://img.shields.io/github/commit-activity/w/csc510fall23g45/cheapBuy" /></a> 
+<a href="https://img.shields.io/github/repo-size/csc510fall23g45/cheapBuy" alt="repo size">
+<img src="https://img.shields.io/github/repo-size/csc510fall23g45/cheapBuy" /></a>
 
 
 
 <p align="center">
-    <a href="https://github.com/EZ7051/cheapBuy/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/csc510fall23g45/cheapBuy/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/EZ7051/cheapBuy/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/csc510fall23g45/cheapBuy/issues/new/choose">Request Feature</a>
 </p>
 
 
 <h1 align="center">
- <img src="https://github.com/freakleesin/cheapBuy/blob/main/media/saveMoney2.gif" />
+ <img src="https://github.com/csc510fall23g45/cheapBuy/blob/Project3/media/cheapBuyGif.gif" />
 </h1>
 
 
@@ -88,20 +90,50 @@ The project is deployed on Streamlit cloud:
 
 ## 🛠️ Steps of Execution <a name="ExecutionSteps"></a>
 
-1. Clone the github repository at the preferable location in your local machine. You will need git to be preinstalled in the system. Once the repository is cloned in your system, with the help of cd command ,
+1. **Clone the GitHub Repository:**
+   - Clone the GitHub repository to your preferred location on your system. Ensure that Git is preinstalled.
+     ```bash
+     git clone https://github.com/csc510fall23g45/cheapBuy.git
+     cd cheapBuy
+     ```
+2. **Install Python and Pip:**
+   - This project uses Python 3. Make sure Python and Pip are preinstalled on your system. If not, download and install them:
+     - [Python](https://www.python.org/downloads/)
+     - [Pip](https://pip.pypa.io/en/stable/installation/)
+
+3. **Install Project Dependencies:**
+   - Install the project dependencies listed in the `requirements.txt` file using the following command:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+4. **Generate ScrapeOps API Key:**
+   - Visit [ScrapeOps](https://scrapeops.io/) website, sign in to your account, and navigate to the API Keys section. Create a new API key in the       ScrapeOps dashboard.
+  
+# Running
+
+**Set Environment Variable for Windows PowerShell:**
+```bash
+$Env:SCRAPEOPS_API_KEY = "your_api_key_here"
 ```
-git clone https://github.com/freakleesin/cheapBuy.git
-cd cheapBuy
+
+**Set Environment Variable for macOS and Linux:**
+```bash
+export SCRAPEOPS_API_KEY="your_api_key_here"
 ```
-2. This project uses Python 3, so make sure that [Python](https://www.python.org/downloads/) and [Pip](https://pip.pypa.io/en/stable/installation/) are preinstalled. All requirements of the project are listed in the ```requirements.txt``` file. Use pip to install all of the requirements.
+
+**Set Environment Variable for Windows Command Prompt:**
+```bash
+set SCRAPEOPS_API_KEY=your_api_key_here
 ```
-pip install -r requirements.txt
+   Replace `"your_api_key_here"` with the actual API key you obtained from ScrapeOps. This key will be used for making requests to the ScrapeOps API within the project.
+
+**Run Flask Application:**
+- Execute the following command to run the Flask application:
+```bash
+python app.py
 ```
-3. Check out the demo video to know about the use of the website in the media files.
-4. To locally run the streamlit website, we would recommend setting up an Anaconda Environment and running the command
-```
-streamlit run cheapBuy_user_interface.py
-```
+- Navigate to the provided link (usually `http://127.0.0.1:5000/`) in your web browser to use cheapBuy.
 
 ## 📅 Plan of Action <a name="PlanofAction"></a>
 ### PHASE-1✅ <a name="Phase1"></a>
@@ -174,19 +206,19 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 ## 👥 Team Members <a name="TeamMember"></a>
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/EZ7051"><img src="https://avatars.githubusercontent.com/u/35006207?v=4" width="75px;" alt=""/><br /><sub><b>Ejaz</b></sub></a></td>
-    <td align="center"><a href="https://github.com/shyni0201"><img src="https://avatars.githubusercontent.com/u/72161297?v=4" width="75px;" alt=""/><br /><sub><b>Shynitha</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/sumalatha-99"><img src="https://avatars.githubusercontent.com/u/26276595?v=4" width="75px;" alt=""/><br /><sub><b>Sumalatha</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/soubhagya31"><img src="https://avatars.githubusercontent.com/u/143368827?v=4" width="75px;" alt=""/><br /><sub><b>Soubhagya</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/sairajzero"><img src="https://avatars.githubusercontent.com/u/39055732?v=4" width="75px;" alt=""/><br /><sub><b>Sai Raj</b></sub></a></td>
+    <td align="center"><a href="https://github.com/NityaNagaSai"><img src="https://avatars.githubusercontent.com/u/73474889?v=4" width="75px;" alt=""/><br /><sub><b>Nitya</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/anish7-anish"><img src="https://avatars.githubusercontent.com/u/79855191?v=4" width="75px;" alt=""/><br /><sub><b>Anish</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/mahathii"><img src="https://avatars.githubusercontent.com/u/95462566?v=4" width="75px;" alt=""/><br /><sub><b>Mahathi</b></sub></a><br /></td>
   </tr>
 </table>
 
 | Name                   | Unity ID                           |
 |------------------------|------------------------------------|
-| Ejaz Ahamed Shaik      | eshaik                             |
-| Shynitha Muthyam       | smuthya                            |
-| Soubhagya Akkena       | sakkena                            |
-| Sumalatha Mashetty     | smashet                            |
+| Sai Raj Thirumalai     | sthirum4                           |
+| Nitya Naga Sai Atluri  | natluri                            |
+| Anish Rao Toorpu       | atoorpu                            |
+| Mahathi Kolishetty     | mkolish                            |
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants San Gilson, Andre Lustosa, Xueqi (Sherry) Yang, Yasitha Rajapaksha, and Rahul Yedida for their support throughout the project.

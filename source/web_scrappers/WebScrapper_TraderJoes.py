@@ -12,11 +12,24 @@ from source.utils.url_shortener import shorten_url
 import requests
 from urllib.parse import urlencode
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from source.utils.url_shortener import shorten_url
 
 # Set working directory path
 sys.path.append('../')
 
-SCRAPEOPS_API_KEY =   "453fce39-0418-4083-8bd4-6f9e6376b8c7"
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
+# Retrieve the API key from the environment variable
+SCRAPEOPS_API_KEY = os.getenv('SCRAPEOPS_API_KEY')
 
 
 def scrapeops_url(url):
@@ -37,37 +50,80 @@ class WebScrapper_TraderJoes:
         self.description = description
         self.result = {}
 
+    # def run(self):
+    #     """ 
+    #     Returns final result
+    #     """
+    #     self.driver = self.get_driver()
+    #     try:
+    #         # Get results from scrapping function
+    #         results = self.scrap_traderjoes()
+    #         # Condition to check whether results are avialable or not
+    #         if len(results) == 0:
+    #             print('TraderJoes_results empty')
+    #             self.result = {}
+    #         else:
+    #             item = results[0]
+    #             # Find teh atag containing our required item
+    #             atag = item.h3.a
+    #             # Extract description from the atag
+    #             #self.result['description'] = atag.text.strip()
+    #             self.result['description'] = item.find('h1', class_='ProductDetails_main__title__14Cnm').text.strip()
+    #             print("description")
+    #             print(self.result['description'])
+    #             # Get the URL for the page and shorten it
+    #             self.result['url'] = 'https://www.traderjoes.com/home'+atag.get('href')
+    #             self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+    #             # Find the span containging price of the item
+    #             #price_parent = item.find('span', 'a-price')
+    #             # Find the price of the item
+    #             self.result['price'] = item.find(
+    #                 'span', 'ProductPrice_productPrice__price__3-50j').text
+    #             # Assign the site as traderjoes to result
+    #             self.result['site'] = 'traderjoes'
+    #     except Exception as e:
+    #         print('TraderJoes_results exception', e)
+    #         self.result = {}
+    #     return self.result
     def run(self):
-        """ 
-        Returns final result
-        """
         self.driver = self.get_driver()
         try:
-            # Get results from scrapping function
+            # Get results from scraping function
             results = self.scrap_traderjoes()
-            # Condition to check whether results are avialable or not
+            # Condition to check whether results are available or not
             if len(results) == 0:
                 print('TraderJoes_results empty')
                 self.result = {}
             else:
                 item = results[0]
-                # Find teh atag containing our required item
+                # Find the a-tag containing our required item
                 atag = item.h3.a
-                # Extract description from the atag
-                self.result['description'] = atag.text.strip()
+
+                # Wait for the product details page to load
+                product_details_url = 'https://www.traderjoes.com/home' + atag.get('href')
+                WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.XPATH, "//h1[@class='ProductDetails_main__title__14Cnm']"))
+                )
+
+                # Extract description from the product details page
+                self.driver.get(product_details_url)
+                product_details_soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+                self.result['description'] = product_details_soup.find('h1', class_='ProductDetails_main__title__14Cnm').text.strip()
+
                 # Get the URL for the page and shorten it
-                self.result['url'] = 'https://www.traderjoes.com/home'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
-                # Find the span containging price of the item
-                #price_parent = item.find('span', 'a-price')
-                # Find the price of the item
-                self.result['price'] = item.find(
-                    'span', 'ProductPrice_productPrice__price__3-50j').text
-                # Assign the site as traderjoes to result
+                self.result['url'] = shorten_url(product_details_url)
+
+                # Find the span containing the price of the item
+                self.result['price'] = item.find('span', 'ProductPrice_productPrice__price__3-50j').text
+
+                # Assign the site as traderjoes to the result
                 self.result['site'] = 'traderjoes'
+
         except Exception as e:
             print('TraderJoes_results exception', e)
             self.result = {}
+        finally:
+            self.driver.quit()  # Make sure to close the driver after scraping
         return self.result
 
     def get_driver(self):
