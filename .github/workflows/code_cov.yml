@@ -13,9 +13,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      SCRAPEOPS_API_KEY: ${{ secrets.SCRAPEOPS_API_KEY }}
-      
     steps:
       - uses: actions/checkout@main
       - uses: codecov/codecov-action@v2
