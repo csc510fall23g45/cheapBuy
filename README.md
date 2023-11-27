@@ -4,7 +4,7 @@
 
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023744.svg)](https://doi.org/10.5281/zenodo.10023744)
+[![DOI](https://zenodo.org/badge/714713156.svg)](https://zenodo.org/doi/10.5281/zenodo.10211696)
 ![Github](https://img.shields.io/badge/language-python-red.svg)
 [![codecov](https://codecov.io/gh/csc510fall23g45/cheapBuy/graph/badge.svg?token=Qntv9b30AU)](https://codecov.io/gh/csc510fall23g45/cheapBuy)
 [![Running Code Coverage](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/code_cov.yml/badge.svg)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/code_cov.yml)
