@@ -19,10 +19,10 @@ def index():
 def search():
     if request.method == 'POST':
         url = request.form['product']
-        sites = request.form['sites'].split(',')
+        sites = request.form.getlist('sites')
     elif request.method == 'GET':
         url = request.args['product']
-        sites = request.args['sites'].split(',')
+        sites = request.args.getlist('sites')
 
     webScrapper = WebScrapper(url)
     results = webScrapper.call_scrapper(sites)

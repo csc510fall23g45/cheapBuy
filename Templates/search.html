@@ -398,42 +398,36 @@
 					>
 						Search
 					</button>
-					<input
-						type="text"
-						name="sites"
-						value="All Sites"
-						style="height: 30px"
-						hidden
-					/>
+					<details class="checkbox-dropdown">
+						<summary>Choose website</summary>
+						<ul class="checkbox-dropdown-list">
+							<li>
+								<label>
+									<input type="checkbox" value="amazon" name="sites" />Amazon
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" value="bestbuy" name="sites" />Bestbuy
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" value="bjs" name="sites" />Bjs
+								</label>
+							</li>
+							<li>
+								<label>
+									<input type="checkbox" value="costco" name="sites" />Costco
+								</label>
+							</li>
+						</ul>
+					</details>
 				</form>
 			</div>
 			<br />
 
-			<details class="checkbox-dropdown">
-				<summary>Choose website</summary>
-				<ul class="checkbox-dropdown-list">
-					<li>
-						<label>
-							<input type="checkbox" value="Amazon" name="city" />Amazon
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" value="Bestbuy" name="city" />Bestbuy
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" value="Bjs" name="city" />Bjs
-						</label>
-					</li>
-					<li>
-						<label>
-							<input type="checkbox" value="Costco" name="city" />Costco
-						</label>
-					</li>
-				</ul>
-			</details>
+
 
 			<br /><br />
 			<br /><br />
