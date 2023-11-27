@@ -36,7 +36,7 @@ def test_add_wishlist_item():
 def test_view_wishlist_items():
     create_user("TestUser1", "TestPassword1")
     result = view_wishlist_items("TestUser")
-    assert result == [(1, 'TestUser', 'Item1', 10, 'Website1', 'Link1')]
+    assert result == [{'id': 1, 'link': 'Link1', 'price': 10, 'title': 'Item1', 'website': 'Website1'}]
 
 def test_delete_wishlist_item():
     result = delete_wishlist_item("TestUser", 1)
