@@ -80,26 +80,24 @@ class WebScrapper:
         Build Threads and call scrapper for all websites
         """
 
-        if(sites == "All Sites") :
+        if "All Sites" in sites:
             scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
-                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy, WebScrapper_TraderJoes,WebScrapper_Kroger]
-        elif(sites == "amazon"):
-            scrapper = [WebScrapper_Amazon]
-        elif(sites == "walmart"):
-            scrapper = [WebScrapper_Walmart]
-        elif(sites == "ebay"):
-            scrapper = [WebScrapper_Ebay]
-        elif(sites == "bjs"):
-            scrapper = [WebScrapper_Bjs]
-        elif(sites == "costco"):
-            scrapper = [WebScrapper_Costco]
-        elif(sites == "bestbuy"):
-            scrapper = [WebScrapper_Bestbuy]
-        elif(sites == "traderjoes"):
-            scrapper=[WebScrapper_TraderJoes]
-        elif(sites == "kroger"):
-            scrapper=[WebScrapper_Kroger]
-    
+                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy]
+        else:
+            scrapper = []
+            if "amazon" in sites:
+                scrapper.append(WebScrapper_Amazon)
+            if "walmart" in sites:
+                scrapper.append(WebScrapper_Walmart)
+            if "ebay" in sites:
+                scrapper.append(WebScrapper_Ebay)
+            if "bjs" in sites:
+                scrapper.append(WebScrapper_Bjs)
+            if "costco" in sites:
+                scrapper.append(WebScrapper_Costco)
+            if "bestbuy" in sites:
+                scrapper.append(WebScrapper_Bestbuy)
+
 
         t_scrapper = [s.__call__(self.product_description) for s in scrapper]
 
