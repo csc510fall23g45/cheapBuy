@@ -18,13 +18,15 @@ def index():
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     if request.method == 'POST':
-        url = request.form['product']
+        product = request.form['product']
         sites = request.form.getlist('sites')
     elif request.method == 'GET':
-        url = request.args['product']
+        product = request.args['product']
         sites = request.args.getlist('sites')
 
-    webScrapper = WebScrapper(url)
+    if not len(sites):
+        sites = ["All Sites"]
+    webScrapper = WebScrapper(product)
     results = webScrapper.call_scrapper(sites)
 
     description, url, price, site = [], [], [], []
