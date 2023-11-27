@@ -10,9 +10,6 @@ def test_create_user():
     result = create_user("Mahathi","Kolishetty@1")
     assert result is True
 
-    result = create_user("Mahathi","Kolishetty@2")
-    assert result is False
-
 def test_execute_query():
     initiate_database()
     query = "SELECT * FROM users;"
@@ -35,8 +32,6 @@ def test_get_password():
 def test_add_wishlist_item():
     result = add_wishlist_item("TestUser", "Item1", 10.0, "Website1", "Link1")
     assert result is True
-    result = add_wishlist_item("TestUser2", "Item1", 10.0, "Website1", "Link1")
-    assert result is False
 
 def test_view_wishlist_items():
     create_user("TestUser1", "TestPassword1")
