@@ -19,39 +19,25 @@ def index():
 def search():
     if request.method == 'POST':
         url = request.form['product']
-        sites = request.form['sites']
+        sites = request.form['sites'].split(',')
     elif request.method == 'GET':
         url = request.args['product']
-        sites = request.args['sites']
+        sites = request.args['sites'].split(',')
 
     webScrapper = WebScrapper(url)
     results = webScrapper.call_scrapper(sites)
 
     description, url, price, site = [], [], [], []
 
-    if sites == "All Sites":
-        for result in results:
-            if result:
-                try:
-                    description.append(result['description'])
-                    url.append(result['url'])
-                    price.append(
-                        float(result['price'].strip('$').rstrip('0')))
-                    site.append(result['site'])
-                except Exception as e:
-                    print(e)
-    else:
-        for result in results:
-            if result:
-                try:
-                    if result['site'].strip() == sites:
-                        description.append(result['description'])
-                        url.append(result['url'])
-                        price.append(
-                            float(result['price'].strip('$').rstrip('0')))
-                        site.append(result['site'])
-                except Exception as e:
-                    print(e)
+    for result in results:
+        if result:
+            try:
+                description.append(result['description'])
+                url.append(result['url'])
+                price.append(float(result['price'].strip('$').rstrip('0')))
+                site.append(result['site'])
+            except Exception as e:
+                print(e)
 
     dataframe = pd.DataFrame({
         'title': description,
