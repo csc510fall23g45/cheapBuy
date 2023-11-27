@@ -48,7 +48,7 @@
 
 
 <h1 align="center">
- <img src="https://github.com/freakleesin/cheapBuy/blob/main/media/saveMoney2.gif" />
+ <img src="https://github.com/csc510fall23g45/cheapBuy/blob/Project3/media/cheapBuyGif.gif" />
 </h1>
 
 
@@ -174,19 +174,19 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 ## 👥 Team Members <a name="TeamMember"></a>
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/EZ7051"><img src="https://avatars.githubusercontent.com/u/35006207?v=4" width="75px;" alt=""/><br /><sub><b>Ejaz</b></sub></a></td>
-    <td align="center"><a href="https://github.com/shyni0201"><img src="https://avatars.githubusercontent.com/u/72161297?v=4" width="75px;" alt=""/><br /><sub><b>Shynitha</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/sumalatha-99"><img src="https://avatars.githubusercontent.com/u/26276595?v=4" width="75px;" alt=""/><br /><sub><b>Sumalatha</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/soubhagya31"><img src="https://avatars.githubusercontent.com/u/143368827?v=4" width="75px;" alt=""/><br /><sub><b>Soubhagya</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/sairajzero"><img src="https://avatars.githubusercontent.com/u/39055732?v=4" width="75px;" alt=""/><br /><sub><b>Sai Raj</b></sub></a></td>
+    <td align="center"><a href="https://github.com/NityaNagaSai"><img src="https://avatars.githubusercontent.com/u/73474889?v=4" width="75px;" alt=""/><br /><sub><b>Nitya</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/anish7-anish"><img src="https://avatars.githubusercontent.com/u/79855191?v=4" width="75px;" alt=""/><br /><sub><b>Anish</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/mahathii"><img src="https://avatars.githubusercontent.com/u/95462566?v=4" width="75px;" alt=""/><br /><sub><b>Mahathi</b></sub></a><br /></td>
   </tr>
 </table>
 
 | Name                   | Unity ID                           |
 |------------------------|------------------------------------|
-| Ejaz Ahamed Shaik      | eshaik                             |
-| Shynitha Muthyam       | smuthya                            |
-| Soubhagya Akkena       | sakkena                            |
-| Sumalatha Mashetty     | smashet                            |
+| Sai Raj Thirumalai     | sthirum4                           |
+| Nitya Naga Sai Atluri  | natluri                            |
+| Anish Rao Toorpu       | atoorpu                            |
+| Mahathi Kolishetty     | mkolish                            |
 
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants San Gilson, Andre Lustosa, Xueqi (Sherry) Yang, Yasitha Rajapaksha, and Rahul Yedida for their support throughout the project.
