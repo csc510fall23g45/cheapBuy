@@ -1,9 +1,10 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
 
 import sys
 from urllib.parse import urlencode
@@ -27,6 +28,7 @@ def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
 
 # Set working directory path
 sys.path.append('../')
@@ -66,12 +68,10 @@ class WebScrapper_Ebay:
         self.description = description
         self.result = {}
 
-
     def shorten_url(long_url):
         s = pyshorteners.Shortener()
         short_url = s.tinyurl.short(long_url)
         return short_url
-
 
     def run(self):
         """ 
@@ -88,9 +88,11 @@ class WebScrapper_Ebay:
             else:
                 item = results[1]
                 # Extract product price
-                product_price = item.find('div', class_='s-item__detail s-item__detail--primary').find('span',class_='s-item__price').text.strip().split('$')[1]
+                product_price = item.find('div', class_='s-item__detail s-item__detail--primary').find(
+                    'span', class_='s-item__price').text.strip().split('$')[1]
                 # Extract product description
-                product_description = item.find('div', class_="s-item__title").text.strip()
+                product_description = item.find(
+                    'div', class_="s-item__title").text.strip()
                 # Extract product URL
                 product_url = item.find('a')['href']
                 self.result['description'] = product_description
@@ -114,7 +116,7 @@ class WebScrapper_Ebay:
         """
         try:
             # Prepare URL for given description
-            #template = "https://www.ebay.com" + \
+            # template = "https://www.ebay.com" + \
             #           "/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw={}"
             template = "https://www.ebay.com/sch/i.html?_from=R40&_nkw={}&_sacat=0&_sop=15"
             template = template.format(self.description)

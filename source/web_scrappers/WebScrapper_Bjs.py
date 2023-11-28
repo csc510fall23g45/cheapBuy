@@ -1,9 +1,10 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
 
 import sys
 
@@ -27,6 +28,7 @@ def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
 
 sys.path.append('../')
 
@@ -85,8 +87,10 @@ class WebScrapper_Bjs:
             else:
                 item = results[0]
 
-                product_description = item.find('span', {'auto-data': 'product_name'}).text
-                product_url = 'https://www.bjs.com'+item.find('a',class_="product-link")['href']
+                product_description = item.find(
+                    'span', {'auto-data': 'product_name'}).text
+                product_url = 'https://www.bjs.com' + \
+                    item.find('a', class_="product-link")['href']
                 product_price = item.find('div', class_='normal-price').text
                 print(product_url)
                 print(product_price)
@@ -139,6 +143,3 @@ class WebScrapper_Bjs:
         soup = BeautifulSoup(html_response, "html.parser")
         results = soup.find_all('div', class_='product')
         return results
-    
-
-    

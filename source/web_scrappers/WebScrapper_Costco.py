@@ -1,9 +1,10 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
 
 import sys
 from urllib.parse import urlencode
@@ -76,9 +77,11 @@ class WebScrapper_Costco:
                 self.result = {}
             else:
                 item = results[0]
-                product_description = item.find('span', class_='description').text.strip()
+                product_description = item.find(
+                    'span', class_='description').text.strip()
                 product_url = item.find('a')['href']
-                product_price = item.find('div', class_='price').text.strip().split('$')[1]
+                product_price = item.find(
+                    'div', class_='price').text.strip().split('$')[1]
                 # product_price = item.find('span', class_="value").text.strip()
                 self.result['description'] = product_description
                 self.result['url'] = product_url
@@ -90,23 +93,21 @@ class WebScrapper_Costco:
         return self.result
 
     # def get_url_costco(self):
-    #     """ 
+    #     """
     #     Returns costco URL of search box
     #     """
     #     template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" +"&dept=All&sortBy=item_location_pricing_salePrice+asc"
     #     search_term = self.description.replace(' ', '+')
     #     return template.format(search_term)
-    
-    
 
     def get_url_costco(self):
         """Returns Costco URL of the search box."""
-        template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" +"&dept=All&sortBy=item_location_pricing_salePrice+asc"
+        template = "https://www.costco.com" + "/CatalogSearch?dept=All&keyword={}" + \
+            "&dept=All&sortBy=item_location_pricing_salePrice+asc"
         search_term = quote(self.description)
         return template.format(search_term)
 
-
-    def scrap_costco(self) :
+    def scrap_costco(self):
         """ 
         Returns Scraped result
         """

@@ -1,9 +1,10 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -20,6 +21,8 @@ from source.web_scrappers.WebScrapper_Kroger import WebScrapper_Kroger
 import sys
 
 sys.path.append('../../')
+
+
 class WebScrapper:
 
     """
@@ -82,7 +85,7 @@ class WebScrapper:
 
         if "All Sites" in sites:
             scrapper = [WebScrapper_Amazon, WebScrapper_Walmart, WebScrapper_Ebay,
-                    WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy]
+                        WebScrapper_Bjs, WebScrapper_Costco, WebScrapper_Bestbuy]
         else:
             scrapper = []
             if "amazon" in sites:
@@ -97,7 +100,6 @@ class WebScrapper:
                 scrapper.append(WebScrapper_Costco)
             if "bestbuy" in sites:
                 scrapper.append(WebScrapper_Bestbuy)
-
 
         t_scrapper = [s.__call__(self.product_description) for s in scrapper]
 

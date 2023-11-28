@@ -1,9 +1,10 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
 import sys
 from urllib.parse import urlencode
 import requests
@@ -82,8 +83,10 @@ class WebScrapper_Amazon:
                 # Extract description from the atag
                 self.result['description'] = atag.text.strip()
                 # Get the URL for the page and shorten it
-                self.result['url'] = 'https://www.amazon.com' + atag.get('href')
-                self.result['url'] = shorten_url(self.result['url'])  # short url is not applied currently
+                self.result['url'] = 'https://www.amazon.com' + \
+                    atag.get('href')
+                # short url is not applied currently
+                self.result['url'] = shorten_url(self.result['url'])
                 # Find the span containing price of the item
                 price_parent = item.find('span', 'a-price')
                 # Find the price of the item

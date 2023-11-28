@@ -1,9 +1,12 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
+from dotenv import load_dotenv
+import os
 import sys
 
 from bs4 import BeautifulSoup
@@ -22,8 +25,6 @@ from source.utils.url_shortener import shorten_url
 # Set working directory path
 sys.path.append('../')
 
-import os
-from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
@@ -36,6 +37,7 @@ def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
 
 class WebScrapper_TraderJoes:
 
@@ -51,7 +53,7 @@ class WebScrapper_TraderJoes:
         self.result = {}
 
     # def run(self):
-    #     """ 
+    #     """
     #     Returns final result
     #     """
     #     self.driver = self.get_driver()
@@ -100,21 +102,26 @@ class WebScrapper_TraderJoes:
                 atag = item.h3.a
 
                 # Wait for the product details page to load
-                product_details_url = 'https://www.traderjoes.com/home' + atag.get('href')
+                product_details_url = 'https://www.traderjoes.com/home' + \
+                    atag.get('href')
                 WebDriverWait(self.driver, 10).until(
-                    EC.presence_of_element_located((By.XPATH, "//h1[@class='ProductDetails_main__title__14Cnm']"))
+                    EC.presence_of_element_located(
+                        (By.XPATH, "//h1[@class='ProductDetails_main__title__14Cnm']"))
                 )
 
                 # Extract description from the product details page
                 self.driver.get(product_details_url)
-                product_details_soup = BeautifulSoup(self.driver.page_source, 'html.parser')
-                self.result['description'] = product_details_soup.find('h1', class_='ProductDetails_main__title__14Cnm').text.strip()
+                product_details_soup = BeautifulSoup(
+                    self.driver.page_source, 'html.parser')
+                self.result['description'] = product_details_soup.find(
+                    'h1', class_='ProductDetails_main__title__14Cnm').text.strip()
 
                 # Get the URL for the page and shorten it
                 self.result['url'] = shorten_url(product_details_url)
 
                 # Find the span containing the price of the item
-                self.result['price'] = item.find('span', 'ProductPrice_productPrice__price__3-50j').text
+                self.result['price'] = item.find(
+                    'span', 'ProductPrice_productPrice__price__3-50j').text
 
                 # Assign the site as traderjoes to the result
                 self.result['site'] = 'traderjoes'
@@ -144,7 +151,7 @@ class WebScrapper_TraderJoes:
         try:
             # Prepare URL for given description
             template = 'https://www.traderjoes.com/home'+'/search?q={}&global=yes'
-            
+
             search_term = self.description.replace(' ', '+')
             template = template.format(search_term)
         except:
@@ -164,7 +171,8 @@ class WebScrapper_TraderJoes:
             self.driver.get(url)
             # Use BeautifulSoup to scrap the webpage
             soup = BeautifulSoup(html_response, 'html.parser')
-            results = soup.find_all('article', class_='SearchResultCard_searchResultCard__3V-_h')
+            results = soup.find_all(
+                'article', class_='SearchResultCard_searchResultCard__3V-_h')
         except:
             results = []
         return results

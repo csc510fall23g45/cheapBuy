@@ -1,5 +1,5 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
@@ -25,9 +25,9 @@ def scrapeops_url(url):
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
 
+
 # Set working directory path
 sys.path.append('../')
-
 
 
 class WebScrapper_Bestbuy:
@@ -78,8 +78,10 @@ class WebScrapper_Bestbuy:
             else:
 
                 item = results[0]
-                self.result['description'] = item.find('h4', class_='sku-title').text
-                self.result['url'] = 'https://www.bestbuy.com' + item.find('a')['href']
+                self.result['description'] = item.find(
+                    'h4', class_='sku-title').text
+                self.result['url'] = 'https://www.bestbuy.com' + \
+                    item.find('a')['href']
                 self.result['price'] = item.find(
                     "div", class_="priceView-hero-price priceView-customer-price").find('span',
                                                                                         class_='sr-only').text.strip().split(
@@ -106,7 +108,7 @@ class WebScrapper_Bestbuy:
         """
         try:
             # Prepare URL for given description
-            #template = 'https://www.bestbuy.com/site/searchpage.jsp?st={}&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
+            # template = 'https://www.bestbuy.com/site/searchpage.jsp?st={}&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
             template = 'https://www.bestbuy.com/site/searchpage.jsp?id=pcat17071&sp=%2Bcurrentprice%20skuidsaas&st={}'
             search_term = self.description.replace(' ', '+')
             template = template.format(search_term)

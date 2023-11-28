@@ -1,6 +1,13 @@
+"""
+Copyright (c) 2023 Group45
+This code is licensed under MIT license (see LICENSE.MD for details)
+
+@author: cheapBuy
+"""
+
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlencode,unquote
+from urllib.parse import urlencode, unquote
 
 
 import os
@@ -19,6 +26,7 @@ def scrapeops_url(url):
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return unquote(proxy_url)
 
+
 def response_call():
     url = 'https://www.walmart.com/search?q=maggi&sort=price_low'
 
@@ -31,18 +39,21 @@ def response_call():
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # Find all the product containers (div elements)
-        product_containers = soup.find_all('div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
+        product_containers = soup.find_all(
+            'div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
 
         # Iterate through each product container and extract the information
         for container in product_containers:
             # Extract product price
-            product_price = container.find('div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span', class_='w_iUH7').text.strip()
+            product_price = container.find(
+                'div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span', class_='w_iUH7').text.strip()
 
             # Extract product description
             product_description = container.find('span', class_='w_iUH7').text
 
             # Extract product URL
-            product_url = 'https://www.walmart.com' + container.find('a')['href']
+            product_url = 'https://www.walmart.com' + \
+                container.find('a')['href']
 
             print("Product Price:", product_price)
             print("Product Description:", product_description)
@@ -53,5 +64,6 @@ def response_call():
         print("Failed to retrieve the web page. Status code:", response.status_code)
 
     return response.status_code
+
 
 response_call()

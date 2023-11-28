@@ -1,10 +1,13 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
 
+
+from dotenv import load_dotenv
+import os
 import sys
 from urllib.parse import urlencode
 import requests
@@ -13,8 +16,6 @@ from bs4 import BeautifulSoup
 # Set working directory path
 sys.path.append('../')
 
-import os
-from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
@@ -79,15 +80,16 @@ class WebScrapper_Walmart:
                 item = results[0]
                 # Extract product price
                 product_price = \
-                item.find('div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span',
-                                                                                                       class_='w_iUH7') \
+                    item.find('div', class_='flex flex-wrap justify-start items-center lh-title mb1').find('span',
+                                                                                                           class_='w_iUH7') \
                     .text.strip().split(" ")[2].split("$")[1]
 
                 # Extract product description
                 product_description = item.find('span', class_='w_iUH7').text
 
                 # Extract product URL
-                product_url = 'https://www.walmart.com' + item.find('a')['href']
+                product_url = 'https://www.walmart.com' + \
+                    item.find('a')['href']
                 # Extract description from the atag
                 self.result['description'] = product_description
                 # Get the URL for the page and shorten it
@@ -120,5 +122,6 @@ class WebScrapper_Walmart:
         html_response = response.text
         # Use BeautifulSoup to scrap the webpage
         soup = BeautifulSoup(html_response, 'html.parser')
-        results = soup.find_all('div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
+        results = soup.find_all(
+            'div', class_='mb0 ph1 pa0-xl bb b--near-white w-25')
         return results

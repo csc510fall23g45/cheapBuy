@@ -1,6 +1,7 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
+
 @author: cheapBuy
 """
 
@@ -51,7 +52,7 @@ class FetchDescription():
             # Extract description from URL for walmart
             link = self.product_link.replace("https://www.walmart.com/ip/", "")
             for ch in link:
-                if(ch != "/"):
+                if (ch != "/"):
                     description += ch
                 else:
                     break
@@ -85,7 +86,8 @@ class FetchDescription():
         description = ''
         try:
             # Extract description from URL for bjs
-            link = self.product_link.replace("https://www.traderjoes.com/home", "")
+            link = self.product_link.replace(
+                "https://www.traderjoes.com/home", "")
             for ch in link:
                 if ch != '/':
                     description += ch
@@ -120,7 +122,7 @@ class FetchDescription():
             # Extract description from URL for costco
             link = self.product_link.replace("https://www.costco.com/", "")
             for ch in link:
-                if(ch != "."):
+                if (ch != "."):
                     description += ch
                 else:
                     break
@@ -139,7 +141,7 @@ class FetchDescription():
             link = self.product_link.replace(
                 "https://www.bjs.com/product/", "")
             for ch in link:
-                if(ch != "/"):
+                if (ch != "/"):
                     description += ch
                 else:
                     break
@@ -176,8 +178,7 @@ class FetchDescription():
         except:
             description = ''
         return description
-    
-    
+
     def fetch_desc_kroger(self):
         """ 
         Fetch description from Kroger

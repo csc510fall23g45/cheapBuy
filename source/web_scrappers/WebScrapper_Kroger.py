@@ -1,9 +1,12 @@
 """
-Copyright (c) 2021 Anshul Patel
+Copyright (c) 2023 Group45
 This code is licensed under MIT license (see LICENSE.MD for details)
 
 @author: cheapBuy
 """
+
+from dotenv import load_dotenv
+import os
 import sys
 
 from bs4 import BeautifulSoup
@@ -15,8 +18,6 @@ from urllib.parse import urlencode
 # Set working directory path
 sys.path.append('../')
 
-import os
-from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
@@ -29,6 +30,7 @@ def scrapeops_url(url):
     payload = {'api_key': SCRAPEOPS_API_KEY, 'url': url, 'country': 'us'}
     proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)
     return proxy_url
+
 
 class WebScrapper_Kroger:
     """
@@ -85,10 +87,12 @@ class WebScrapper_Kroger:
 
                 # Get the URL for the page and shorten it
                 self.result['url'] = 'https://www.kroger.com'+atag.get('href')
-                self.result['url'] = shorten_url(self.result['url']) # short url is not applied currently
+                # short url is not applied currently
+                self.result['url'] = shorten_url(self.result['url'])
 
                 # Find the span containging price of the item
-                price_parent = item.find('div', 'flex justify-between items-center mb-8')
+                price_parent = item.find(
+                    'div', 'flex justify-between items-center mb-8')
                 # Find the price of the item
                 # kroger using unique method to record price among all sites above...
                 self.result['price'] = price_parent.find('data value').text
