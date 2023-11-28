@@ -170,10 +170,13 @@ python app.py
 8. Fixed web scraper issues for BJs, Costco and eBay.
 
 ### FUTURE PHASE ⌛ <a name="FuturePhase"></a>
-1. Dashboard including how many users click on the website.
+1. Creating ordering and payment functionality for customers to directly order from Website.
 2. Email notification of the available coupon to the user.
-3. Alternate product suggestion feature.
-4. Add more websites for web scrapping like Target, Kroger, and Traderjoes.
+3. Adding more filter options.
+4. Creating multiple wishlists.
+5. Decrease the load time.
+6. Storing the data more securly.
+7. Add more websites for web scrapping like Target, Kroger, and Traderjoes.
 
 🌟 You are all set! 🌟
 
