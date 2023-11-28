@@ -51,15 +51,18 @@
 </h1>
 
 
-## 🧐 Features <a name="Features"></a>
-- Price Comparison
-- Get alternative website for the product
-- Highlight Cheapest product
-- **User Accounts**
-- **Personal wishlists**
-- **Filter option for searching**
-- **Enhanced UI**
+# :dizzy: Features <a name="Features"></a>
+### User Accounts
+<p align="center"><img width="700" src="media/cheapbuylogin.gif"></p>
 
+### Enhanced UI
+<p align="center"><img width="700" src="media/cheapbuysearch.gif"></p>
+
+### Personal wishlists
+<p align="center"><img width="700" src="media/cheapbuywishlist.gif"></p>
+
+### Filter option for searching
+<p align="center"><img width="700" src="media/cheapbuychoosewebsite.gif"></p>
 ## 🛠️ Steps of Execution <a name="ExecutionSteps"></a>
 
 1. **Clone the GitHub Repository:**
