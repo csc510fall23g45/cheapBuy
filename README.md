@@ -14,7 +14,6 @@
 <img src="https://img.shields.io/github/issues-closed/csc510fall23g45/cheapBuy" alt="cheapBuy issues closed"/></a>
 <a href="https://github.com/csc510fall23g45/cheapBuy/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/></a>
-<img src="https://img.shields.io/github/milestones/all/csc510fall23g45/cheapBuy" /></a> 
 <a href="https://github.com/csc510fall23g45/cheapBuy/graphs/commit-activity" alt="commit activity">
 <img src="https://img.shields.io/github/commit-activity/w/csc510fall23g45/cheapBuy" /></a> 
 <a href="https://img.shields.io/github/repo-size/csc510fall23g45/cheapBuy" alt="repo size">
@@ -35,7 +34,7 @@
   - [Phase 2](#phase-2--)
   - [Phase 3](#phase-3--)
   - [Phase 4](#phase-4--)
-  - [(new)Phase 5](#phase-5--)
+  - [***(new)Phase 5***](#phase-5--)
   - [Future phase](#future-phase--)
 - [Video](#Video)
 - [License](#License)
