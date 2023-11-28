@@ -1,9 +1,4 @@
 # <h1 align="center">CHEAPBUY</h1>
-## 📖 Introduction <a name="Introduction"></a>
-
-**cheapBuy Extension** provides you an easy way to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, while providing prices comparison from same product from different websites. Usually, it takes lot of time to do price comparison by checking different websites. However, you can instead add our extension **cheapBuy** and it will automatically fetch you price of the same product from different websites which you can then directly compare. This extension will not only save you time, but also save you money! Overall, **cheapBuy** is an one stop solution to buy the cheapest product online.
-
-
 
 [![DOI](https://zenodo.org/badge/714713156.svg)](https://zenodo.org/doi/10.5281/zenodo.10211696)
 ![Github](https://img.shields.io/badge/language-python-red.svg)
@@ -12,40 +7,24 @@
 [![Python Style Checker](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/style_checker.yml/badge.svg)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/style_checker.yml)
 [![Run Tests On Push](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/unit_test.yml/badge.svg?branch=main)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/unit_test.yml)
 [![Lint Python](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/main.yml/badge.svg)](https://github.com/csc510fall23g45/cheapBuy/actions/workflows/main.yml)
-
-
-<!--Badges-->
 <a href="https://github.com/csc510fall23g45/cheapBuy/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy license" />  
-</a>
-<a href="https://github.com/csc510fall23g45/cheapBuy/issues" target="blank">
-<img src="https://img.shields.io/github/issues/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
-</a>
+<img src="https://img.shields.io/github/license/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy license" /> </a>
+<a href="https://github.com/csc510fall23g45/cheapBuy/issues" target="blank"><img src="https://img.shields.io/github/issues/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy issues"/></a>
 <a href="https://github.com/csc510fall23g45/cheapBuy/issues?q=is%3Aissue+is%3Aclosed" target="blank">
-<img src="https://img.shields.io/github/issues-closed/csc510fall23g45/cheapBuy" alt="cheapBuy issues closed"/>
-</a>
+<img src="https://img.shields.io/github/issues-closed/csc510fall23g45/cheapBuy" alt="cheapBuy issues closed"/></a>
 <a href="https://github.com/csc510fall23g45/cheapBuy/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
-</a>
+<img src="https://img.shields.io/github/issues-pr/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/></a>
 <img src="https://img.shields.io/github/milestones/all/csc510fall23g45/cheapBuy" /></a> 
 <a href="https://github.com/csc510fall23g45/cheapBuy/graphs/commit-activity" alt="commit activity">
 <img src="https://img.shields.io/github/commit-activity/w/csc510fall23g45/cheapBuy" /></a> 
 <a href="https://img.shields.io/github/repo-size/csc510fall23g45/cheapBuy" alt="repo size">
 <img src="https://img.shields.io/github/repo-size/csc510fall23g45/cheapBuy" /></a>
 
-
-
 <p align="center">
     <a href="https://github.com/csc510fall23g45/cheapBuy/issues/new/choose">Report Bug</a>
     ·
     <a href="https://github.com/csc510fall23g45/cheapBuy/issues/new/choose">Request Feature</a>
 </p>
-
-
-<h1 align="center">
- <img src="https://github.com/csc510fall23g45/cheapBuy/blob/Project3/media/cheapBuyGif.gif" />
-</h1>
-
 
 ## Table of Contents
 - [Introduction](#Introduction)
@@ -63,10 +42,14 @@
 - [Team Members](#TeamMember)
 - [Acknowledgements](#Acknowledgement)
 
+## 📖 Introduction <a name="Introduction"></a>
 
-<h2 align="center">
- <img src= "https://github.com/anshulp2912/cheapBuy/blob/main/media/Drake_BF_meme.gif" width="500"/>
-</h2>
+**cheapBuy Extension** provides you an easy way to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, while providing prices comparison from same product from different websites. Usually, it takes lot of time to do price comparison by checking different websites. However, you can instead add our extension **cheapBuy** and it will automatically fetch you price of the same product from different websites which you can then directly compare. This extension will not only save you time, but also save you money! Overall, **cheapBuy** is an one stop solution to buy the cheapest product online.
+
+<h1 align="center">
+ <img src="https://github.com/csc510fall23g45/cheapBuy/blob/Project3/media/cheapBuyGif.gif" />
+</h1>
+
 
 ## 🧐 Features <a name="Features"></a>
 - Price Comparison
