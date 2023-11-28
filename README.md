@@ -63,7 +63,8 @@
 
 ### Filter option for searching
 <p align="center"><img width="700" src="media/cheapbuychoosewebsite.gif"></p>
-## 🛠️ Steps of Execution <a name="ExecutionSteps"></a>
+
+## 🛠️ Steps for Execution <a name="ExecutionSteps"></a>
 
 1. **Clone the GitHub Repository:**
    - Clone the GitHub repository to your preferred location on your system. Ensure that Git is preinstalled.
