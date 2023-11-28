@@ -187,7 +187,17 @@ python app.py
 8. Enhance the user interface, and keep only relevant images and content.
 9. Reduce the time complexity and latency for the product search by removing inner loops.
 
-### PHASE-5 ⌛ <a name="Phase5"></a>
+### PHASE-5 ✅ <a name="Phase5"></a>
+1. Implemented a new functionality that allows users to effortlessly set up new accounts.
+2. Implemented a new wishlist feature that empowers users to personalize and seamlessly save their desired products.
+3. Updated the front-end framework to Flask to improve the page hosting.
+4. Enhanced the user interface.
+5. Added option for users to select one or more websites for selected searching.
+6. Improved Test case code coverage from 27% to 67%.
+7. Secured the ScrapeOps API key using environment variables.
+8. Fixed web scraper issues for BJs, Costco and eBay.
+
+### PHASE-6 ⌛ <a name="Phase5"></a>
 1. Dashboard including how many users click on the website.
 2. Email notification of the available coupon to the user.
 3. Alternate product suggestion feature.
