@@ -3,7 +3,7 @@
 [CSC 510 - Project 2 - Repo Presentation](https://youtu.be/bUPy9Fyh2bA)
 
 
-# Project 2 Rubric 
+# Project 3 Rubric 
 
 
 Notes|Self-assement (Total-90/90) |Evidence|
@@ -31,7 +31,7 @@ Test cases exist |3| https://github.com/csc510fall23g45/cheapBuy/tree/Project3/
 Test cases are routinely executed |3| https://github.com/csc510fall23g45/cheapBuy/actions  |
 The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up |3| https://github.com/csc510fall23g45/cheapBuy/blob/Project3/CONTRIBUTING.md |
 Issues are discussed before they are closed |3| https://github.com/csc510fall23g45/cheapBuy/issues |
-Chat channel: exists |3| https://github.com/csc510fall23g45/slash#chat-channel |
+Chat channel: exists |3| https://github.com/csc510fall23g45/cheapBuy/blob/Project3/README.md#chat-channel |
 Test cases: a large proportion of the issues related to handling failing cases. |3| https://github.com/csc510fall23g45/cheapBuy/issues |
 Evidence that the whole team is using the same tools: everyone can get to all tools and files |3| https://github.com/csc510fall23g45/cheapBuy/graphs/contributors |
 "Evidence that the whole team is using the same tools (e.g. config files in the repo updated by lots of different people) "|3| https://github.com/csc510fall23g45/cheapBuy/graphs/contributors |
@@ -109,7 +109,7 @@ Q13 - How you engage with your community ||
 "13.8) If your software is developed as an open source project do you have a governance model? "|YES|
 Q14 - How you manage contributions ||
 "14.1) Do you accept contributions (e.g. bug fixes, enhancements, documentation, updates, tutorials) from people who are not part of your project? "|YES|
-14.2) Do you have a contributions policy? |YES|https://github.com/csc510fall23g45/slash/blob/main/docs/CONTRIBUTING.md
+14.2) Do you have a contributions policy? |YES|https://github.com/csc510fall23g45/cheapBuy/blob/Project3/CONTRIBUTING.md
 14.3) Is your contributions' policy publicly available? |YES|https://github.com/csc510fall23g45/cheapBuy/blob/Project3/CONTRIBUTING.md
 14.4) Do contributors keep the copyright/IP of their contributions? |YES|
 Q15 - Your software's copyright and licensing ||
