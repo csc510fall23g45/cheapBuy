@@ -1,6 +1,6 @@
 # Video
 
-[CSC 510 - Project 2 - Repo Presentation](https://youtu.be/bUPy9Fyh2bA)
+[CSC 510 - Project 3 - Project Demo](https://youtu.be/70gB6JjtWYc?si=ZCn7D42tq3VUA0xX)
 
 
 # Project 3 Rubric 
@@ -8,11 +8,11 @@
 
 Notes|Self-assement (Total-90/90) |Evidence|
 --------|------|-------|
-Video |3| https://youtu.be/bUPy9Fyh2bA |
-Workload is spread over the whole team (One team member is often X-times more productive than the others...) |3 | Sai Raj Thirumalai(sairajzero)-18  Mahathi Kolishetty(mahathii)-18  Anish Rao Toorpu(anish7-anish)-17  Nitya Naga Sai Atluri(NityaNagaSai)-18  Workload is spread equally |
-"but nevertheless, here is a track record that everyone is contributing a lot) "|3|  Everyone is contributing a lot as each person has more than 15 commits
-Number of commits |3|https://github.com/csc510fall23g45/cheapBuy/graphs/contributors  - 71
-Number of commits: by different people |3| Sai Raj Thirumalai(sairajzero)-18  Mahathi Kolishetty(mahathii)-18  Anish Rao Toorpu(anish7-anish)-17  Nitya Naga Sai Atluri(NityaNagaSai)- 18 |
+Video |3| https://youtu.be/70gB6JjtWYc?si=ZCn7D42tq3VUA0xX |
+Workload is spread over the whole team (One team member is often X-times more productive than the others...) |3 | Sai Raj Thirumalai(sairajzero)-27  Mahathi Kolishetty(mahathii)-27  Anish Rao Toorpu(anish7-anish)-26  Nitya Naga Sai Atluri(NityaNagaSai)-28  Workload is spread equally |
+"but nevertheless, here is a track record that everyone is contributing a lot) "|3|  Everyone is contributing a lot as each person has more than 25 commits
+Number of commits |3|https://github.com/csc510fall23g45/cheapBuy/graphs/contributors  - 108
+Number of commits: by different people |3| Sai Raj Thirumalai(sairajzero)-27  Mahathi Kolishetty(mahathii)-27  Anish Rao Toorpu(anish7-anish)-26  Nitya Naga Sai Atluri(NityaNagaSai)- 28 |
 Issues reports: there are many |3| https://github.com/csc510fall23g45/cheapBuy/issues 
 Issues are being closed |3|https://github.com/csc510fall23g45/cheapBuy/issues?q=is%3Aissue+is%3Aclosed - Every issue is closed
 DOI badge exists |3|DOI Badge: https://zenodo.org/records/10020461
