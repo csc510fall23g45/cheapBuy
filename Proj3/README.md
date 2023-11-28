@@ -41,7 +41,7 @@ Short release cycles |3| https://github.com/csc510fall23g45/cheapBuy/releases 
 Q1 - What your software does |  | 
 "1.1) Does your website and documentation provide a clear, high-level overview of your software? "|YES| https://github.com/csc510fall23g45/cheapBuy#cheapBuy
 1.2) Does your website and documentation clearly describe the type of user who should use your software? |YES| https://github.com/csc510fall23g45/cheapBuy/tree/Project3#ExecutionSteps
-1.3) Do you publish case studies to show how your software has been used by yourself and others? |NO|
+1.3) Do you publish case studies to show how your software has been used by yourself and others? |YES| 
 Q2 - Your project's and software's identity ||
 2.1) Is the name of your project/software unique? |YES|
 2.2) Is your project/software name free from trademark violations? |YES|
