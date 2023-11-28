@@ -207,7 +207,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 # Chat Channel
 
-<code><a href="https://discord.gg/Ns8zxEUu" target="_blank"><img height="100" width="250" src="https://user-images.githubusercontent.com/42767118/135394825-26dee6db-7a64-4e3f-902a-1e35abd4cf0c.png"></a></code>
+<code><a href="https://discord.gg/MxDrcdSs4p" target="_blank"><img height="100" width="250" src="https://user-images.githubusercontent.com/42767118/135394825-26dee6db-7a64-4e3f-902a-1e35abd4cf0c.png"></a></code>
 
 ## :email: Support
 To Subscribe and for any help, please reach out to us at: sefall2023project45@gmail.com
