@@ -233,9 +233,16 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 | Anish Rao Toorpu       | atoorpu                            |
 | Mahathi Kolishetty     | mkolish                            |
 
+# Chat Channel
+
+<code><a href="https://discord.gg/Ns8zxEUu" target="_blank"><img height="100" width="250" src="https://user-images.githubusercontent.com/42767118/135394825-26dee6db-7a64-4e3f-902a-1e35abd4cf0c.png"></a></code>
+
+## :email: Support
+To Subscribe and for any help, please reach out to us at: sefall2023project45@gmail.com
+
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants San Gilson, Andre Lustosa, Xueqi (Sherry) Yang, Yasitha Rajapaksha, and Rahul Yedida for their support throughout the project.
-We would also like to extend our gratitude to the previous group : [https://github.com/rliu9/cheapBuy](https://github.com/rliu9/cheapBuy)
+We would also like to extend our gratitude to the previous group : [[https://github.com/EZ7051/cheapBuy](https://github.com/EZ7051/cheapBuy)]
 - [https://streamlit.io/](https://streamlit.io/)
 - [https://shields.io/](https://shields.io/)
 - [https://www.powtoon.com/](https://www.powtoon.com/)
