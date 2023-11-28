@@ -1,3 +1,9 @@
+"""
+Copyright (c) 2023 Group45
+This code is licensed under MIT license (see LICENSE.MD for details)
+
+@author: cheapBuy
+"""
 from flask import Flask, render_template, request, session, redirect, url_for
 from source.web_scrappers.WebScrapper import WebScrapper
 import source.database as db
