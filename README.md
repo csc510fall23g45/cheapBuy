@@ -1,6 +1,7 @@
-[![cheapBuy Project 3 DEMO](https://github.com/freakleesin/cheapBuy/blob/main/media/cheapbuy.png)](https://www.youtube.com/watch?v=CBo6NUFXeF0) <br>
-![YouTube Video Views](https://img.shields.io/youtube/views/CBo6NUFXeF0)
-## ⬆️ Click on the icon above to see the new video
+# <h1 align="center">CHEAPBUY</h1>
+## 📖 Introduction <a name="Introduction"></a>
+
+**cheapBuy Extension** provides you an easy way to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, while providing prices comparison from same product from different websites. Usually, it takes lot of time to do price comparison by checking different websites. However, you can instead add our extension **cheapBuy** and it will automatically fetch you price of the same product from different websites which you can then directly compare. This extension will not only save you time, but also save you money! Overall, **cheapBuy** is an one stop solution to buy the cheapest product online.
 
 
 
@@ -15,14 +16,7 @@
 
 <!--Badges-->
 <a href="https://github.com/csc510fall23g45/cheapBuy/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy license" />
-    
-</a>
-<a href="https://github.com/csc510fall23g45/cheapBuy/forks" target="blank">
-<img src="https://img.shields.io/github/forks/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy forks"/>
-</a>
-<a href="https://github.com/csc510fall23g45/cheapBuy/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/csc510fall23g45/cheapBuy?style=flat-square" alt="gcheapBuy stars"/>
+<img src="https://img.shields.io/github/license/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy license" />  
 </a>
 <a href="https://github.com/csc510fall23g45/cheapBuy/issues" target="blank">
 <img src="https://img.shields.io/github/issues/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy issues"/>
@@ -33,7 +27,6 @@
 <a href="https://github.com/csc510fall23g45/cheapBuy/pulls" target="blank">
 <img src="https://img.shields.io/github/issues-pr/csc510fall23g45/cheapBuy?style=flat-square" alt="cheapBuy pull-requests"/>
 </a>
-<a href="https://github.com/csc510fall23g45/cheapBuy/milestones" alt="milestones">
 <img src="https://img.shields.io/github/milestones/all/csc510fall23g45/cheapBuy" /></a> 
 <a href="https://github.com/csc510fall23g45/cheapBuy/graphs/commit-activity" alt="commit activity">
 <img src="https://img.shields.io/github/commit-activity/w/csc510fall23g45/cheapBuy" /></a> 
@@ -54,10 +47,6 @@
 </h1>
 
 
-<h1 align="center">
-  cheapBuy
-</h1>
-
 ## Table of Contents
 - [Introduction](#Introduction)
 - [Features](#Features)
@@ -74,9 +63,7 @@
 - [Team Members](#TeamMember)
 - [Acknowledgements](#Acknowledgement)
 
-## 📖 Introduction <a name="Introduction"></a>
 
-**cheapBuy Extension** provides you an easy way to buy any product through your favourite website's like Amazon, Walmart, Ebay, Bjs, Costco, etc, while providing prices comparison from same product from different websites. Usually, it takes lot of time to do price comparison by checking different websites. However, you can instead add our extension **cheapBuy** and it will automatically fetch you price of the same product from different websites which you can then directly compare. This extension will not only save you time, but also save you money! Overall, **cheapBuy** is an one stop solution to buy the cheapest product online.
 <h2 align="center">
  <img src= "https://github.com/anshulp2912/cheapBuy/blob/main/media/Drake_BF_meme.gif" width="500"/>
 </h2>
