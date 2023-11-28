@@ -196,6 +196,9 @@ Please contribute using [GitHub Flow](https://guides.github.com/introduction/flo
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
+## Project 3 Rubric
+Click [here](https://github.com/csc510fall23g45/cheapBuy/blob/Project3/Proj3/README.md) for project 3 rubric
+
 ## 👥 Team Members <a name="TeamMember"></a>
 <table>
   <tr>
@@ -213,7 +216,10 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 | Anish Rao Toorpu       | atoorpu                            |
 | Mahathi Kolishetty     | mkolish                            |
 
-# Chat Channel
+## More documentation
+- [function_description](https://github.com/csc510fall23g45/cheapBuy/blob/Project3/Proj3/function_description.md)
+
+## Chat Channel
 
 <code><a href="https://discord.gg/MxDrcdSs4p" target="_blank"><img height="100" width="250" src="https://user-images.githubusercontent.com/42767118/135394825-26dee6db-7a64-4e3f-902a-1e35abd4cf0c.png"></a></code>
 
