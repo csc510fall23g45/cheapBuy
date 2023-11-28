@@ -57,7 +57,11 @@ def search():
     # Add a column for the link to the website
     #dataframe['website_link'] = dataframe.apply(lambda row: f"/visit/{row['url']}/{row['site']}", axis=1)
 
-    return render_template('search.html', data=dataframe.to_dict(orient='records'))
+    if "username" in session:
+        username=session["username"]
+    else:
+        username=""
+    return render_template('search.html', data=dataframe.to_dict(orient='records'), username=username)
 
 @app.route('/wishlist')
 def wishlist():
