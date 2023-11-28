@@ -111,7 +111,7 @@ The project is deployed on Streamlit cloud:
      ```
 
 4. **Generate ScrapeOps API Key:**
-   - Visit [ScrapeOps](https://scrapeops.io/) website, sign in to your account, and navigate to the API Keys section. Create a new API key in the       ScrapeOps dashboard.
+   - Visit [ScrapeOps](https://scrapeops.io/) website, sign in to your account, and navigate to the API Keys section. Create a new API key in the      ScrapeOps dashboard nd verify your email address to start scraping using the api-key.
   
 # Running
 
@@ -209,10 +209,10 @@ python app.py
 🌟 You are all set! 🌟
 
 ## 📝 License <a name="License"></a>
-This project is licensed under the terms of the MIT license. Please check [License](https://github.com/EZ7051/cheapBuy/blob/main/LICENSE) for more details.
+This project is licensed under the terms of the MIT license. Please check [License](https://github.com/csc510fall23g45/cheapBuy/blob/Project3/LICENSE) for more details.
 
 ## 🍰 Contributing <a name="Contributing"></a>
-Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/EZ7051/cheapBuy/compare).
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/EZ7051/cheapBuy/compare/main...csc510fall23g45:cheapBuy:Project3).
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
