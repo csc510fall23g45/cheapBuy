@@ -83,9 +83,13 @@
 </h2>
 
 ## 🧐 Features <a name="Features"></a>
-- **Price Comparison**
-- **Get alternative website for the product**
-- **Highlight Cheapest product**
+- Price Comparison
+- Get alternative website for the product
+- Highlight Cheapest product
+- **User Accounts**
+- **Personal wishlists**
+- **Filter option for searching**
+- **Enhanced UI**
 
 ## 🚀 Demo <a name="Demo"></a>
 The project is deployed on Streamlit cloud:
