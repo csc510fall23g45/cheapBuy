@@ -61,7 +61,6 @@
 ## Table of Contents
 - [Introduction](#Introduction)
 - [Features](#Features)
-- [Demo](#Demo)
 - [Installation Steps](#ExecutionSteps)
 - [Plan of Action](#PlanofAction)
   - [Phase 1](#phase-1--)
@@ -90,10 +89,6 @@
 - **Personal wishlists**
 - **Filter option for searching**
 - **Enhanced UI**
-
-## 🚀 Demo <a name="Demo"></a>
-The project is deployed on Streamlit cloud:
-- [Streamlit](https://share.streamlit.io/anshulp2912/cheapbuy/main/cheapBuy_user_interface.py)
 
 ## 🛠️ Steps of Execution <a name="ExecutionSteps"></a>
 
