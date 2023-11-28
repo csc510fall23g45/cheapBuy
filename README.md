@@ -67,6 +67,9 @@
   - [Phase 1](#Phase1)
   - [Phase 2](#Phase2)
   - [Phase 3](#Phase3)
+  - [Phase 4](#Phase4)
+  - [(new)Phase 5](#Phase5)
+  - [Future phase](#FuturePhase)
 - [License](#License)
 - [Contributing](#Contributing)
 - [Team Members](#TeamMember)
@@ -197,7 +200,7 @@ python app.py
 7. Secured the ScrapeOps API key using environment variables.
 8. Fixed web scraper issues for BJs, Costco and eBay.
 
-### PHASE-6 ⌛ <a name="Phase5"></a>
+### FUTURE PHASE ⌛ <a name="FuturePhase"></a>
 1. Dashboard including how many users click on the website.
 2. Email notification of the available coupon to the user.
 3. Alternate product suggestion feature.
