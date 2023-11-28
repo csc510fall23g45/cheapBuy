@@ -37,6 +37,7 @@
   - [Phase 4](#phase-4--)
   - [(new)Phase 5](#phase-5--)
   - [Future phase](#future-phase--)
+- [Video](#Video)
 - [License](#License)
 - [Contributing](#Contributing)
 - [Team Members](#TeamMember)
@@ -184,6 +185,9 @@ python app.py
 
 🌟 You are all set! 🌟
 
+## Video <a name="Video"></a>
+[CSC 510 - Project 3 - Project Demo](https://youtu.be/70gB6JjtWYc)
+
 ## 📝 License <a name="License"></a>
 This project is licensed under the terms of the MIT license. Please check [License](https://github.com/csc510fall23g45/cheapBuy/blob/Project3/LICENSE) for more details.
 
@@ -219,7 +223,6 @@ To Subscribe and for any help, please reach out to us at: sefall2023project45@gm
 ## 🙏 Acknowledgements <a name="Acknowledgement"></a>
 We would like to thank Professor Dr Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants San Gilson, Andre Lustosa, Xueqi (Sherry) Yang, Yasitha Rajapaksha, and Rahul Yedida for their support throughout the project.
 We would also like to extend our gratitude to the previous group : [[https://github.com/EZ7051/cheapBuy](https://github.com/EZ7051/cheapBuy)]
-- [https://streamlit.io/](https://streamlit.io/)
 - [https://shields.io/](https://shields.io/)
 - [https://www.powtoon.com/](https://www.powtoon.com/)
 <br>
